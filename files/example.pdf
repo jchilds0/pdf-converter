@@ -29,7 +29,7 @@ endobj
 stream
     BT
         /F13 12 Tf
-        288 720 Td
+        72 720 Td
         (Hello World) Tj
     ET
 endstream
@@ -47,5 +47,5 @@ trailer <<
     /Root 1 0 R
 >>
 startxref
-360
+359
 %%EOF

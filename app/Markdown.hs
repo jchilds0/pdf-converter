@@ -7,7 +7,7 @@ data Leaf = Heading Int String | HorizontalRule | BlankLine
 data Marker = Bullet Char | Number Int
     deriving (Show, Eq)
 
-data Block = Leaf Leaf | Paragraph [String] | Code [String] | Quote Blocks | ListItem Marker Block
+data Block = Leaf Leaf | Paragraph [String] | Code Bool [String] | Quote Blocks | ListItem Marker Block
     deriving (Show, Eq)
 
 type Blocks = [Block]
@@ -15,14 +15,15 @@ newtype MDTree = Document Blocks
     deriving (Show, Eq)
 
 parseMarkdown :: String -> MDTree
-parseMarkdown content = parseLines (Document []) ls2
+parseMarkdown content = tree
     where 
         ls = lines content
         ls2 = map parseLine ls
+        tree = parseBlocks (Document []) ls2
 
-parseLines :: MDTree -> [Block] -> MDTree
-parseLines tree [] = tree
-parseLines tree (l:ls) = parseLines newTree ls
+parseBlocks :: MDTree -> [Block] -> MDTree
+parseBlocks tree [] = tree
+parseBlocks tree (l:ls) = parseBlocks newTree ls
     where 
         newTree = addLine tree l
 
@@ -39,9 +40,11 @@ mergeBlocks (ListItem m b) next = [ListItem m b, next]
 mergeBlocks (Paragraph ls1) next = case next of 
     Paragraph ls2 -> [Paragraph (ls1 ++ ls2)]
     _ -> [Paragraph ls1, next]
-mergeBlocks (Code ls1) next = case next of 
-    Code ls2 -> [Code (ls1 ++ ls2)]
-    _ -> [Code ls1, next]
+mergeBlocks (Code False ls1) next = [Code False ls1, next]
+mergeBlocks (Code True ls1) next = case next of 
+    Paragraph ls2 -> [Code True (ls1 ++ ls2)]
+    Code _ ls2 -> [Code False (ls1 ++ ls2)]
+    _ -> [Code False ls1, next]
 mergeBlocks (Quote bs1) next = case next of 
     Quote bs2 -> [Quote blocks]
         where 
@@ -57,7 +60,7 @@ parseLine :: String -> Block
 parseLine s
     | null line = Leaf BlankLine
     | isHeading line = parseHeading line
-    | take 3 line == "```" = Code [drop 3 line]
+    | take 3 line == "```" = Code True [drop 3 line]
     | take 3 line == "---" = Leaf HorizontalRule
     | head line == '>' = Quote [parseLine (tail line)]
     | head line == '-' = ListItem (Bullet '-') (parseLine (tail line))
@@ -80,5 +83,5 @@ parseHeading :: String -> Block
 parseHeading s = Leaf (Heading n str)
     where 
         n = countHash s
-        text = pack (take n s)
+        text = pack (drop n s)
         str = unpack (strip text)

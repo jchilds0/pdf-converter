@@ -170,10 +170,11 @@ pdfCreatePageTree pages = Pages [
         ("Count", Inline (Integer (length pages)))
     ]
 
-pdfCreatePage :: [Object] -> Page
-pdfCreatePage contents = Indirect (Dictionary [
+pdfCreatePage :: [Object] -> Dictionary -> Page
+pdfCreatePage contents resources = Indirect (Dictionary [
          ("Type", Inline (Name "Page")),
-         ("Contents", Indirect (Array contents))
+         ("Contents", Indirect (Array contents)),
+         ("Resources", Indirect (Dictionary resources))
     ])
 
 data Position = Point Int Int

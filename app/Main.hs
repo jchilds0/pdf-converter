@@ -3,6 +3,7 @@ import System.Environment (getArgs)
 import Data.Text (stripSuffix, pack, unpack)
 import PDF (generatePDF, PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, pdfCreateTextObject, Position (Point), Object, Text (Text))
 import Markdown (parseMarkdown)
+import Text (markdownToPDF, resources)
 
 main :: IO ()
 main = do 
@@ -63,13 +64,13 @@ objs = [
     ]
 
 blankPDF :: PDFTree
-blankPDF = pdfCreateCatalog (pdfCreatePageTree [pdfCreatePage objs]) 
+blankPDF = pdfCreateCatalog (pdfCreatePageTree [pdfCreatePage objs resources])
 
 parseFile :: FilePath -> FilePath -> IO ()
 parseFile input output = do
     putStrLn $ "Converting " ++ input ++ " to " ++ output
     contents <- readFile input
     let mdTree = parseMarkdown contents
-    -- let pdfTree = markdownToPDF mdTree
-    let pdfContents = generatePDF blankPDF
+    let pdfTree = markdownToPDF mdTree
+    let pdfContents = generatePDF pdfTree
     writeFile output pdfContents
