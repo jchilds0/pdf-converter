@@ -1,7 +1,8 @@
 module Main (module Main) where
 import System.Environment (getArgs)
 import Data.Text (stripSuffix, pack, unpack)
-import PDF (generatePDF, PDFTree, documentCatalog, pageTree, page, textObject, Pages, Position (Point), Page)
+import PDF (generatePDF, PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, pdfCreateTextObject, Position (Point), Object, Text (Text))
+import Markdown (parseMarkdown)
 
 main :: IO ()
 main = do 
@@ -54,20 +55,21 @@ parseFiles ((input, output):items) = do
     parseFile input output
     parseFiles items
 
-singlePage :: Page 
-singlePage = page [textObject "Hello World" 12 (Point 288 720)]
-
-pTree :: Pages
-pTree = pageTree [singlePage]
+objs :: [Object]
+objs = [
+        pdfCreateTextObject (Text "Hello World" 12 (Point 10 780)),
+        pdfCreateTextObject (Text "Lorem ipsum dolor sit amet." 12 (Point 10 710)),
+        pdfCreateTextObject (Text "Line 3 text" 12 (Point 288 730))
+    ]
 
 blankPDF :: PDFTree
-blankPDF = documentCatalog pTree 
+blankPDF = pdfCreateCatalog (pdfCreatePageTree [pdfCreatePage objs]) 
 
 parseFile :: FilePath -> FilePath -> IO ()
 parseFile input output = do
     putStrLn $ "Converting " ++ input ++ " to " ++ output
-    -- contents <- readFile input
-    -- let mdTree = parseMarkdown contents
+    contents <- readFile input
+    let mdTree = parseMarkdown contents
     -- let pdfTree = markdownToPDF mdTree
     let pdfContents = generatePDF blankPDF
     writeFile output pdfContents

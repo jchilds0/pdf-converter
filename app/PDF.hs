@@ -150,31 +150,41 @@ encodeObject objects (Indirect obj) = (value, newObjects)
         (_, ref) = head newObjects
         value = encodeObjectRef ref
 
-documentCatalog :: Pages -> PDFTree 
-documentCatalog (Pages pages) = PDFTree [
+pdfCreateCatalog :: Pages -> PDFTree 
+pdfCreateCatalog (Pages pages) = PDFTree [
         ("Type", Inline (Name "Catalog")),
         ("Version", Inline (Name "PDF-1.7")), 
-        ("Pages", Indirect (Dictionary pages))
+        ("Pages", Indirect (Dictionary pages)),
+        ("MediaBox", Indirect (Array [
+            Inline (Integer 0), 
+            Inline (Integer 0), 
+            Inline (Integer 595), 
+            Inline (Integer 842)
+        ]))
     ]
 
-pageTree :: [Page] -> Pages
-pageTree pages = Pages [
+pdfCreatePageTree :: [Page] -> Pages
+pdfCreatePageTree pages = Pages [
         ("Type", Inline (Name "Pages")),
         ("Kids", Indirect (Array pages)),
         ("Count", Inline (Integer (length pages)))
     ]
 
-page :: [Object] -> Page
-page contents = Indirect (Dictionary [
+pdfCreatePage :: [Object] -> Page
+pdfCreatePage contents = Indirect (Dictionary [
          ("Type", Inline (Name "Page")),
          ("Contents", Indirect (Array contents))
     ])
 
 data Position = Point Int Int
+data Text = Text String Int Position
 
-textObject :: String -> Int -> Position -> Object
-textObject text fontSize (Point x y) = Indirect (Stream dict stream)
+pdfCreateTextObject :: Text -> Object
+pdfCreateTextObject (Text text fontSize (Point x y)) = Indirect (Stream dict stream)
     where 
         len = length stream
         dict = [("Length", Inline (Integer len))]
-        stream = printf "BT\n\t/F13 %d Tf\n\t%d %d Td\n\t(%s) Tj\nET" fontSize x y text
+        tf = "\t/F13 " ++ show fontSize ++ " Tf\n"
+        td = "\t" ++ show x ++ " " ++ show y ++ " Td\n"
+        tj = "\t(" ++ text ++ ") Tj\n"
+        stream = "BT\n" ++ tf ++ td ++ tj ++ "ET" 
