@@ -71,6 +71,7 @@ executable pdf-converter
     build-depends:    
         base ^>=4.17.2.1,
         text >= 2.0.2,
+        freetype2 >= 0.2.0,
         libpdf
 
     -- Directories containing source files.
@@ -114,11 +115,11 @@ library libpdf
     -- Modules exported by the library.
     exposed-modules:  
         Markdown,
+        Text,
         PDF
 
     -- Modules included in this library but not exported.
-    other-modules:
-        Text
+    -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -126,6 +127,7 @@ library libpdf
     -- Other library packages from which modules are imported.
     build-depends:    
         base ^>=4.17.2.1,
+        freetype2 >= 0.2.0,
         text >= 2.0.2
 
     -- Directories containing source files.

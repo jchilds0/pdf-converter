@@ -20,7 +20,7 @@ newtype PDFTree = PDFTree Catalog
 type Objects = [(String, ObjectRef)]
 
 pdfHeader :: String
-pdfHeader = "%PDF-1.7\n"
+pdfHeader = "%PDF-2.0\n"
 
 pdfXRef:: String
 pdfXRef = "startxref\n"
