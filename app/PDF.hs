@@ -178,14 +178,39 @@ pdfCreatePage contents resources = Indirect (Dictionary [
     ])
 
 data Position = Point Int Int
-data Text = Text String Int Position
+type FontSize = Int
+type Stretch = Float
+data Text = Text String FontSize Stretch Position
 
 pdfCreateTextObject :: Text -> Object
-pdfCreateTextObject (Text text fontSize (Point x y)) = Indirect (Stream dict stream)
+pdfCreateTextObject (Text text fontSize stretch (Point x y)) = Indirect (Stream dict stream)
     where 
         len = length stream
         dict = [("Length", Inline (Integer len))]
+
         tf = "\t/F13 " ++ show fontSize ++ " Tf\n"
         td = "\t" ++ show x ++ " " ++ show y ++ " Td\n"
         tj = "\t(" ++ text ++ ") Tj\n"
-        stream = "BT\n" ++ tf ++ td ++ tj ++ "ET" 
+        tw = "\t" ++ show stretch ++ " Tw\n"
+        stream = "BT\n" ++ tf ++ td ++ tw ++ tj ++ "ET" 
+
+data Color = Color Int Int Int
+data Rectangle = Rectangle Position Int Int
+
+rgb :: Color -> String
+rgb (Color red green blue) = show r ++ " " ++ show g ++ " " ++ show b
+    where 
+        r = fromIntegral red / 255.0 :: Float
+        g = fromIntegral green / 255.0 :: Float
+        b = fromIntegral blue / 255.0 :: Float
+
+pdfCreateRectangleObject :: Rectangle -> Color -> Object
+pdfCreateRectangleObject (Rectangle (Point x y) width height) color = Indirect (Stream dict stream) 
+    where 
+        len = length stream
+        dict = [("Length", Inline (Integer len))]
+
+        re = "\t" ++ show x ++ " " ++ show y ++ " " ++ show width ++ " " ++ show height ++ " re\n"
+        cStr = "\tDeviceRGB cs " ++ rgb color ++ " sc\n"
+        stroke = "\tf\n"
+        stream = "\tq\n" ++ re ++ cStr ++ stroke ++ "\tQ\n"

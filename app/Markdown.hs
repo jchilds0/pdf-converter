@@ -1,5 +1,5 @@
 module Markdown (module Markdown) where 
-import Data.Text (strip, pack, unpack, stripStart)
+import Data.Text (pack, unpack, stripStart)
 
 data Prefix = Tab | BackTick | LeftArrow | Star | Minus | Plus | Hash | Space
     deriving (Show, Eq) 

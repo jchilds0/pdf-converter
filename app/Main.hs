@@ -4,6 +4,7 @@ import Data.Text (stripSuffix, pack, unpack)
 import PDF (generatePDF, PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, pdfCreateTextObject, Position (Point), Object, Text (Text))
 import Markdown (parseMarkdown)
 import Text (markdownToPDF, resources)
+import Debug.Trace (trace)
 
 main :: IO ()
 main = do 
@@ -58,9 +59,9 @@ parseFiles ((input, output):items) = do
 
 objs :: [Object]
 objs = [
-        pdfCreateTextObject (Text "Hello World" 12 (Point 10 780)),
-        pdfCreateTextObject (Text "Lorem ipsum dolor sit amet." 12 (Point 10 710)),
-        pdfCreateTextObject (Text "Line 3 text" 12 (Point 288 730))
+        pdfCreateTextObject (Text "Hello World" 12 1.0 (Point 10 780)),
+        pdfCreateTextObject (Text "Lorem ipsum dolor sit amet." 12 1.0 (Point 10 710)),
+        pdfCreateTextObject (Text "Line 3 text" 12 1.0 (Point 288 730))
     ]
 
 blankPDF :: PDFTree
@@ -71,6 +72,6 @@ parseFile input output = do
     putStrLn $ "Converting " ++ input ++ " to " ++ output
     contents <- readFile input
     let mdTree = parseMarkdown contents
-    pdfTree <- markdownToPDF mdTree
+    pdfTree <- trace (show mdTree) markdownToPDF mdTree
     let pdfContents = generatePDF pdfTree
     writeFile output pdfContents
