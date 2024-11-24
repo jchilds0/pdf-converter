@@ -2,7 +2,7 @@ module Main (module Main) where
 import System.Environment (getArgs)
 import Data.Text (stripSuffix, pack, unpack)
 import PDF (generatePDF, PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, pdfCreateTextObject, Position (Point), Object, Text (Text))
-import Markdown (parseMarkdown)
+import Markdown (parseMarkdown, MDTree (Document))
 import Text (markdownToPDF, resources)
 import Debug.Trace (trace)
 
@@ -71,7 +71,12 @@ parseFile :: FilePath -> FilePath -> IO ()
 parseFile input output = do
     putStrLn $ "Converting " ++ input ++ " to " ++ output
     contents <- readFile input
-    let mdTree = parseMarkdown contents
-    pdfTree <- trace (show mdTree) markdownToPDF mdTree
+    let mdTree@(Document blocks) = parseMarkdown contents
+    pdfTree <- trace (printArray blocks) markdownToPDF mdTree
     let pdfContents = generatePDF pdfTree
     writeFile output pdfContents
+
+printArray :: Show a => [a] -> String
+printArray ls = "[\n" ++ strs ++ "]"
+    where 
+        strs = foldr (\b s -> "\t" ++ show b ++ ",\n" ++ s) "" ls

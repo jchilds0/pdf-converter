@@ -1,5 +1,5 @@
 module Text (module Text) where
-import Markdown (MDTree (Document), Blocks, Leaf (Heading), Block (Leaf, Paragraph, Quote, Code, ListItem), Marker)
+import Markdown (MDTree (Document), Blocks, Leaf (Heading), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem), Marker)
 import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, Object (Indirect, Inline), Position (Point), pdfCreateTextObject, Text (Text), Dictionary, IndirectType (Dictionary), InlineType (Name), Rectangle (Rectangle), pdfCreateRectangleObject, Color (Color))
 import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_Face, FT_GlyphSlotRec (gsrAdvance), FT_Vector (FT_Vector), ft_Set_Char_Size)
 import Foreign (Storable(peek), Int64)
@@ -43,6 +43,9 @@ paraPadding = 10
 headingScale :: Int64
 headingScale = 2
 
+indent :: Int
+indent = 24
+
 start :: Position
 start = Point margin (height - 100)
 
@@ -66,8 +69,9 @@ blocksToObjects pos (b:blocks) = do
 blockToObject :: Block -> Position -> IO ([Object], Position)
 blockToObject (Leaf l) pos = return (leafBlock l pos)
 blockToObject (Paragraph l) pos = paragraphBlock l pos
-blockToObject (Code _ ls) pos = return (codeBlock ls pos)
-blockToObject (Quote blocks) pos = quoteBlock blocks pos
+blockToObject (FencedCode _ ls) pos = return (codeBlock ls pos)
+blockToObject (IndentCode _ ls) pos = return (codeBlock ls pos)
+blockToObject (Quote blocks) pos = quoteBlocks blocks pos
 blockToObject (ListItem m b) pos = listItem m b pos
 
 leafBlock :: Leaf -> Position -> ([Object], Position)
@@ -104,12 +108,12 @@ paragraphLines (l:ls) pos1 paraWidth = do
 codeBlock :: [String] -> Position -> ([Object], Position)
 codeBlock ls (Point xPos1 yPos1) = (objs, pos2)
     where
-        bgRect = Rectangle (Point xPos1 (yPos1 - 12)) (width - 2 * margin) (yPos2 - yPos1)
+        bgRect = Rectangle (Point xPos1 (yPos1 - 12)) (width - xPos1 - margin) (yPos2 - yPos1)
         bgColor = Color 200 200 200
         bg = pdfCreateRectangleObject bgRect bgColor
 
-        indent = Point (xPos1 + 24) (yPos1 - 24)
-        (textObjs, pos1) = codeLines ls indent
+        indentPos = Point (xPos1 + indent) (yPos1 - 24)
+        (textObjs, pos1) = codeLines ls indentPos
         (Point _ yPos2) = pos1
         pos2 = Point xPos1 (yPos2 - 24)
 
@@ -122,11 +126,19 @@ codeLines (l:ls) pos1 = (pdfCreateTextObject obj:objs, pos3)
         (obj, pos2) = textObject l codeFontSize pos1
         (objs, pos3) = codeLines ls pos2
 
-quoteBlock :: Blocks -> Position -> IO ([Object], Position)
-quoteBlock [] pos = return ([], pos)
-quoteBlock (b:blocks) pos1 = do
+quoteBlocks :: Blocks -> Position -> IO ([Object], Position) 
+quoteBlocks blocks (Point xPos1 yPos1) = do
+    let indentPos = Point (xPos1 + indent) yPos1
+    (objs, pos1) <- quoteBlockItems blocks indentPos
+    let Point _ yPos2 = pos1
+    let pos2 = Point xPos1 yPos2
+    return (objs, pos2)
+
+quoteBlockItems :: Blocks -> Position -> IO ([Object], Position)
+quoteBlockItems [] pos = return ([], pos)
+quoteBlockItems (b:blocks) pos1 = do
     (obj, pos2) <- blockToObject b pos1
-    (objs, pos3) <- quoteBlock blocks pos2
+    (objs, pos3) <- quoteBlockItems blocks pos2
     return (obj ++ objs, pos3)
 
 listItem :: Marker -> Block -> Position -> IO ([Object], Position)

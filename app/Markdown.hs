@@ -1,10 +1,11 @@
 module Markdown (module Markdown) where 
-import Data.Text (pack, unpack, stripStart)
+import Data.Text (pack, unpack, stripStart, strip)
+import Debug.Trace (trace)
 
 data Prefix = Tab | BackTick | LeftArrow | Star | Minus | Plus | Hash | Space
     deriving (Show, Eq) 
 
-data Line = Line [Prefix] String String
+data Line = Line Prefix Line String | Blank String
     deriving (Show, Eq) 
 
 data Leaf = Heading Int String | HorizontalRule | BlankLine
@@ -13,7 +14,7 @@ data Leaf = Heading Int String | HorizontalRule | BlankLine
 data Marker = Bullet Char | Number Int
     deriving (Show, Eq)
 
-data Block = Leaf Leaf | Paragraph String | Code Bool [String] | Quote Blocks | ListItem Marker Block
+data Block = Leaf Leaf | Paragraph String | IndentCode Bool [String] | FencedCode Bool [String] | Quote Blocks | ListItem Marker Block
     deriving (Show, Eq)
 
 type Blocks = [Block]
@@ -26,24 +27,30 @@ parseMarkdown content = Document blocks
         ls = map parseLine (lines content)
         blocks = parseBlocks [] ls
 
-addPrefix :: Prefix -> Line -> Line
-addPrefix prefix (Line ps s line) = Line (prefix:ps) s line
+printArray :: Show a => [a] -> String
+printArray ls = "[\n" ++ strs ++ "]"
+    where 
+        strs = foldr (\b s -> "\t" ++ show b ++ ",\n" ++ s) "" ls
 
 parseLine :: String -> Line
 parseLine s
-    | null s = Line [] [] []
-    | head s == '\t' = addPrefix Tab (parseLine (tail s))
-    | length line < length s - 4 = addPrefix Tab (parseLine (drop 4 s))
-    | length line /= length s = addPrefix Space (parseLine line)
-    | head line == '#' = addPrefix Hash (parseLine (tail line))
-    | head line == '`' = addPrefix BackTick (parseLine (tail line))
-    | head line == '>' = addPrefix LeftArrow (parseLine (tail line))
-    | head line == '-' = addPrefix Minus (parseLine (tail line))
-    | head line == '+' = addPrefix Plus (parseLine (tail line))
-    | head line == '*' = addPrefix Star (parseLine (tail line))
-    | otherwise = Line [] line s
+    | null s = Blank s
+    | head s == '\t' = Line Tab (parseLine (tail s)) s
+    | length line <= length s - 4 = Line Tab (parseLine (drop 4 s)) s
+    | length line /= length s = Line Space (parseLine line) s
+    | head line == '#' = Line Hash (parseLine (tail line)) s
+    | head line == '`' = Line BackTick (parseLine (tail line)) s
+    | head line == '>' = Line LeftArrow (parseLine removeSpace) s
+    | head line == '-' = Line Minus (parseLine (tail line)) s
+    | head line == '+' = Line Plus (parseLine (tail line)) s
+    | head line == '*' = Line Star (parseLine (tail line)) s
+    | otherwise = Blank s
     where 
         line = unpack (stripStart (pack s))
+        removeSpace 
+            | null (tail line) = "" 
+            | head (tail line) == ' ' = tail (tail line)
+            | otherwise = tail line
 
 parseBlocks :: Blocks -> [Line] -> Blocks 
 parseBlocks blocks [] = blocks
@@ -57,72 +64,70 @@ addLine blocks block = init blocks ++ mergeBlocks lastBlock block
     where 
         lastBlock = last blocks
 
-dropPrefix :: [Prefix] -> Prefix -> [Prefix]
-dropPrefix [] _ = []
-dropPrefix (p1:ps) p2 
-    | p1 == p2 = dropPrefix ps p2
-    | otherwise = p1:dropPrefix ps p2
+countPrefix :: Prefix -> Line -> Int
+countPrefix p1 (Line p2 line _) 
+    | p1 == p2 = countPrefix p1 line + 1
+    | otherwise = countPrefix p1 line
+countPrefix _ _ = 0 
+
+lineText :: Line -> String
+lineText (Blank text) = text
+lineText (Line _ _ text) = text
+
+headingText :: Line -> String
+headingText (Line Hash line _) = headingText line
+headingText line = unpack (strip (pack text))
+    where 
+        text = lineText line
 
 lineToBlock :: Line -> Block
-lineToBlock (Line _ [] _) = Leaf BlankLine
-lineToBlock (Line (Space:ps) s line) = lineToBlock (Line ps s line)
-lineToBlock (Line (Tab:_) _ line) = Code False [line]
-lineToBlock (Line (Star:ps) s line) = ListItem (Bullet '*') (lineToBlock (Line ps s line))
-lineToBlock (Line (Plus:ps) s line) = ListItem (Bullet '+') (lineToBlock (Line ps s line))
-lineToBlock (Line (Minus:ps) s line) = ListItem (Bullet '-') (lineToBlock (Line ps s line))
-lineToBlock (Line (LeftArrow:ps) s line) = Quote [lineToBlock (Line ps s line)]
-lineToBlock (Line (BackTick:BackTick:BackTick:_) _ _) = Code True []
-lineToBlock (Line (Hash:ps) s line)
-    | isHeading (Hash:ps) = parseHeading (Hash:ps) s 
-    | otherwise = lineToBlock (Line (dropPrefix ps Hash) s line)
-lineToBlock (Line _ _ line) = Paragraph s 
-    where
-        text = pack line
-        s = unpack (stripStart text)
-
-countPrefix :: [Prefix] -> Prefix -> Int
-countPrefix [] _ = 0 
-countPrefix (p1:ps) p2 
-    | p1 == p2 = countPrefix ps p2 + 1
-    | otherwise = countPrefix ps p2
-
-isHeading :: [Prefix] -> Bool 
-isHeading ps = hashCount > 0 && hashCount <= 6
+lineToBlock (Blank s) = if null s then Leaf BlankLine else Paragraph s
+lineToBlock (Line Space line _) = lineToBlock line
+lineToBlock (Line Star line _) = ListItem (Bullet '*') (lineToBlock line)
+lineToBlock (Line Plus line _) = ListItem (Bullet '+') (lineToBlock line)
+lineToBlock (Line Minus line _) = ListItem (Bullet '-') (lineToBlock line)
+lineToBlock (Line LeftArrow line _) = Quote [lineToBlock line]
+lineToBlock (Line Tab line _) = IndentCode True [lineText line]
+lineToBlock (Line BackTick (Line BackTick (Line BackTick _ _) _) _) = FencedCode True []
+lineToBlock (Line Hash line s)
+    | hashCount <= 6 = Leaf (Heading hashCount (headingText line))
+    | otherwise = Paragraph s
     where 
-        hashCount = countPrefix ps Hash
-
-parseHeading :: [Prefix] -> String -> Block
-parseHeading ps s = Leaf (Heading n s)
-    where 
-        n = countPrefix ps Hash
+        hashCount = countPrefix Hash (Line Hash line s)
+lineToBlock (Line _ _ s) = Paragraph s 
 
 mergeBlocks :: Block -> Line -> Blocks
 mergeBlocks (Leaf l) line = [Leaf l, lineToBlock line]
 mergeBlocks (ListItem m b) line = [ListItem m b, lineToBlock line]
 mergeBlocks (Paragraph ls1) line = mergeParagraph ls1 line
-mergeBlocks (Code False ls1) line = [Code False ls1, lineToBlock line]
-mergeBlocks (Code True ls1) line = mergeCode ls1 line
-mergeBlocks (Quote bs) line = mergeBlocks (last bs) line
+mergeBlocks (IndentCode False ls1) line = [IndentCode False ls1, lineToBlock line]
+mergeBlocks (FencedCode False ls1) line = [FencedCode False ls1, lineToBlock line]
+mergeBlocks (IndentCode True ls1) line = case line of 
+    Line Tab (Line _ _ text) _ -> [IndentCode True (ls1 ++ [text])]
+    _ -> [IndentCode False ls1, lineToBlock line]
+mergeBlocks (FencedCode True ls1) line = case lineToBlock line of 
+    FencedCode _ _ -> [FencedCode False ls1]
+    _ -> [FencedCode True (ls1 ++ [lineText line])]
+mergeBlocks (Quote bs) line = mergeQuote bs line
 
 mergeQuote :: Blocks -> Line -> Blocks
-mergeQuote blocks (Line [] _ _) = blocks
-mergeQuote blocks (Line (LeftArrow:ps) s line) = init blocks ++ newBlocks
-    where 
+mergeQuote blocks (Line LeftArrow nextLine _) = [mergeQuoteBlock blocks nextLine]
+mergeQuote blocks (Line Space (Line LeftArrow nextLine _) _) = [mergeQuoteBlock blocks nextLine]
+mergeQuote blocks line = case lineToBlock line of 
+    Paragraph _ -> case last blocks of 
+        Paragraph _ -> [mergeQuoteBlock blocks line]
+        _ -> [Quote blocks, lineToBlock line]
+    _ -> [Quote blocks, lineToBlock line]
+
+mergeQuoteBlock :: Blocks -> Line -> Block
+mergeQuoteBlock blocks nextLine = Quote (init blocks ++ newBlocks)
+    where
         block = last blocks
-        newBlocks = mergeBlocks block (Line ps s line)
-mergeQuote blocks line = init blocks ++ newBlocks
-    where 
-        block = last blocks
-        newBlocks = mergeBlocks block line 
+        newBlocks = mergeBlocks block nextLine
 
 mergeParagraph :: String -> Line -> Blocks
-mergeParagraph para (Line [] s _) 
+mergeParagraph para (Blank s) 
     | null s = [Paragraph para, Leaf BlankLine]
     | otherwise = [Paragraph (para ++ " " ++ s)]
 mergeParagraph para line = [Paragraph para, lineToBlock line]
 
-mergeCode :: [String] -> Line -> Blocks
-mergeCode ls (Line [] s _) = [Code True (ls ++ [s])]
-mergeCode ls (Line ps s line) 
-    | take 3 ps == [BackTick, BackTick, BackTick] = [Code False ls, lineToBlock (Line (drop 3 ps) s line)]
-    | otherwise = [Code True (ls ++ [line])]
