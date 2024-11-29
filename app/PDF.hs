@@ -4,8 +4,11 @@ import Text.Printf (printf)
 type Name = String
 type Dictionary = [(Name, Object)]
 data InlineType = Boolean Bool | Integer Int | String String | Name Name
+    deriving Show
 data IndirectType = Array [Object] | Dictionary Dictionary | Stream Dictionary [Char]
+    deriving Show
 data Object = Inline InlineType | Indirect IndirectType
+    deriving Show
 
 type ObjectNumber = Int
 type GenNumber = Int 
@@ -178,6 +181,7 @@ pdfCreatePage contents resources = Indirect (Dictionary [
     ])
 
 data Position = Point Int Int
+    deriving Show
 type FontSize = Int
 type Stretch = Float
 data Text = Text String FontSize Stretch Position
@@ -195,7 +199,9 @@ pdfCreateTextObject (Text text fontSize stretch (Point x y)) = Indirect (Stream 
         stream = "BT\n" ++ tf ++ td ++ tw ++ tj ++ "ET" 
 
 data Color = Color Int Int Int
-data Rectangle = Rectangle Position Int Int
+type Width = Int
+type Height = Int
+data Rectangle = Rectangle Position Width Height
 
 rgb :: Color -> String
 rgb (Color red green blue) = show r ++ " " ++ show g ++ " " ++ show b

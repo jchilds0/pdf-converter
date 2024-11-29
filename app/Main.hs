@@ -72,7 +72,7 @@ parseFile input output = do
     putStrLn $ "Converting " ++ input ++ " to " ++ output
     contents <- readFile input
     let mdTree@(Document blocks) = parseMarkdown contents
-    pdfTree <- trace (printArray blocks) markdownToPDF mdTree
+    pdfTree <- markdownToPDF mdTree
     let pdfContents = generatePDF pdfTree
     writeFile output pdfContents
 

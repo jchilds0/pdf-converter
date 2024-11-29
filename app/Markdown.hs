@@ -1,6 +1,5 @@
 module Markdown (module Markdown) where 
 import Data.Text (pack, unpack, stripStart, strip)
-import Debug.Trace (trace)
 
 data Prefix = Tab | BackTick | LeftArrow | Star | Minus | Plus | Hash | Space
     deriving (Show, Eq) 
@@ -83,6 +82,7 @@ headingText line = unpack (strip (pack text))
 lineToBlock :: Line -> Block
 lineToBlock (Blank s) = if null s then Leaf BlankLine else Paragraph s
 lineToBlock (Line Space line _) = lineToBlock line
+lineToBlock (Line Minus (Line Minus (Line Minus _ _) _) _) = Leaf HorizontalRule
 lineToBlock (Line Star line _) = ListItem (Bullet '*') (lineToBlock line)
 lineToBlock (Line Plus line _) = ListItem (Bullet '+') (lineToBlock line)
 lineToBlock (Line Minus line _) = ListItem (Bullet '-') (lineToBlock line)

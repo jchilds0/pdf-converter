@@ -1,9 +1,10 @@
 module Text (module Text) where
-import Markdown (MDTree (Document), Blocks, Leaf (Heading), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem), Marker)
+import Markdown (MDTree (Document), Blocks, Leaf (Heading, HorizontalRule), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem))
 import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, Object (Indirect, Inline), Position (Point), pdfCreateTextObject, Text (Text), Dictionary, IndirectType (Dictionary), InlineType (Name), Rectangle (Rectangle), pdfCreateRectangleObject, Color (Color))
 import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_Face, FT_GlyphSlotRec (gsrAdvance), FT_Vector (FT_Vector), ft_Set_Char_Size)
 import Foreign (Storable(peek), Int64)
 import Data.Char (ord)
+import Debug.Trace (trace)
 
 margin :: Int
 margin = 72 
@@ -51,98 +52,137 @@ start = Point margin (height - 100)
 
 markdownToPDF :: MDTree -> IO PDFTree
 markdownToPDF (Document blocks) = do
-    pages <- blocksToPage blocks
-    return (pdfCreateCatalog (pdfCreatePageTree [pages]))
+    pages <- blocksToPages blocks
+    return (pdfCreateCatalog (pdfCreatePageTree pages))
 
-blocksToPage :: Blocks -> IO Page
-blocksToPage blocks = do 
-    objs <- blocksToObjects start blocks
-    return (pdfCreatePage objs resources)
+data Bound = Rect Position Position
+    deriving Show
+data Node = Node [Object] Block Position | Final [Object] Position | NewPage
+    deriving Show
 
-blocksToObjects :: Position -> Blocks -> IO [Object]
-blocksToObjects _ [] = return []
-blocksToObjects pos (b:blocks) = do
-    (obj, newPos) <- blockToObject b pos
-    objs <- blocksToObjects newPos blocks
-    return (obj ++ objs)
+blocksToPages :: Blocks -> IO [Page]
+blocksToPages [] = return []
+blocksToPages blocks = do 
+    let rect = Rect start (Point (width - margin) margin)
+    (objs, newBlocks) <- blocksToPageObjects blocks rect
+    let page = pdfCreatePage objs resources
+    let pages = blocksToPages newBlocks
+    let skipBlock = trace ("Skipping block\t" ++ show (head newBlocks)) blocksToPages (tail newBlocks)
+    if null objs then skipBlock else fmap (page:) pages
 
-blockToObject :: Block -> Position -> IO ([Object], Position)
-blockToObject (Leaf l) pos = return (leafBlock l pos)
-blockToObject (Paragraph l) pos = paragraphBlock l pos
-blockToObject (FencedCode _ ls) pos = return (codeBlock ls pos)
-blockToObject (IndentCode _ ls) pos = return (codeBlock ls pos)
-blockToObject (Quote blocks) pos = quoteBlocks blocks pos
-blockToObject (ListItem m b) pos = listItem m b pos
-
-leafBlock :: Leaf -> Position -> ([Object], Position)
-leafBlock (Heading n s) pos1 = ([pdfCreateTextObject obj], pos3)
+blocksToPageObjects :: Blocks -> Bound -> IO ([Object], Blocks)
+blocksToPageObjects [] _ = return ([], [])
+blocksToPageObjects (block1:bs) rect = do 
+    node <- blockToObject block1 rect
+    case node of 
+        NewPage -> return ([], block1:bs)
+        Node objs block2 pos3 -> do
+            (newObjs, newBlocks) <- blocksToPageObjects (block2:bs) (Rect pos3 pos2)
+            return (objs ++ newObjs, newBlocks)
+        Final objs pos3 -> do 
+            (newObjs, newBlocks) <- blocksToPageObjects bs (Rect pos3 pos2)
+            return (objs ++ newObjs, newBlocks)
     where 
-        size = paragraphFontSize + (7 - fromIntegral n) * headingScale
-        (obj, pos2) = textObject s (fromIntegral size) pos1
-        (Point xPos yPos) = pos2
-        pos3 = Point xPos (yPos - paraPadding)
-leafBlock _ (Point x y) = ([], Point x y)
+        (Rect _ pos2) = rect
 
-paragraphBlock :: String -> Position -> IO ([Object], Position)
-paragraphBlock line pos = do 
-    let (Point xPos _) = pos
-    let paraWidth = 72 * (width - margin - xPos)
-    ls <- wrapText paragraphFontSize paraWidth "" line 
-    paragraphLines ls pos paraWidth
+blockToObject :: Block -> Bound -> IO Node
+blockToObject (Leaf l) bound = return (leafBlock l bound)
+blockToObject (ListItem _ b) bound = blockToObject b bound
+blockToObject (FencedCode _ ls) bound = return (codeBlock (FencedCode False) ls bound)
+blockToObject (IndentCode _ ls) bound = return (codeBlock (IndentCode False) ls bound)
+blockToObject (Paragraph line) bound = do 
+    let (Rect pos1 pos2) = bound
+    let (Point xPos1 _) = pos1
+    let paraWidth = 72 * (width - margin - xPos1)
 
-paragraphLines :: [String] -> Position -> Int -> IO ([Object], Position)
-paragraphLines [] pos _ = return ([], pos)
-paragraphLines [l] pos1 _ = return ([obj], pos3)
+    (newLine, text) <- wrapText paragraphFontSize paraWidth "" line 
+    let (text1, pos3) = textObject newLine (fromIntegral paragraphFontSize) pos1
+    textObj <- if null text then return text1 else textJustify text1 paraWidth
+
+    let (Point xPos3 yPos3) = pos3
+    let (Point _ yPos2) = pos2
+    let pos4 = Point xPos3 (yPos3 - paraPadding)
+    let obj = pdfCreateTextObject textObj
+    let node 
+            | yPos2 > yPos3 = NewPage
+            | null text = Final [obj] pos4
+            | otherwise = Node [obj] (Paragraph text) pos3
+
+    return node
+blockToObject (Quote blocks) bound = case blocks of 
+    [] -> return (Final [] pos1)
+    (block:bs) -> do 
+        node <- blockToObject block (Rect indentPos pos2)
+        case node of 
+            NewPage -> return node
+            Final objs pos3 -> return (Node objs (Quote bs) pos4)
+                where 
+                    (Point _ yPos3) = pos3
+                    pos4 = Point xPos1 yPos3
+            Node objs b pos3 -> return (Node objs (Quote (b:bs)) pos4)
+                where 
+                    (Point _ yPos3) = pos3
+                    pos4 = Point xPos1 yPos3
     where 
-        (text, pos2) = textObject l (fromIntegral paragraphFontSize) pos1
-        (Point xPos yPos) = pos2
-        pos3 = Point xPos (yPos - paraPadding)
-        obj = pdfCreateTextObject text
-paragraphLines (l:ls) pos1 paraWidth = do
-    let (text1, pos2) = textObject l (fromIntegral paragraphFontSize) pos1
-    text2 <- textJustify text1 paraWidth
-    let obj = pdfCreateTextObject text2
-    (objs, pos3) <- paragraphLines ls pos2 paraWidth
-    return (obj:objs, pos3)
+        (Rect pos1 pos2) = bound
+        (Point xPos1 yPos1) = pos1
+        indentPos = Point (xPos1 + indent) yPos1
 
-codeBlock :: [String] -> Position -> ([Object], Position)
-codeBlock ls (Point xPos1 yPos1) = (objs, pos2)
-    where
-        bgRect = Rectangle (Point xPos1 (yPos1 - 12)) (width - xPos1 - margin) (yPos2 - yPos1)
+leafBlock :: Leaf -> Bound -> Node
+leafBlock (Heading n s) (Rect pos1 pos2)
+    | yPos2 > yPos3 = NewPage
+    | otherwise = Final [pdfCreateTextObject obj] pos4
+    where 
+        (Point _ yPos2) = pos2
+        size = fromIntegral (paragraphFontSize + (7 - fromIntegral n) * headingScale)
+        (obj, pos3) = textObject s size pos1
+        (Point xPos3 yPos3) = pos3
+        pos4 = Point xPos3 (yPos3 - paraPadding)
+leafBlock HorizontalRule (Rect pos1 pos2) 
+    | yPos1 - yPos2 < 8 = NewPage 
+    | otherwise = Final [obj] (Point xPos1 (yPos1 - 8))
+    where 
+        (Point xPos1 yPos1) = pos1
+        (Point _ yPos2) = pos2
+        rectWidth = width - margin - xPos1
         bgColor = Color 200 200 200
-        bg = pdfCreateRectangleObject bgRect bgColor
+        startPos = Point xPos1 (yPos1 - 5)
+        obj = pdfCreateRectangleObject (Rectangle startPos rectWidth 1) bgColor
+leafBlock _ (Rect pos1 _) = Final [] pos1
 
+codeBlock :: ([String] -> Block) -> [String] -> Bound -> Node
+codeBlock code ls (Rect pos1 pos2) = case codeLines code ls (Rect indentPos pos2) of 
+    NewPage -> NewPage
+    Final objs (Point _ yPos3) -> Final (bg:objs) pos3
+        where 
+            bgRect = Rectangle rectPos (width - xPos1 - margin) (yPos3 - yPos1)
+            bg = pdfCreateRectangleObject bgRect bgColor
+            pos3 = Point xPos1 (yPos3 - 24)
+    Node objs block (Point _ yPos3) -> Node (bg:objs) block pos3
+        where 
+            bgRect = Rectangle rectPos (width - xPos1 - margin) (yPos3 - yPos1)
+            bg = pdfCreateRectangleObject bgRect bgColor
+            pos3 = Point xPos1 (yPos3 - 24)
+    where
+        (Point xPos1 yPos1) = pos1
+        rectPos = Point xPos1 (yPos1 - 12)
+        bgColor = Color 200 200 200
         indentPos = Point (xPos1 + indent) (yPos1 - 24)
-        (textObjs, pos1) = codeLines ls indentPos
-        (Point _ yPos2) = pos1
-        pos2 = Point xPos1 (yPos2 - 24)
 
-        objs = bg:textObjs
-
-codeLines :: [String] -> Position -> ([Object], Position)
-codeLines [] pos = ([], pos)
-codeLines (l:ls) pos1 = (pdfCreateTextObject obj:objs, pos3)
+codeLines :: ([String] -> Block) -> [String] -> Bound -> Node
+codeLines _ [] (Rect pos1 _) = Final [] pos1
+codeLines code (l:ls) (Rect pos1 pos2) 
+    | codeFontSize > yPos1 - yPos2 = NewPage
+    | otherwise = case codeLines code ls (Rect pos3 pos2) of 
+        NewPage -> Node [obj] (code ls) pos3
+        Final objs pos4 -> Final (obj:objs) pos4
+        Node objs block pos4 -> Node (obj:objs) block pos4
     where 
-        (obj, pos2) = textObject l codeFontSize pos1
-        (objs, pos3) = codeLines ls pos2
+        (Point _ yPos1) = pos1 
+        (Point _ yPos2) = pos2 
 
-quoteBlocks :: Blocks -> Position -> IO ([Object], Position) 
-quoteBlocks blocks (Point xPos1 yPos1) = do
-    let indentPos = Point (xPos1 + indent) yPos1
-    (objs, pos1) <- quoteBlockItems blocks indentPos
-    let Point _ yPos2 = pos1
-    let pos2 = Point xPos1 yPos2
-    return (objs, pos2)
-
-quoteBlockItems :: Blocks -> Position -> IO ([Object], Position)
-quoteBlockItems [] pos = return ([], pos)
-quoteBlockItems (b:blocks) pos1 = do
-    (obj, pos2) <- blockToObject b pos1
-    (objs, pos3) <- quoteBlockItems blocks pos2
-    return (obj ++ objs, pos3)
-
-listItem :: Marker -> Block -> Position -> IO ([Object], Position)
-listItem _ b pos = blockToObject b pos
+        (text, pos3) = textObject l codeFontSize pos1
+        obj = pdfCreateTextObject text
 
 fontPath :: String
 fontPath = "./fonts/CourierPrime-Regular.ttf"
@@ -152,15 +192,19 @@ addLine line ss = do
     ls <- ss
     return (line:ls)
 
-wrapText :: Int64 -> Int -> String -> String -> IO [String]
-wrapText _ _ line "" = return [line]
-wrapText fontSize w line text = do 
-    let currentLine = if null line then "" else line ++ " "
-    let (c1, r1) = splitSpace currentLine text
-    nextCharWidth <- mapM (charWidth fontSize) c1
+-- | wrapText takes a fontSize, lineWidth, a string 'line' (the current text 
+--   in the line) and a string 'text' (the remaining text), and returns
+--   a pair (nextLine, remainingText) where nextLine is a substring of words 
+--   from the string of text which fits the line width for the given font size 
+--   and remainingText is the rest of the text not included in nextLine.
+wrapText :: Int64 -> Int -> String -> String -> IO (String, String)
+wrapText _ _ line "" = return (line, "")
+wrapText fontSize lineWidth line text = do 
+    let currentLine = if null line then line else line ++ " "
+    let (newLine, newText) = splitSpace currentLine text
+    nextCharWidth <- mapM (charWidth fontSize) newLine
     let nextLineWidth = sum nextCharWidth
-
-    if nextLineWidth <= w then wrapText fontSize w c1 r1 else addLine line (wrapText fontSize w "" text)
+    if nextLineWidth > lineWidth then return (line, text) else wrapText fontSize lineWidth newLine newText
 
 splitSpace :: String -> String -> (String, String) 
 splitSpace current "" = (current, "")
