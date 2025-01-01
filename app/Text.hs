@@ -4,7 +4,6 @@ import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, O
 import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_Face, FT_GlyphSlotRec (gsrAdvance), FT_Vector (FT_Vector), ft_Set_Char_Size)
 import Foreign (Storable(peek), Int64)
 import Data.Char (ord)
-import Debug.Trace (trace)
 
 margin :: Int
 margin = 72 
@@ -60,6 +59,9 @@ data Bound = Rect Position Position
 data Node = Node [Object] Block Position | Final [Object] Position | NewPage
     deriving Show
 
+-- | blocksToPages converts a list of blocks to a list of pages, 
+-- wrapping objects to a new page before they reach within 'margin'
+-- of the end of the page.
 blocksToPages :: Blocks -> IO [Page]
 blocksToPages [] = return []
 blocksToPages blocks = do 
@@ -67,9 +69,13 @@ blocksToPages blocks = do
     (objs, newBlocks) <- blocksToPageObjects blocks rect
     let page = pdfCreatePage objs resources
     let pages = blocksToPages newBlocks
-    let skipBlock = trace ("Skipping block\t" ++ show (head newBlocks)) blocksToPages (tail newBlocks)
+    let skipBlock = blocksToPages (tail newBlocks)
     if null objs then skipBlock else fmap (page:) pages
 
+-- | blocksToPageObjects takes a list of blocks and a rectangle 
+-- boundary, and pulls out blocks from the list until the 
+-- rectangle is filled, returning the objects which fill the 
+-- boundary and the remaining blocks
 blocksToPageObjects :: Blocks -> Bound -> IO ([Object], Blocks)
 blocksToPageObjects [] _ = return ([], [])
 blocksToPageObjects (block1:bs) rect = do 
@@ -85,6 +91,7 @@ blocksToPageObjects (block1:bs) rect = do
     where 
         (Rect _ pos2) = rect
 
+-- | convert a block to a pdf object
 blockToObject :: Block -> Bound -> IO Node
 blockToObject (Leaf l) bound = return (leafBlock l bound)
 blockToObject (ListItem _ b) bound = blockToObject b bound
@@ -193,10 +200,10 @@ addLine line ss = do
     return (line:ls)
 
 -- | wrapText takes a fontSize, lineWidth, a string 'line' (the current text 
---   in the line) and a string 'text' (the remaining text), and returns
---   a pair (nextLine, remainingText) where nextLine is a substring of words 
---   from the string of text which fits the line width for the given font size 
---   and remainingText is the rest of the text not included in nextLine.
+-- in the line) and a string 'text' (the remaining text), and returns
+-- a pair (nextLine, remainingText) where nextLine is a substring of words 
+-- from the string of text which fits the line width for the given font size 
+-- and remainingText is the rest of the text not included in nextLine.
 wrapText :: Int64 -> Int -> String -> String -> IO (String, String)
 wrapText _ _ line "" = return (line, "")
 wrapText fontSize lineWidth line text = do 
@@ -204,7 +211,8 @@ wrapText fontSize lineWidth line text = do
     let (newLine, newText) = splitSpace currentLine text
     nextCharWidth <- mapM (charWidth fontSize) newLine
     let nextLineWidth = sum nextCharWidth
-    if nextLineWidth > lineWidth then return (line, text) else wrapText fontSize lineWidth newLine newText
+    let wrappedText = wrapText fontSize lineWidth newLine newText
+    if nextLineWidth > lineWidth then return (line, text) else wrappedText
 
 splitSpace :: String -> String -> (String, String) 
 splitSpace current "" = (current, "")
@@ -220,6 +228,8 @@ charWidth fontSize c = ft_With_FreeType $ \lib ->
         let (FT_Vector vX _) = gsrAdvance slot
         return (fromIntegral vX)
 
+-- | textJustify calculates the horizontal stretch on spaces required for 
+-- a string of text to fill the given width.
 textJustify :: Text -> Int -> IO Text
 textJustify (Text s fontSize _ pos) textWidth = do
     cWidths <- mapM (charWidth (fromIntegral fontSize)) s
