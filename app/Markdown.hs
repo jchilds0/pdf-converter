@@ -4,7 +4,10 @@ import Data.Text (pack, unpack, stripStart, strip)
 data Prefix = Tab | BackTick | LeftArrow | Star | Minus | Plus | Hash | Space
     deriving (Show, Eq) 
 
-data Line = Line Prefix Line String | Blank String
+data Inline = Text String | Code String | Strong String | Emphasis String
+    deriving (Show, Eq) 
+
+data Line = Line Prefix Line [Inline] | Blank [Inline]
     deriving (Show, Eq) 
 
 data Leaf = Heading Int String | HorizontalRule | BlankLine
@@ -23,7 +26,7 @@ newtype MDTree = Document Blocks
 parseMarkdown :: String -> MDTree
 parseMarkdown content = Document blocks
     where 
-        ls = map parseLine (lines content)
+        ls = map parseLinePrefix (lines content)
         blocks = parseBlocks [] ls
 
 printArray :: Show a => [a] -> String
@@ -31,25 +34,29 @@ printArray ls = "[\n" ++ strs ++ "]"
     where 
         strs = foldr (\b s -> "\t" ++ show b ++ ",\n" ++ s) "" ls
 
-parseLine :: String -> Line
-parseLine s
-    | null s = Blank s
-    | head s == '\t' = Line Tab (parseLine (tail s)) s
-    | length line <= length s - 4 = Line Tab (parseLine (drop 4 s)) s
-    | length line /= length s = Line Space (parseLine line) s
-    | head line == '#' = Line Hash (parseLine (tail line)) s
-    | head line == '`' = Line BackTick (parseLine (tail line)) s
-    | head line == '>' = Line LeftArrow (parseLine removeSpace) s
-    | head line == '-' = Line Minus (parseLine (tail line)) s
-    | head line == '+' = Line Plus (parseLine (tail line)) s
-    | head line == '*' = Line Star (parseLine (tail line)) s
-    | otherwise = Blank s
+parseLinePrefix :: String -> Line
+parseLinePrefix s
+    | null s = Blank inline
+    | head s == '\t' = Line Tab (parseLinePrefix (tail s)) inline
+    | length line <= length s - 4 = Line Tab (parseLinePrefix (drop 4 s)) inline
+    | length line /= length s = Line Space (parseLinePrefix line) inline 
+    | head line == '#' = Line Hash (parseLinePrefix (tail line)) inline
+    | head line == '`' = Line BackTick (parseLinePrefix (tail line)) inline
+    | head line == '>' = Line LeftArrow (parseLinePrefix removeSpace) inline 
+    | head line == '-' = Line Minus (parseLinePrefix (tail line)) inline
+    | head line == '+' = Line Plus (parseLinePrefix (tail line)) inline
+    | head line == '*' = Line Star (parseLinePrefix (tail line)) inline
+    | otherwise = Blank inline
     where 
         line = unpack (stripStart (pack s))
+        inline = parseLineInline s
         removeSpace 
             | null (tail line) = "" 
             | head (tail line) == ' ' = tail (tail line)
             | otherwise = tail line
+
+parseLineInline :: String -> [Inline]
+parseLineInline s = [Text s]
 
 parseBlocks :: Blocks -> [Line] -> Blocks 
 parseBlocks blocks [] = blocks
@@ -69,15 +76,12 @@ countPrefix p1 (Line p2 line _)
     | otherwise = countPrefix p1 line
 countPrefix _ _ = 0 
 
-lineText :: Line -> String
-lineText (Blank text) = text
-lineText (Line _ _ text) = text
-
-headingText :: Line -> String
-headingText (Line Hash line _) = headingText line
-headingText line = unpack (strip (pack text))
+headingInfo :: Line -> ([Inline], Int)
+headingInfo (Line Hash line _) = (heading, count + 1)
     where 
-        text = lineText line
+        (heading, count) = headingInfo line
+headingInfo (Line _ _ inline) = (inline, 0) 
+headingInfo (Blank inline) = (inline, 0) 
 
 lineToBlock :: Line -> Block
 lineToBlock (Blank s) = if null s then Leaf BlankLine else Paragraph s
@@ -87,14 +91,14 @@ lineToBlock (Line Star line _) = ListItem (Bullet '*') (lineToBlock line)
 lineToBlock (Line Plus line _) = ListItem (Bullet '+') (lineToBlock line)
 lineToBlock (Line Minus line _) = ListItem (Bullet '-') (lineToBlock line)
 lineToBlock (Line LeftArrow line _) = Quote [lineToBlock line]
-lineToBlock (Line Tab line _) = IndentCode True [lineText line]
+lineToBlock (Line Tab line _) = IndentCode True [line]
 lineToBlock (Line BackTick (Line BackTick (Line BackTick _ _) _) _) = FencedCode True []
-lineToBlock (Line Hash line s)
-    | hashCount <= 6 = Leaf (Heading hashCount (headingText line))
-    | otherwise = Paragraph s
+lineToBlock (Line Hash line inline)
+    | hashCount <= 6 = Leaf (Heading hashCount (headingInfo line))
+    | otherwise = Paragraph inline
     where 
-        hashCount = countPrefix Hash (Line Hash line s)
-lineToBlock (Line _ _ s) = Paragraph s 
+        (inline, hashCount) = headingInfo (Line Hash line inline)
+lineToBlock (Line _ _ inline) = Paragraph inline 
 
 mergeBlocks :: Block -> Line -> Blocks
 mergeBlocks (Leaf l) line = [Leaf l, lineToBlock line]
