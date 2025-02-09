@@ -4,6 +4,7 @@ import Data.Text (stripSuffix, pack, unpack)
 import Markdown (parseMarkdown)
 import Text (markdownToPDF)
 import PDF (generatePDF)
+import Debug.Trace (traceShow)
 
 main :: IO ()
 main = do 

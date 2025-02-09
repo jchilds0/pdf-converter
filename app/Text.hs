@@ -1,5 +1,5 @@
 module Text (module Text) where
-import Markdown (MDTree (Document), Blocks, Leaf (Heading, HorizontalRule), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem))
+import Markdown (MDTree (Document), Leaf (Heading, HorizontalRule), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem), Inline (Plain, Emphasis, Code, Strong))
 import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, Object (Indirect, Inline), Position (Point), pdfCreateTextObject, Text (Text), Dictionary, IndirectType (Dictionary), InlineType (Name), Rectangle (Rectangle), pdfCreateRectangleObject, Color (Color))
 import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_Face, FT_GlyphSlotRec (gsrAdvance), FT_Vector (FT_Vector), ft_Set_Char_Size)
 import Foreign (Storable(peek), Int64)
@@ -14,21 +14,51 @@ width = 595
 height :: Int
 height = 842
 
-paragraphFontSize :: Int64
-paragraphFontSize = 12
+paragraphFontAttr :: (Int64, String)
+paragraphFontAttr = (12, "Plain")
 
-codeFontSize :: Int
-codeFontSize = 12
+strongFontAttr :: (Int64, String)
+strongFontAttr = (12, "Strong")
+
+emphasisFontAttr :: (Int64, String)
+emphasisFontAttr = (12, "Emphasis")
+
+codeFontAttr :: (Int64, String)
+codeFontAttr = (12, "Code")
 
 resources :: Dictionary
 resources = [
         ("Font", Indirect (Dictionary [
-            ("F13", Indirect (Dictionary paragraphFont))
+            ("Plain", Indirect (Dictionary paragraphFont)),
+            ("Strong", Indirect (Dictionary strongFont)),
+            ("Emphasis", Indirect (Dictionary emphasisFont)),
+            ("Code", Indirect (Dictionary codeFont))
         ]))
     ]
 
 paragraphFont :: Dictionary 
 paragraphFont = [
+        ("Type", Inline (Name "Font")),
+        ("Subtype", Inline (Name "Type1")),
+        ("BaseFont", Inline (Name "Courier"))
+    ]
+
+strongFont :: Dictionary 
+strongFont = [
+        ("Type", Inline (Name "Font")),
+        ("Subtype", Inline (Name "Type1")),
+        ("BaseFont", Inline (Name "Courier-Bold"))
+    ]
+
+emphasisFont :: Dictionary 
+emphasisFont = [
+        ("Type", Inline (Name "Font")),
+        ("Subtype", Inline (Name "Type1")),
+        ("BaseFont", Inline (Name "Courier-Italic"))
+    ]
+
+codeFont :: Dictionary 
+codeFont = [
         ("Type", Inline (Name "Font")),
         ("Subtype", Inline (Name "Type1")),
         ("BaseFont", Inline (Name "Courier"))
@@ -62,7 +92,7 @@ data Node = Node [Object] Block Position | Final [Object] Position | NewPage
 -- | blocksToPages converts a list of blocks to a list of pages, 
 -- wrapping objects to a new page before they reach within 'margin'
 -- of the end of the page.
-blocksToPages :: Blocks -> IO [Page]
+blocksToPages :: [Block] -> IO [Page]
 blocksToPages [] = return []
 blocksToPages blocks = do 
     let rect = Rect start (Point (width - margin) margin)
@@ -76,7 +106,7 @@ blocksToPages blocks = do
 -- boundary, and pulls out blocks from the list until the 
 -- rectangle is filled, returning the objects which fill the 
 -- boundary and the remaining blocks
-blocksToPageObjects :: Blocks -> Bound -> IO ([Object], Blocks)
+blocksToPageObjects :: [Block] -> Bound -> IO ([Object], [Block])
 blocksToPageObjects [] _ = return ([], [])
 blocksToPageObjects (block1:bs) rect = do 
     node <- blockToObject block1 rect
@@ -97,25 +127,7 @@ blockToObject (Leaf l) bound = return (leafBlock l bound)
 blockToObject (ListItem _ b) bound = blockToObject b bound
 blockToObject (FencedCode _ ls) bound = return (codeBlock (FencedCode False) ls bound)
 blockToObject (IndentCode _ ls) bound = return (codeBlock (IndentCode False) ls bound)
-blockToObject (Paragraph line) bound = do 
-    let (Rect pos1 pos2) = bound
-    let (Point xPos1 _) = pos1
-    let paraWidth = 72 * (width - margin - xPos1)
-
-    (newLine, text) <- wrapText paragraphFontSize paraWidth "" line 
-    let (text1, pos3) = textObject newLine (fromIntegral paragraphFontSize) pos1
-    textObj <- if null text then return text1 else textJustify text1 paraWidth
-
-    let (Point xPos3 yPos3) = pos3
-    let (Point _ yPos2) = pos2
-    let pos4 = Point xPos3 (yPos3 - paraPadding)
-    let obj = pdfCreateTextObject textObj
-    let node 
-            | yPos2 > yPos3 = NewPage
-            | null text = Final [obj] pos4
-            | otherwise = Node [obj] (Paragraph text) pos3
-
-    return node
+blockToObject (Paragraph inlines) bound = paragraphObject inlines bound
 blockToObject (Quote blocks) bound = case blocks of 
     [] -> return (Final [] pos1)
     (block:bs) -> do 
@@ -138,11 +150,10 @@ blockToObject (Quote blocks) bound = case blocks of
 leafBlock :: Leaf -> Bound -> Node
 leafBlock (Heading n s) (Rect pos1 pos2)
     | yPos2 > yPos3 = NewPage
-    | otherwise = Final [pdfCreateTextObject obj] pos4
+    | otherwise = Final objs pos4
     where 
         (Point _ yPos2) = pos2
-        size = fromIntegral (paragraphFontSize + (7 - fromIntegral n) * headingScale)
-        (obj, pos3) = textObject s size pos1
+        (objs, pos3) = headingText n s (Rect pos1 pos2) 
         (Point xPos3 yPos3) = pos3
         pos4 = Point xPos3 (yPos3 - paraPadding)
 leafBlock HorizontalRule (Rect pos1 pos2) 
@@ -156,6 +167,20 @@ leafBlock HorizontalRule (Rect pos1 pos2)
         startPos = Point xPos1 (yPos1 - 5)
         obj = pdfCreateRectangleObject (Rectangle startPos rectWidth 1) bgColor
 leafBlock _ (Rect pos1 _) = Final [] pos1
+
+headingAttr :: (Int64, String) -> Int -> (Int64, String)
+headingAttr (fontSize, fontId) n = (fromIntegral (fontSize + (7 - fromIntegral n) * headingScale), fontId)
+
+headingText :: Int -> [Inline] -> Bound -> ([Object], Position)
+headingText _ [] (Rect _ pos2) = ([], pos2)
+headingText n (text : inlines) (Rect pos1 pos2) = (pdfCreateTextObject obj : objs, pos3)
+    where
+        (obj, pos3) = case text of 
+            Plain s -> textObject s (headingAttr paragraphFontAttr n) pos1
+            Strong s -> textObject s (headingAttr strongFontAttr n) pos1
+            Emphasis s -> textObject s (headingAttr emphasisFontAttr n) pos1
+            Code s -> textObject s (headingAttr codeFontAttr n) pos1
+        (objs, _) = headingText n inlines (Rect pos3 pos2)
 
 codeBlock :: ([String] -> Block) -> [String] -> Bound -> Node
 codeBlock code ls (Rect pos1 pos2) = case codeLines code ls (Rect indentPos pos2) of 
@@ -179,17 +204,57 @@ codeBlock code ls (Rect pos1 pos2) = case codeLines code ls (Rect indentPos pos2
 codeLines :: ([String] -> Block) -> [String] -> Bound -> Node
 codeLines _ [] (Rect pos1 _) = Final [] pos1
 codeLines code (l:ls) (Rect pos1 pos2) 
-    | codeFontSize > yPos1 - yPos2 = NewPage
+    | fromIntegral codeFontSize > yPos1 - yPos2 = NewPage
     | otherwise = case codeLines code ls (Rect pos3 pos2) of 
         NewPage -> Node [obj] (code ls) pos3
         Final objs pos4 -> Final (obj:objs) pos4
         Node objs block pos4 -> Node (obj:objs) block pos4
     where 
+        (codeFontSize, _) = codeFontAttr
         (Point _ yPos1) = pos1 
         (Point _ yPos2) = pos2 
 
-        (text, pos3) = textObject l codeFontSize pos1
+        (text, pos3) = textObject l codeFontAttr pos1
         obj = pdfCreateTextObject text
+
+paragraphObject :: [Inline] -> Bound -> IO Node
+paragraphObject [] (Rect _ pos2) = return (Final [] pos2)
+paragraphObject (inlineText : line1) bound = do 
+    let (Rect pos1 pos2) = bound
+    let (Point xPos1 _) = pos1
+    let paraWidth = 72 * (width - margin - xPos1)
+
+    (line2, text) <- case inlineText of 
+        Plain lineText -> wrapText paragraphFontAttr paraWidth "" lineText
+        Strong lineText -> wrapText strongFontAttr paraWidth "" lineText
+        Emphasis lineText -> wrapText emphasisFontAttr paraWidth "" lineText
+        Code lineText -> wrapText codeFontAttr paraWidth "" lineText
+
+    let (text1, pos3) = case inlineText of 
+            Plain _ -> textObject line2 paragraphFontAttr pos1
+            Strong _ -> textObject line2 strongFontAttr pos1
+            Emphasis _ -> textObject line2 emphasisFontAttr pos1
+            Code _ -> textObject line2 codeFontAttr pos1
+
+    let remText = case inlineText of 
+            Plain _ -> Plain text
+            Strong _ -> Strong text
+            Emphasis _ -> Emphasis text
+            Code _ -> Code text
+
+    let newInline = if null text then line1 else remText : line1
+    textObj <- if null newInline then return text1 else textJustify text1 paraWidth
+
+    let (Point xPos3 yPos3) = pos3
+    let (Point _ yPos2) = pos2
+    let pos4 = Point xPos3 (yPos3 - paraPadding)
+    let obj = pdfCreateTextObject textObj
+    let node 
+            | yPos2 > yPos3 = NewPage
+            | null newInline = Final [obj] pos4
+            | otherwise = Node [obj] (Paragraph newInline) pos3
+
+    return node
 
 fontPath :: String
 fontPath = "./fonts/CourierPrime-Regular.ttf"
@@ -204,14 +269,14 @@ addLine line ss = do
 -- a pair (nextLine, remainingText) where nextLine is a substring of words 
 -- from the string of text which fits the line width for the given font size 
 -- and remainingText is the rest of the text not included in nextLine.
-wrapText :: Int64 -> Int -> String -> String -> IO (String, String)
+wrapText :: (Int64, String) -> Int -> String -> String -> IO (String, String)
 wrapText _ _ line "" = return (line, "")
-wrapText fontSize lineWidth line text = do 
+wrapText (fontSize, fontId) lineWidth line text = do 
     let currentLine = if null line then line else line ++ " "
     let (newLine, newText) = splitSpace currentLine text
     nextCharWidth <- mapM (charWidth fontSize) newLine
     let nextLineWidth = sum nextCharWidth
-    let wrappedText = wrapText fontSize lineWidth newLine newText
+    let wrappedText = wrapText (fontSize, fontId) lineWidth newLine newText
     if nextLineWidth > lineWidth then return (line, text) else wrappedText
 
 splitSpace :: String -> String -> (String, String) 
@@ -231,16 +296,16 @@ charWidth fontSize c = ft_With_FreeType $ \lib ->
 -- | textJustify calculates the horizontal stretch on spaces required for 
 -- a string of text to fill the given width.
 textJustify :: Text -> Int -> IO Text
-textJustify (Text s fontSize _ pos) textWidth = do
+textJustify (Text s fontid fontSize _ pos) textWidth = do
     cWidths <- mapM (charWidth (fromIntegral fontSize)) s
     let cWidth = sum cWidths
     let spaceCount = length (filter (' ' ==) s)
     let spaceStretch = fromIntegral (textWidth - cWidth) / fromIntegral (72 * spaceCount)
     let stretch = if spaceCount == 0 then 1.0 else spaceStretch
-    return (Text s fontSize stretch pos)
+    return (Text s fontid fontSize stretch pos)
 
-textObject :: String -> Int -> Position -> (Text, Position)
-textObject s fontSize (Point x y) = (text, newPos)
+textObject :: String -> (Int64, String) -> Position -> (Text, Position)
+textObject s (fontSize, fontId) (Point x y) = (text, newPos)
     where 
-        newPos = Point x (y - fontSize)
-        text = Text s fontSize 1.0 newPos
+        newPos = Point x (y - fromIntegral fontSize)
+        text = Text s fontId (fromIntegral fontSize) 1.0 newPos

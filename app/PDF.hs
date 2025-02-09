@@ -184,15 +184,16 @@ data Position = Point Int Int
     deriving Show
 type FontSize = Int
 type Stretch = Float
-data Text = Text String FontSize Stretch Position
+type FontID = String
+data Text = Text String FontID FontSize Stretch Position
 
 pdfCreateTextObject :: Text -> Object
-pdfCreateTextObject (Text text fontSize stretch (Point x y)) = Indirect (Stream dict stream)
+pdfCreateTextObject (Text text fontid fontSize stretch (Point x y)) = Indirect (Stream dict stream)
     where 
         len = length stream
         dict = [("Length", Inline (Integer len))]
 
-        tf = "\t/F13 " ++ show fontSize ++ " Tf\n"
+        tf = "\t/" ++ fontid ++ " " ++ show fontSize ++ " Tf\n"
         td = "\t" ++ show x ++ " " ++ show y ++ " Td\n"
         tj = "\t(" ++ text ++ ") Tj\n"
         tw = "\t" ++ show stretch ++ " Tw\n"
