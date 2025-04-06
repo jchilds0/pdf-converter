@@ -273,11 +273,11 @@ wrapText :: (Int64, String) -> Int -> String -> String -> IO (String, String)
 wrapText _ _ line "" = return (line, "")
 wrapText (fontSize, fontId) lineWidth line text = do 
     let currentLine = if null line then line else line ++ " "
-    let (newLine, newText) = splitSpace currentLine text
-    nextCharWidth <- mapM (charWidth fontSize) newLine
-    let nextLineWidth = sum nextCharWidth
-    let wrappedText = wrapText (fontSize, fontId) lineWidth newLine newText
-    if nextLineWidth > lineWidth then return (line, text) else wrappedText
+    let (word, remainingLine) = splitSpace currentLine text
+    wordCharWidths <- mapM (charWidth fontSize) word
+    let wordWidth = sum wordCharWidths
+    let wrappedText = wrapText (fontSize, fontId) lineWidth word remainingLine
+    if wordWidth > lineWidth then return (line, text) else wrappedText
 
 splitSpace :: String -> String -> (String, String) 
 splitSpace current "" = (current, "")
