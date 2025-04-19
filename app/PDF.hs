@@ -182,6 +182,23 @@ pdfCreatePage contents resources = Indirect (Dictionary [
 
 data Position = Point Int Int
     deriving Show
+
+-- | replace the x position of the first point with 
+--   the x position of the second point
+positionReplaceX :: Position -> Position -> Position
+positionReplaceX (Point _ y) (Point x _) = Point x y
+
+positionOffsetX :: Position -> Int -> Position
+positionOffsetX (Point x y) offset = Point (x + offset) y
+
+-- | replace the y position of the first point with 
+--   the y position of the second point
+positionReplaceY :: Position -> Position -> Position
+positionReplaceY (Point x _) (Point _ y) = Point x y
+
+positionOffsetY :: Position -> Int -> Position
+positionOffsetY (Point x y) offset = Point x (y + offset)
+
 type FontSize = Int
 type Stretch = Float
 type FontID = String

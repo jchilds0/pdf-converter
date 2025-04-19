@@ -1,5 +1,4 @@
 module Markdown (module Markdown) where 
-import Debug.Trace (traceShow)
 
 -- | markdown lexer
 data Token = Tab | BackTick | LeftArrow | Star | UnderLine | Minus | Plus | Hash | Space | NewLine | Text String
@@ -47,7 +46,9 @@ tokenToStr NewLine = "\n"
 tokenToStr (Text text) = text
 
 -- | markdown parser
-data Inline = Plain String | Code String | Strong String | Emphasis String
+data InlineType = Plain | Code | Strong | Emphasis
+    deriving (Show, Eq) 
+data Inline = Inlines InlineType String
     deriving (Show, Eq) 
 
 data Leaf = Heading Int [Inline] | HorizontalRule | BlankLine
@@ -136,11 +137,11 @@ parseText :: [Text] -> [Inline]
 parseText [] = []
 parseText (t:text) = case t of 
     Delim {} -> processDelim t text
-    Str tok -> Plain (tokenToStr tok) : parseText text
+    Str tok -> Inlines Plain (tokenToStr tok) : parseText text
 
 processDelim :: Text -> [Text] -> [Inline]
 processDelim delim text = case delim of 
-    Str tok -> Plain (tokenToStr tok) : parseText text
+    Str tok -> Inlines Plain (tokenToStr tok) : parseText text
     Delim RightFlank _ _ -> parseText (textDelim : text)
         where
             textDelim = Str (Text (textToString delim))
@@ -163,7 +164,7 @@ findMatchingDelim c1 count (delim : text) = case delim of
         retval = if null delimText then ([], delim : text) else (delim : delimText, remText)
 
 parseMatchingDelim :: Text -> [Text] -> [Text] -> [Inline]
-parseMatchingDelim delimStart [] text = parseText text
+parseMatchingDelim _ [] text = parseText text
 parseMatchingDelim delimStart delimText text = case prev of 
     Just i2 -> i2 : i1 : inlines
     Nothing -> i1 : inlines
@@ -179,32 +180,32 @@ formatInline (Delim type1 count1 char1) text (Delim type2 count2 char2)
     | char1 == char2 = case compare count1 count2 of 
         LT -> (Nothing, inlineBlock char1 count1 text, [Delim type2 (count2 - count1) char2])
         EQ -> (Nothing, inlineBlock char1 count1 text, [])
-        GT -> (Just (Plain (textToString newDelim)), inlineBlock char1 count2 text, [])
+        GT -> (Just (Inlines Plain (textToString newDelim)), inlineBlock char1 count2 text, [])
             where 
                 newDelim = Delim type1 (count1 - count2) char1
-    | otherwise = (Nothing, Plain (concatMap textToString text), [])
-formatInline _ text _ = (Nothing, Plain (concatMap textToString text), [])
+    | otherwise = (Nothing, Inlines Plain (concatMap textToString text), [])
+formatInline _ text _ = (Nothing, Inlines Plain (concatMap textToString text), [])
 
 inlineBlock :: Token -> Int -> [Text] -> Inline
 inlineBlock char 1 text = case char of 
-    UnderLine -> Emphasis string
-    Star -> Emphasis string
-    BackTick -> Code string
-    _ -> Plain string
+    UnderLine -> Inlines Emphasis string
+    Star -> Inlines Emphasis string
+    BackTick -> Inlines Code string
+    _ -> Inlines Plain string
     where 
         string = concatMap textToString text
 inlineBlock char _ text = case char of 
-    UnderLine -> Strong string
-    Star -> Strong string
-    BackTick -> Code string
-    _ -> Plain string
+    UnderLine -> Inlines Strong string
+    Star -> Inlines Strong string
+    BackTick -> Inlines Code string
+    _ -> Inlines Plain string
     where 
         string = concatMap textToString text
 
 collapseInline :: [Inline] -> [Inline]
 collapseInline [] = []
 collapseInline [i] = [i]
-collapseInline (Plain t1 : Plain t2 : inlines) = collapseInline (Plain (t1 ++ t2) : inlines)
+collapseInline (Inlines Plain t1 : Inlines Plain t2 : inlines) = collapseInline (Inlines Plain (t1 ++ t2) : inlines)
 collapseInline (i1 : inlines) = i1 : collapseInline inlines
 
 -- | parseBlocks takes the current blocks in the document and 
@@ -226,11 +227,12 @@ countPrefix t1 (t2:tokens)
     | otherwise = countPrefix t1 tokens
 countPrefix _ _ = 0 
 
-headingInfo :: [Token] -> Int
-headingInfo (Hash:tokens) = count + 1
+headingInfo :: [Token] -> (Int, [Token])
+headingInfo (Hash:tokens) = (count + 1, text)
     where 
-        count = headingInfo tokens
-headingInfo _ = 0 
+        (count, text) = headingInfo tokens
+headingInfo (Space:tokens) = (0, tokens)
+headingInfo text = (0, text)
 
 lineToBlock :: [Token] -> Block
 lineToBlock (Space:ts) = lineToBlock ts
@@ -241,10 +243,10 @@ lineToBlock (LeftArrow:ts) = Quote [lineToBlock ts]
 lineToBlock (Tab:ts) = IndentCode True [concatMap tokenToStr ts]
 lineToBlock (BackTick:BackTick:BackTick:_) = FencedCode True []
 lineToBlock (Hash:ts)
-    | hashCount <= 6 = Leaf (Heading hashCount (parseInline (Hash:ts)))
+    | hashCount <= 6 = Leaf (Heading hashCount (parseInline text))
     | otherwise = Paragraph (parseInline (Hash:ts))
     where 
-        hashCount = headingInfo (Hash:ts)
+        (hashCount, text) = headingInfo (Hash:ts)
 lineToBlock tokens = Paragraph (parseInline tokens) 
 
 mergeBlocks :: Block -> [Token] -> [Block]
