@@ -1,5 +1,6 @@
 module PDF (module PDF) where 
 import Text.Printf (printf)
+import Debug.Trace (traceShow)
 
 type Name = String
 type Dictionary = [(Name, Object)]
@@ -220,6 +221,7 @@ data Color = Color Int Int Int
 type Width = Int
 type Height = Int
 data Rectangle = Rectangle Position Width Height
+    deriving Show
 
 rgb :: Color -> String
 rgb (Color red green blue) = show r ++ " " ++ show g ++ " " ++ show b

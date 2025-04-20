@@ -2,10 +2,10 @@ module Text (module Text) where
 import Markdown (MDTree (Document), Leaf (Heading, HorizontalRule), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem), InlineType (Plain, Strong, Emphasis, Code), Inline (Inlines))
 import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, Object (Indirect, Inline), Position (Point), pdfCreateTextObject, Text (Text), Dictionary, IndirectType (Dictionary), InlineType (Name), Rectangle (Rectangle), pdfCreateRectangleObject, Color (Color), positionReplaceY, positionOffsetX, positionOffsetY)
 import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_Face, FT_GlyphSlotRec (gsrAdvance), FT_Vector (FT_Vector), ft_Set_Char_Size)
-import Foreign (Storable(peek), Int64)
 import Data.Char (ord)
+import Foreign (Storable(peek))
 
-data FontAttributes = FontAttrs Int64 String String
+data FontAttributes = FontAttrs Int String String
 
 margin :: Int
 margin = 72 
@@ -72,7 +72,7 @@ rowPadding = 2
 paraPadding :: Int
 paraPadding = 10
 
-headingScale :: Int64
+headingScale :: Int
 headingScale = 2
 
 indent :: Int
@@ -86,8 +86,21 @@ markdownToPDF (Document blocks) = do
     pages <- blocksToPages blocks
     return (pdfCreateCatalog (pdfCreatePageTree pages))
 
+-- | Bound is a rectangle with the first position in the top left 
+--   and second position in the bottom right, and describes the 
+--   remaining space on a page
 data Bound = Rect Position Position
     deriving Show
+
+type Width = Int
+type Height = Int
+
+boundContainsX :: Bound -> Width -> Bool
+boundContainsX (Rect (Point xPos1 _) (Point xPos2 _)) w = xPos1 + w <= xPos2
+
+boundContainsY :: Bound -> Height -> Bool
+boundContainsY (Rect (Point _ yPos1) (Point _ yPos2)) h = yPos1 - h >= yPos2
+
 data Node = Node [Object] Block Position | Final [Object] Position | NewPage
     deriving Show
 
@@ -143,20 +156,18 @@ blockToObject (Quote blocks) bound = case blocks of
         indentPos = positionOffsetX pos1 indent
 
 leafBlock :: Leaf -> Bound -> IO Node
-leafBlock (Heading n s) (Rect pos1 pos2) = do
-        (objs, pos3) <- headingText n s (Rect pos1 pos2) 
+leafBlock (Heading n s) bound = do
+        (objs, h) <- headingText n s bound
 
-        let (Point _ yPos2) = pos2
-        let (Point _ yPos3) = pos3
-        let pos4 = positionOffsetY pos3 (-paraPadding)
-        if yPos2 > yPos3 then return NewPage else return (Final objs pos4)
-
-leafBlock HorizontalRule (Rect pos1 pos2) 
-    | yPos1 - yPos2 < 8 = return NewPage 
+        let (Rect pos1 _) = bound 
+        let pos3 = positionOffsetY pos1 (-h - paraPadding)
+        if boundContainsY bound h then return (Final objs pos3) else return NewPage
+leafBlock HorizontalRule bound
+    | not (boundContainsY bound 8) = return NewPage 
     | otherwise = return (Final [obj] (positionOffsetY pos1 (-8)))
     where 
-        (Point xPos1 yPos1) = pos1
-        (Point _ yPos2) = pos2
+        (Rect pos1 _) = bound
+        (Point xPos1 _) = pos1
         rectWidth = width - margin - xPos1
         bgColor = Color 200 200 200
         startPos = positionOffsetY pos1 (-5)
@@ -175,17 +186,17 @@ inlineAttr (Inlines Strong _) = strongFontAttr
 inlineAttr (Inlines Emphasis _) = emphasisFontAttr
 inlineAttr (Inlines Code _) = codeFontAttr
 
-headingText :: Int -> [Inline] -> Bound -> IO ([Object], Position)
-headingText _ [] (Rect _ pos2) = return ([], pos2)
+headingText :: Int -> [Inline] -> Bound -> IO ([Object], Height)
+headingText _ [] _ = return ([], 0)
 headingText n (inline : inlines) (Rect pos1 pos2) = do 
     let attrs = headingAttr (inlineAttr inline) n
-    let (obj, pos3) = textObject inline attrs pos1
+    let (obj, h1) = textObject inline attrs pos1
     let (Inlines _ line) = inline
 
     cWidths <- mapM (charWidth attrs) line
     let textWidth = div (sum cWidths) 72
-    (objs, _) <- headingText n inlines (Rect (positionOffsetX pos1 textWidth) pos2)
-    return (pdfCreateTextObject obj : objs, pos3)
+    (objs, h2) <- headingText n inlines (Rect (positionOffsetX pos1 textWidth) pos2)
+    return (pdfCreateTextObject obj : objs, max h1 h2)
 
 codeBlock :: ([String] -> Block) -> [String] -> Bound -> Node
 codeBlock code ls (Rect pos1 pos2) = case codeLines code ls (Rect indentPos pos2) of 
@@ -208,56 +219,76 @@ codeBlock code ls (Rect pos1 pos2) = case codeLines code ls (Rect indentPos pos2
 
 codeLines :: ([String] -> Block) -> [String] -> Bound -> Node
 codeLines _ [] (Rect pos1 _) = Final [] pos1
-codeLines code (l:ls) (Rect pos1 pos2) 
-    | fromIntegral codeFontSize > yPos1 - yPos2 = NewPage
+codeLines code (l:ls) bound
+    | not (boundContainsY bound codeFontSize) = NewPage
     | otherwise = case codeLines code ls (Rect pos3 pos2) of 
         NewPage -> Node [obj] (code ls) pos3
         Final objs pos4 -> Final (obj:objs) pos4
         Node objs block pos4 -> Node (obj:objs) block pos4
     where 
         (FontAttrs codeFontSize _ _) = codeFontAttr
-        (Point _ yPos1) = pos1 
-        (Point _ yPos2) = pos2 
+        (Rect pos1 pos2) = bound
 
-        (text, pos3) = textObject (Inlines Code l) codeFontAttr pos1
+        (text, h) = textObject (Inlines Code l) codeFontAttr pos1
+        pos3 = positionOffsetY pos1 (-h)
         obj = pdfCreateTextObject text
 
 paragraphObject :: [Inline] -> Bound -> IO Node
-paragraphObject [] (Rect _ pos2) = return (Final [] pos2)
-paragraphObject (inline : ls) (Rect pos1 pos2) = do 
-    let (Point xPos1 _) = pos1
-    let paraWidth = 72 * (width - margin - xPos1)
+paragraphObject [] (Rect pos1 _) = return (Final [] pos1)
+paragraphObject inlines bound = do 
+    (objs, newInlines, h) <- paragraphLineInlines inlines bound 
 
-    let fontAttrs = inlineAttr inline
-    (nextInline, remainingInline) <- wrapText inline "" paraWidth
-
-    let (Inlines _ remainingText) = remainingInline
-    let (text, pos3) = textObject nextInline paragraphFontAttr pos1
-    let newInlines = if null remainingText then ls else remainingInline : ls
-
-    textObj <- if null newInlines then return text else textJustify text fontAttrs paraWidth
-    let (Point _ yPos3) = pos3
-    let (Point _ yPos2) = pos2
-
-    let obj = pdfCreateTextObject textObj
+    let (Rect pos1 _) = bound 
     let node 
-            | yPos2 > yPos3 = NewPage
-            | null newInlines = Final [obj] (positionOffsetY pos3 (- paraPadding))
-            | otherwise = Node [obj] (Paragraph newInlines) pos3
+            | not (boundContainsY bound h) = NewPage
+            | null newInlines = Final objs (positionOffsetY pos1 (-h - paraPadding))
+            | otherwise = Node objs (Paragraph newInlines) (positionOffsetY pos1 (-h)) 
 
     return node
 
-addLine :: String -> IO [String] -> IO [String]
-addLine line ss = do 
-    ls <- ss
-    return (line:ls)
+-- | paragraphLineInlines takes a list of inlines and a rectangle bound,
+--   and returns (nextInlines, remainingInlines), where nextInlines is 
+--   the maximum prefix of the inlines list which fits in one line of the 
+--   rectangle bound, and inlines = nextInlines ++ remainingInlines
+paragraphLineInlines :: [Inline] -> Bound -> IO ([Object], [Inline], Height) 
+paragraphLineInlines [] (Rect _ _) = return ([], [], 0)
+paragraphLineInlines (inline : ls) bound = do 
+    let (Rect pos1 pos2) = bound
+    let (Point xPos1 _) = pos1
+    let (Point xPos2 _) = pos2
+    let paraWidth = 72 * (xPos2 - xPos1)
+
+    (nextInline, remainingInline) <- wrapText inline "" paraWidth
+
+    let (Inlines _ remainingText) = remainingInline
+    let (text, h1) = textObject nextInline (inlineAttr nextInline) pos1
+
+    -- let fontAttrs = inlineAttr inline
+    -- textObj <- if null newInlines then return text else textJustify text fontAttrs paraWidth
+    
+    let obj = pdfCreateTextObject text
+
+    let attrs = inlineAttr nextInline
+    let (Inlines _ nextLine) = nextInline
+    cWidths <- mapM (charWidth attrs) nextLine  
+    let textWidth = div (sum cWidths) 72
+
+    (paraObjects, paraInlines, h2) <- paragraphLineInlines ls (Rect (positionOffsetX pos1 textWidth) pos2)
+    let h = max h1 h2
+
+    let objs
+            | null nextLine = ([], inline : ls, h)
+            | null remainingText = (obj : paraObjects, paraInlines, h)
+            | otherwise = ([obj], remainingInline : ls, h)
+
+    return objs
 
 -- | wrapText takes a inline, a string and the line width, and returns
 -- a pair of inlines (nextLine, remainingLine) where nextLine is the 
 -- largest prefix of inline which fits in the line width, and 
 -- remainingLine is the remaining part of the inline.
 wrapText :: Inline -> String -> Int -> IO (Inline, Inline)
-wrapText (Inlines inlineType "") _ _ = return (Inlines inlineType "", Inlines inlineType "")
+wrapText (Inlines inlineType "") line _ = return (Inlines inlineType line, Inlines inlineType "")
 wrapText inline line lineWidth = do 
     let (Inlines inlineType text) = inline
     let currentLine = if null line then line else line ++ " "
@@ -273,13 +304,14 @@ wrapText inline line lineWidth = do
 
 splitSpace :: String -> String -> (String, String) 
 splitSpace current "" = (current, "")
+splitSpace current " " = (current ++ " ", "")
 splitSpace current (' ':remaining) = (current, remaining)
 splitSpace current (c:remaining) = splitSpace (current ++ [c]) remaining
 
 charWidth :: FontAttributes -> Char -> IO Int
 charWidth (FontAttrs fontSize _ fontPath) c = ft_With_FreeType $ \lib -> 
     ft_With_Face lib fontPath 0 $ \face -> do
-        ft_Set_Char_Size face 0 (fontSize * 72) 0 0
+        ft_Set_Char_Size face 0 (fromIntegral fontSize * 72) 0 0
         ft_Load_Char face (fromIntegral $ ord c) 4
         slot <- peek . frGlyph =<< peek face
         let (FT_Vector vX _) = gsrAdvance slot
@@ -296,8 +328,8 @@ textJustify (Text s fontid fontSize _ pos) fontAttrs textWidth = do
     let stretch = if spaceCount == 0 then 1.0 else spaceStretch
     return (Text s fontid fontSize stretch pos)
 
-textObject :: Inline -> FontAttributes -> Position -> (Text, Position)
-textObject (Inlines _ s) (FontAttrs fontSize fontId _) pos1 = (text, pos2)
+textObject :: Inline -> FontAttributes -> Position -> (Text, Height)
+textObject (Inlines _ s) (FontAttrs fontSize fontId _) pos1 = (text, fontSize)
     where 
-        pos2 = positionOffsetY pos1 (- fromIntegral fontSize)
-        text = Text s fontId (fromIntegral fontSize) 1.0 pos2 
+        pos2 = positionOffsetY pos1 (- fontSize)
+        text = Text s fontId fontSize 1.0 pos2 
