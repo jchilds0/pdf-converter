@@ -1,6 +1,5 @@
 module PDF (module PDF) where 
 import Text.Printf (printf)
-import Debug.Trace (traceShow)
 
 type Name = String
 type Dictionary = [(Name, Object)]
@@ -203,15 +202,18 @@ positionOffsetY (Point x y) offset = Point x (y + offset)
 type FontSize = Int
 type Stretch = Float
 type FontID = String
-data Text = Text String FontID FontSize Stretch Position
+type FontPath = String
+
+data FontAttributes = FontAttrs FontSize FontID FontPath
+data Text = Text String FontAttributes Stretch Position
 
 pdfCreateTextObject :: Text -> Object
-pdfCreateTextObject (Text text fontid fontSize stretch (Point x y)) = Indirect (Stream dict stream)
+pdfCreateTextObject (Text text (FontAttrs fontSize fontID _) stretch (Point x y)) = Indirect (Stream dict stream)
     where 
         len = length stream
         dict = [("Length", Inline (Integer len))]
 
-        tf = "\t/" ++ fontid ++ " " ++ show fontSize ++ " Tf\n"
+        tf = "\t/" ++ fontID ++ " " ++ show fontSize ++ " Tf\n"
         td = "\t" ++ show x ++ " " ++ show y ++ " Td\n"
         tj = "\t(" ++ text ++ ") Tj\n"
         tw = "\t" ++ show stretch ++ " Tw\n"

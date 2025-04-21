@@ -4,7 +4,6 @@ import Data.Text (stripSuffix, pack, unpack)
 import Markdown (parseMarkdown)
 import Text (markdownToPDF)
 import PDF (generatePDF)
-import Debug.Trace (traceShow)
 
 main :: IO ()
 main = do 
@@ -62,7 +61,7 @@ parseFile input output = do
     putStrLn $ "Converting " ++ input ++ " to " ++ output
     contents <- readFile input
     pdfTree <- markdownToPDF (parseMarkdown contents)
-    let pdfContents = traceShow (parseMarkdown contents) generatePDF pdfTree
+    let pdfContents = generatePDF pdfTree
     writeFile output pdfContents
 
 printArray :: Show a => [a] -> String
