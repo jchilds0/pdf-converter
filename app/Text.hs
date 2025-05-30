@@ -5,6 +5,7 @@ import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_F
 import Data.Char (ord)
 import Foreign (Storable(peek))
 import Control.Monad (zipWithM)
+import Debug.Trace (trace, traceShow)
 
 margin :: Int
 margin = 72 
@@ -245,7 +246,7 @@ paragraphObject inlines bound = do
 
     let (Rect pos1 _) = bound
     let (Point xPos1 _) = pos1
-    let posSplit = arrangePositions tWidths 0 xPos1 (sum tWidths) (boundWidth bound)
+    let posSplit = arrangePositions tWidths xPos1 (sum tWidths) (boundWidth bound)
 
     -- let fontAttrs = inlineAttr inline
     -- textObj <- if null newInlines then return text else textJustify text fontAttrs paraWidth
@@ -325,11 +326,11 @@ stringWidth text attrs = do
 textWidth :: Text -> IO Int
 textWidth (Text text attrs _ _) = stringWidth text attrs
 
-arrangePositions :: [Int] -> Int -> Int -> Width -> Width -> [(Int, Width)]
-arrangePositions [] _ _ _ _ = []
-arrangePositions (w : ws) offset currentPos itemsWidth totalWidth = item : arrangePositions ws (offset + w) newPos w totalWidth
+arrangePositions :: [Int] -> Int -> Width -> Width -> [(Int, Width)]
+arrangePositions [] _ _ _ = []
+arrangePositions (w : ws) currentPos itemsWidth totalWidth = item : arrangePositions ws newPos itemsWidth totalWidth
     where 
-        itemWidth = totalWidth * div itemsWidth w
+        itemWidth = div (totalWidth * w) itemsWidth  
         item = (currentPos, itemWidth)
         newPos = currentPos + itemWidth
 

@@ -4,11 +4,11 @@ import Text.Printf (printf)
 type Name = String
 type Dictionary = [(Name, Object)]
 data InlineType = Boolean Bool | Integer Int | String String | Name Name
-    deriving Show
+    deriving (Show, Eq)
 data IndirectType = Array [Object] | Dictionary Dictionary | Stream Dictionary [Char]
-    deriving Show
+    deriving (Show, Eq)
 data Object = Inline InlineType | Indirect IndirectType
-    deriving Show
+    deriving (Show, Eq)
 
 type ObjectNumber = Int
 type GenNumber = Int 
@@ -17,8 +17,11 @@ type ObjectRef = (ObjectNumber, GenNumber, ByteOffset)
 
 type Page = Object
 newtype Pages = Pages Dictionary
+    deriving (Show, Eq)
+
 type Catalog = Dictionary
 newtype PDFTree = PDFTree Catalog
+    deriving (Show, Eq)
 
 type Objects = [(String, ObjectRef)]
 
