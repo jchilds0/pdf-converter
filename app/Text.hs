@@ -1,11 +1,11 @@
 module Text (module Text) where
 import Markdown (MDTree (Document), Leaf (Heading, HorizontalRule), Block (Leaf, Paragraph, Quote, IndentCode, FencedCode, ListItem), InlineType (Plain, Strong, Emphasis, Code), Inline (Inlines))
-import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, Object (Indirect, Inline), Position (Point), pdfCreateTextObject, Text (Text), Dictionary, IndirectType (Dictionary), InlineType (Name), Rectangle (Rectangle), pdfCreateRectangleObject, Color (Color), positionReplaceY, positionOffsetX, positionOffsetY, FontAttributes (FontAttrs))
+import PDF (PDFTree, pdfCreateCatalog, pdfCreatePageTree, pdfCreatePage, Page, Object (Indirect, Inline), Position (Point), pdfCreateTextObject, Text (Text), Dictionary, IndirectType (Dictionary), InlineType (Name), Rectangle (Rectangle), pdfCreateRectangleObject, Color (Color), positionReplaceY, positionOffsetX, positionOffsetY, FontAttributes (FontAttrs), transformText)
 import FreeType (ft_With_FreeType, ft_Load_Char, FT_FaceRec (frGlyph), ft_With_Face, FT_GlyphSlotRec (gsrAdvance), FT_Vector (FT_Vector), ft_Set_Char_Size)
 import Data.Char (ord)
 import Foreign (Storable(peek))
 import Control.Monad (zipWithM)
-import Debug.Trace (trace, traceShow)
+import Data.Text (pack, stripStart, stripEnd, strip, unpack)
 
 margin :: Int
 margin = 72 
@@ -242,14 +242,21 @@ paragraphObject :: [Inline] -> Bound -> IO Node
 paragraphObject [] (Rect pos1 _) = return (Final [] pos1)
 paragraphObject inlines bound = do 
     (texts, newInlines, h) <- paragraphLineInlines inlines bound 
+
+    -- remove leading and trailing space 
+    -- let stripHead = unpack . stripStart . pack
+    -- let stripTail = unpack . stripEnd . pack
+    -- let newTexts = case texts of 
+    --         [] -> []
+    --         [t] -> [transformText (unpack . strip . pack) t]
+    --         (t:ts) -> (transformText stripHead t:init ts) ++ [transformText stripTail (last ts)]
+
     tWidths <- mapM textWidth texts
 
     let (Rect pos1 _) = bound
     let (Point xPos1 _) = pos1
     let posSplit = arrangePositions tWidths xPos1 (sum tWidths) (boundWidth bound)
 
-    -- let fontAttrs = inlineAttr inline
-    -- textObj <- if null newInlines then return text else textJustify text fontAttrs paraWidth
     textAdjs <- zipWithM textJustify texts posSplit
     let objs = map pdfCreateTextObject textAdjs
 

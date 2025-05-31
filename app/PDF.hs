@@ -210,6 +210,9 @@ type FontPath = String
 data FontAttributes = FontAttrs FontSize FontID FontPath
 data Text = Text String FontAttributes Stretch Position
 
+transformText :: (String -> String) -> Text -> Text
+transformText f (Text text attr s p) = Text (f text) attr s p
+
 pdfCreateTextObject :: Text -> Object
 pdfCreateTextObject (Text text (FontAttrs fontSize fontID _) stretch (Point x y)) = Indirect (Stream dict stream)
     where 

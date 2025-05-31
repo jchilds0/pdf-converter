@@ -1,14 +1,14 @@
 %PDF-2.0
-15 0 obj
+14 0 obj
 <<
 	/Type /Catalog
 	/Version /PDF-1.7
-	/Pages 13 0 R
-	/MediaBox 14 0 R
+	/Pages 12 0 R
+	/MediaBox 13 0 R
 >>
 endobj
 
-14 0 obj
+13 0 obj
 [
 	0
 	0
@@ -17,48 +17,40 @@ endobj
 ]
 endobj
 
-13 0 obj
+12 0 obj
 <<
 	/Type /Pages
-	/Kids 12 0 R
+	/Kids 11 0 R
 	/Count 1
 >>
 endobj
 
-12 0 obj
-[
-	11 0 R
-]
-endobj
-
 11 0 obj
-<<
-	/Type /Page
-	/Contents 4 0 R
-	/Resources 10 0 R
->>
+[
+	10 0 R
+]
 endobj
 
 10 0 obj
 <<
-	/Font 9 0 R
+	/Type /Page
+	/Contents 3 0 R
+	/Resources 9 0 R
 >>
 endobj
 
 9 0 obj
 <<
-	/Plain 5 0 R
-	/Strong 6 0 R
-	/Emphasis 7 0 R
-	/Code 8 0 R
+	/Font 8 0 R
 >>
 endobj
 
 8 0 obj
 <<
-	/Type /Font
-	/Subtype /Type1
-	/BaseFont /Courier
+	/Plain 4 0 R
+	/Strong 5 0 R
+	/Emphasis 6 0 R
+	/Code 7 0 R
 >>
 endobj
 
@@ -66,7 +58,7 @@ endobj
 <<
 	/Type /Font
 	/Subtype /Type1
-	/BaseFont /Courier-Italic
+	/BaseFont /Courier
 >>
 endobj
 
@@ -74,7 +66,7 @@ endobj
 <<
 	/Type /Font
 	/Subtype /Type1
-	/BaseFont /Courier-Bold
+	/BaseFont /Courier-Italic
 >>
 endobj
 
@@ -82,30 +74,23 @@ endobj
 <<
 	/Type /Font
 	/Subtype /Type1
-	/BaseFont /Courier
+	/BaseFont /Courier-Bold
 >>
 endobj
 
 4 0 obj
-[
-	1 0 R
-	2 0 R
-	3 0 R
-]
+<<
+	/Type /Font
+	/Subtype /Type1
+	/BaseFont /Courier
+>>
 endobj
 
 3 0 obj
-<<
-	/Length 48
->>
-stream
-BT
-	/Plain 12 Tf
-	503 730 Td
-	11.0 Tw
-	( ) Tj
-ET
-endstream
+[
+	1 0 R
+	2 0 R
+]
 endobj
 
 2 0 obj
@@ -115,8 +100,8 @@ endobj
 stream
 BT
 	/Emphasis 12 Tf
-	297 730 Td
-	128.0 Tw
+	307 730 Td
+	137.0 Tw
 	(hello world) Tj
 ET
 endstream
@@ -130,34 +115,33 @@ stream
 BT
 	/Plain 12 Tf
 	72 730 Td
-	70.0 Tw
+	75.0 Tw
 	(Lorem ipsum ) Tj
 ET
 endstream
 endobj
 
 xref
-0 16
+0 15
 0000000000 65535 f
-0000000971 00000 n
-0000000857 00000 n
-0000000757 00000 n
-0000000716 00000 n
-0000000644 00000 n
-0000000567 00000 n
-0000000488 00000 n
-0000000416 00000 n
-0000000335 00000 n
-0000000299 00000 n
+0000000862 00000 n
+0000000748 00000 n
+0000000714 00000 n
+0000000642 00000 n
+0000000565 00000 n
+0000000486 00000 n
+0000000414 00000 n
+0000000333 00000 n
+0000000298 00000 n
 0000000227 00000 n
 0000000198 00000 n
 0000000137 00000 n
 0000000100 00000 n
 0000000009 00000 n
 trailer <<
-	/Size 16
-	/Root 15 0 R
+	/Size 15
+	/Root 14 0 R
 >>
 startxref
-1081
+972
 %%EOF

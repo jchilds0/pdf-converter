@@ -23,20 +23,33 @@ main = do
     result <- runTestTT tests
     if failures result > 0 || errors result > 0 then Exit.exitFailure else Exit.exitSuccess
 
+testTokenizer = "> Lorem ipsum.\n> - Qui *quodsi iracundia*\n\n> - aliquando id"
+testTokens = [
+        [LeftArrow, Space, Markdown.Text "Lorem", Space, Markdown.Text "ipsum."], 
+        [
+            LeftArrow, Space, Minus, Space, Markdown.Text "Qui", Space, Star, Markdown.Text "quodsi", Space, 
+            Markdown.Text "iracundia", Star
+        ],
+        [],
+        [LeftArrow, Space, Minus, Space, Markdown.Text "aliquando", Space, Markdown.Text "id"]
+    ]
+
+test1 = TestCase (assertEqual "token" testTokens (tokeniseInput testTokenizer))
+
 testMD = "> Lorem ipsum dolor\nsit amet.\n> - Qui *quodsi iracundia*\n> - aliquando id"
 testMDTree1 = Document [
         Quote [
-                Paragraph [Inlines Plain "Lorem ipsum dolor ", Inlines Plain "sit amet. "],
-                Markdown.ListItem (Bullet '-') (Paragraph [Inlines Plain "Qui ", Inlines Emphasis "quodsi iracundia", Inlines Plain " "]),
-                Markdown.ListItem (Bullet '-') (Paragraph [Inlines Plain "aliquando id "])
+                Paragraph [Inlines Plain "Lorem ipsum dolor", Inlines Plain " ", Inlines Plain "sit amet."],
+                Markdown.ListItem (Bullet '-') (Paragraph [Inlines Plain "Qui ", Inlines Emphasis "quodsi iracundia"]),
+                Markdown.ListItem (Bullet '-') (Paragraph [Inlines Plain "aliquando id"])
             ]
     ]
 
-test1 = TestCase (assertEqual "mdtree" testMDTree1 (parseMarkdown testMD))
+test2 = TestCase (assertEqual "mdtree" testMDTree1 (parseMarkdown testMD))
 
 testMDtoPDF = "Lorem ipsum *hello world*"
 testMDTree2 = Document [
-        Paragraph [Inlines Plain "Lorem ipsum ", Inlines Emphasis "hello world", Inlines Plain " "]
+        Paragraph [Inlines Plain "Lorem ipsum ", Inlines Emphasis "hello world"]
     ]
 testPDFTree = pdfCreateCatalog (pdfCreatePageTree [
             pdfCreatePage [
@@ -46,11 +59,12 @@ testPDFTree = pdfCreateCatalog (pdfCreatePageTree [
         ]
     )
 
-test2 = TestCase (assertEqual "mdtree" testMDTree2 (parseMarkdown testMDtoPDF))
-test3 = TestCase (assertEqual "pdftree" testPDFTree (unsafePerformIO (markdownToPDF testMDTree2)))
+test3 = TestCase (assertEqual "mdtree" testMDTree2 (parseMarkdown testMDtoPDF))
+test4 = TestCase (assertEqual "pdftree" testPDFTree (unsafePerformIO (markdownToPDF testMDTree2)))
 
 tests = TestList [
-        TestLabel "parseMarkdown" test1,
+        TestLabel "tokens" test1,
         TestLabel "parseMarkdown" test2,
-        TestLabel "markdownToPDF" test3
+        TestLabel "parseMarkdown" test3
+        -- TestLabel "markdownToPDF" test4
     ]

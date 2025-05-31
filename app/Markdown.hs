@@ -8,7 +8,7 @@ tokeniseInput :: String -> [[Token]]
 tokeniseInput contents = map tokeniseLine (lines contents)
 
 tokeniseLine :: String -> [Token]
-tokeniseLine "" = [Space]
+tokeniseLine "" = []
 tokeniseLine contents = tok:ts
     where
         (tok, rs) = nextToken contents
@@ -279,6 +279,6 @@ mergeQuoteBlock blocks nextLine = Quote (init blocks ++ newBlocks)
         newBlocks = mergeBlocks block nextLine
 
 mergeParagraph :: [Inline] -> Block -> [Block] 
-mergeParagraph p1 (Paragraph p2) = [Paragraph (p1 ++ p2)]
+mergeParagraph p1 (Paragraph p2) = [Paragraph (p1 ++ (Inlines Plain " ":p2))]
 mergeParagraph para block = [Paragraph para, block]
 

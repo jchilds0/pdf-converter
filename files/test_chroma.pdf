@@ -1,14 +1,14 @@
 %PDF-2.0
-350 0 obj
+484 0 obj
 <<
 	/Type /Catalog
 	/Version /PDF-1.7
-	/Pages 348 0 R
-	/MediaBox 349 0 R
+	/Pages 482 0 R
+	/MediaBox 483 0 R
 >>
 endobj
 
-349 0 obj
+483 0 obj
 [
 	0
 	0
@@ -17,48 +17,48 @@ endobj
 ]
 endobj
 
-348 0 obj
+482 0 obj
 <<
 	/Type /Pages
-	/Kids 347 0 R
+	/Kids 481 0 R
 	/Count 5
 >>
 endobj
 
-347 0 obj
+481 0 obj
 [
-	70 0 R
-	160 0 R
-	249 0 R
-	333 0 R
-	346 0 R
+	99 0 R
+	227 0 R
+	351 0 R
+	465 0 R
+	480 0 R
 ]
 endobj
 
-346 0 obj
+480 0 obj
 <<
 	/Type /Page
-	/Contents 339 0 R
-	/Resources 345 0 R
+	/Contents 473 0 R
+	/Resources 479 0 R
 >>
 endobj
 
-345 0 obj
+479 0 obj
 <<
-	/Font 344 0 R
+	/Font 478 0 R
 >>
 endobj
 
-344 0 obj
+478 0 obj
 <<
-	/Plain 340 0 R
-	/Strong 341 0 R
-	/Emphasis 342 0 R
-	/Code 343 0 R
+	/Plain 474 0 R
+	/Strong 475 0 R
+	/Emphasis 476 0 R
+	/Code 477 0 R
 >>
 endobj
 
-343 0 obj
+477 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -66,7 +66,7 @@ endobj
 >>
 endobj
 
-342 0 obj
+476 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -74,7 +74,7 @@ endobj
 >>
 endobj
 
-341 0 obj
+475 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -82,7 +82,7 @@ endobj
 >>
 endobj
 
-340 0 obj
+474 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -90,73 +90,103 @@ endobj
 >>
 endobj
 
-339 0 obj
+473 0 obj
 [
-	334 0 R
-	335 0 R
-	336 0 R
-	337 0 R
-	338 0 R
+	466 0 R
+	467 0 R
+	468 0 R
+	469 0 R
+	470 0 R
+	471 0 R
+	472 0 R
 ]
 endobj
 
-338 0 obj
+472 0 obj
 <<
-	/Length 89
+	/Length 86
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 658 Td
-	153.0 Tw
-	(href="/assets/chroma-graphics/style.css"> ) Tj
+	1.0 Tw
+	(href="/assets/chroma-graphics/style.css">) Tj
 ET
 endstream
 endobj
 
-337 0 obj
+471 0 obj
 <<
 	/Length 70
 >>
 stream
 BT
 	/Plain 12 Tf
-	203 670 Td
-	163.0 Tw
+	209 670 Td
+	155.0 Tw
 	(<link rel="stylesheet") Tj
 ET
 endstream
 endobj
 
-336 0 obj
+470 0 obj
 <<
-	/Length 55
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	196 670 Td
+	6.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+469 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	183 670 Td
+	6.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+468 0 obj
+<<
+	/Length 53
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 670 Td
-	67.0 Tw
-	(</video> ) Tj
+	1.0 Tw
+	(</video>) Tj
 ET
 endstream
 endobj
 
-335 0 obj
+467 0 obj
 <<
-	/Length 128
+	/Length 127
 >>
 stream
 BT
 	/Code 12 Tf
 	96 706 Td
 	1.0 Tw
-	(<source src="https://github.com/jchilds0/chroma-viz/raw/main/data/artist_demo.mp4"> ) Tj
+	(<source src="https://github.com/jchilds0/chroma-viz/raw/main/data/artist_demo.mp4">) Tj
 ET
 endstream
 endobj
 
-334 0 obj
+466 0 obj
 <<
 	/Length 78
 >>
@@ -170,30 +200,30 @@ stream
 endstream
 endobj
 
-333 0 obj
+465 0 obj
 <<
 	/Type /Page
-	/Contents 326 0 R
-	/Resources 332 0 R
+	/Contents 458 0 R
+	/Resources 464 0 R
 >>
 endobj
 
-332 0 obj
+464 0 obj
 <<
-	/Font 331 0 R
+	/Font 463 0 R
 >>
 endobj
 
-331 0 obj
+463 0 obj
 <<
-	/Plain 327 0 R
-	/Strong 328 0 R
-	/Emphasis 329 0 R
-	/Code 330 0 R
+	/Plain 459 0 R
+	/Strong 460 0 R
+	/Emphasis 461 0 R
+	/Code 462 0 R
 >>
 endobj
 
-330 0 obj
+462 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -201,7 +231,7 @@ endobj
 >>
 endobj
 
-329 0 obj
+461 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -209,7 +239,7 @@ endobj
 >>
 endobj
 
-328 0 obj
+460 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -217,7 +247,7 @@ endobj
 >>
 endobj
 
-327 0 obj
+459 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -225,8 +255,1680 @@ endobj
 >>
 endobj
 
-326 0 obj
+458 0 obj
 [
+	352 0 R
+	353 0 R
+	354 0 R
+	355 0 R
+	356 0 R
+	357 0 R
+	358 0 R
+	359 0 R
+	360 0 R
+	361 0 R
+	362 0 R
+	363 0 R
+	364 0 R
+	365 0 R
+	366 0 R
+	367 0 R
+	368 0 R
+	369 0 R
+	370 0 R
+	371 0 R
+	372 0 R
+	373 0 R
+	374 0 R
+	375 0 R
+	376 0 R
+	377 0 R
+	378 0 R
+	379 0 R
+	380 0 R
+	381 0 R
+	382 0 R
+	383 0 R
+	384 0 R
+	385 0 R
+	386 0 R
+	387 0 R
+	388 0 R
+	389 0 R
+	390 0 R
+	391 0 R
+	392 0 R
+	393 0 R
+	394 0 R
+	395 0 R
+	396 0 R
+	397 0 R
+	398 0 R
+	399 0 R
+	400 0 R
+	401 0 R
+	402 0 R
+	403 0 R
+	404 0 R
+	405 0 R
+	406 0 R
+	407 0 R
+	408 0 R
+	409 0 R
+	410 0 R
+	411 0 R
+	412 0 R
+	413 0 R
+	414 0 R
+	415 0 R
+	416 0 R
+	417 0 R
+	418 0 R
+	419 0 R
+	420 0 R
+	421 0 R
+	422 0 R
+	423 0 R
+	424 0 R
+	425 0 R
+	426 0 R
+	427 0 R
+	428 0 R
+	429 0 R
+	430 0 R
+	431 0 R
+	432 0 R
+	433 0 R
+	434 0 R
+	435 0 R
+	436 0 R
+	437 0 R
+	438 0 R
+	439 0 R
+	440 0 R
+	441 0 R
+	442 0 R
+	443 0 R
+	444 0 R
+	445 0 R
+	446 0 R
+	447 0 R
+	448 0 R
+	449 0 R
+	450 0 R
+	451 0 R
+	452 0 R
+	453 0 R
+	454 0 R
+	455 0 R
+	456 0 R
+	457 0 R
+]
+endobj
+
+457 0 obj
+<<
+	/Length 74
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 78 Td
+	126.0 Tw
+	(<video width="720" controls>) Tj
+ET
+endstream
+endobj
+
+456 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 90 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+455 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	508 90 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+454 0 obj
+<<
+	/Length 105
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 90 Td
+	2.125 Tw
+	(Putting these together we can create the following graphic.) Tj
+ET
+endstream
+endobj
+
+453 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 102 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+452 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 102 Td
+	3.1 Tw
+	(it receives a template with a cycle in the keyframe graph.) Tj
+ET
+endstream
+endobj
+
+451 0 obj
+<<
+	/Length 110
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 114 Td
+	0.375 Tw
+	(makes evaluating them ambiguous, so Chroma Engine terminates if) Tj
+ET
+endstream
+endobj
+
+450 0 obj
+<<
+	/Length 54
+>>
+stream
+BT
+	/Plain 12 Tf
+	464 126 Td
+	2.0 Tw
+	(Doing so) Tj
+ET
+endstream
+endobj
+
+449 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	457 126 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+448 0 obj
+<<
+	/Length 97
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 126 Td
+	2.0 Tw
+	(keyframes is they cannot create cycles in the graph.) Tj
+ET
+endstream
+endobj
+
+447 0 obj
+<<
+	/Length 76
+>>
+stream
+BT
+	/Plain 12 Tf
+	328 138 Td
+	7.6666665 Tw
+	(The only restrictions on) Tj
+ET
+endstream
+endobj
+
+446 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	321 138 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+445 0 obj
+<<
+	/Length 76
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 138 Td
+	5.8 Tw
+	(the maximum of all child nodes.) Tj
+ET
+endstream
+endobj
+
+444 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 150 Td
+	1.375 Tw
+	(and height respectively for each child geometry, and evaluates) Tj
+ET
+endstream
+endobj
+
+443 0 obj
+<<
+	/Length 113
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 162 Td
+	0.9166667 Tw
+	(an edge to the upper x position and upper y position for width) Tj
+ET
+endstream
+endobj
+
+442 0 obj
+<<
+	/Length 87
+>>
+stream
+BT
+	/Plain 12 Tf
+	275 174 Td
+	0.85714287 Tw
+	(This is what we used above, we add) Tj
+ET
+endstream
+endobj
+
+441 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	268 174 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+440 0 obj
+<<
+	/Length 78
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 174 Td
+	1.3333334 Tw
+	(attributes width or height.) Tj
+ET
+endstream
+endobj
+
+439 0 obj
+<<
+	/Length 104
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 186 Td
+	9.571428 Tw
+	(currently only supported for User Frame rectangles and) Tj
+ET
+endstream
+endobj
+
+438 0 obj
+<<
+	/Length 105
+>>
+stream
+BT
+	/Plain 12 Tf
+	79 198 Td
+	1.7 Tw
+	(Additionally we can set a keyframe to be an expand keyframe,) Tj
+ET
+endstream
+endobj
+
+437 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 198 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+436 0 obj
+<<
+	/Length 92
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 220 Td
+	22.857143 Tw
+	(takes the value of the single child node.) Tj
+ET
+endstream
+endobj
+
+435 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 232 Td
+	1.0 Tw
+	(edge to another node in the graph, and the current node simply) Tj
+ET
+endstream
+endobj
+
+434 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 244 Td
+	2.2727273 Tw
+	(Bind Frame: Use a value computed in a keyframe. This adds an) Tj
+ET
+endstream
+endobj
+
+433 0 obj
+<<
+	/Length 101
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 266 Td
+	8.375 Tw
+	(user, and is the default for non keyframed attributes.) Tj
+ET
+endstream
+endobj
+
+432 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 278 Td
+	2.2727273 Tw
+	(adds an edge which points to the attribute values set by the) Tj
+ET
+endstream
+endobj
+
+431 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 290 Td
+	1.0 Tw
+	(template or page when the graphic is animated on is used. This) Tj
+ET
+endstream
+endobj
+
+430 0 obj
+<<
+	/Length 104
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 302 Td
+	3.2 Tw
+	(User Frame: Similar to set frame, except the value from the) Tj
+ET
+endstream
+endobj
+
+429 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 324 Td
+	36.2 Tw
+	(node and doesn't add any dependencies.) Tj
+ET
+endstream
+endobj
+
+428 0 obj
+<<
+	/Length 104
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 336 Td
+	3.2 Tw
+	(specific keyframe. In the graph this updates the value of a) Tj
+ET
+endstream
+endobj
+
+427 0 obj
+<<
+	/Length 110
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 348 Td
+	2.6666667 Tw
+	(Set Frame: Set the value of an attribute of a geometry in a) Tj
+ET
+endstream
+endobj
+
+426 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	508 370 Td
+	7.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+425 0 obj
+<<
+	/Length 77
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 370 Td
+	55.75 Tw
+	(Current types of keyframes are) Tj
+ET
+endstream
+endobj
+
+424 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 382 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+423 0 obj
+<<
+	/Length 101
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 382 Td
+	7.5 Tw
+	(attributes are interpolated linearly between the frames.) Tj
+ET
+endstream
+endobj
+
+422 0 obj
+<<
+	/Length 69
+>>
+stream
+BT
+	/Plain 12 Tf
+	343 394 Td
+	7.5 Tw
+	(When animated, geometry) Tj
+ET
+endstream
+endobj
+
+421 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	336 394 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+420 0 obj
+<<
+	/Length 80
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 394 Td
+	5.75 Tw
+	(evaluation functions to the graph.) Tj
+ET
+endstream
+endobj
+
+419 0 obj
+<<
+	/Length 91
+>>
+stream
+BT
+	/Plain 12 Tf
+	170 406 Td
+	5.875 Tw
+	(A Keyframe is a way to add dependencies and) Tj
+ET
+endstream
+endobj
+
+418 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	162 406 Td
+	1.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+417 0 obj
+<<
+	/Length 57
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 406 Td
+	12.0 Tw
+	(show above.) Tj
+ET
+endstream
+endobj
+
+416 0 obj
+<<
+	/Length 108
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 418 Td
+	0.3 Tw
+	(each frame, we create the table of attributes for each geometry) Tj
+ET
+endstream
+endobj
+
+415 0 obj
+<<
+	/Length 49
+>>
+stream
+BT
+	/Plain 12 Tf
+	501 430 Td
+	1.0 Tw
+	(For) Tj
+ET
+endstream
+endobj
+
+414 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	494 430 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+413 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 430 Td
+	1.0 Tw
+	(fixed number $ n $, and contain a collection of keyframes.) Tj
+ET
+endstream
+endobj
+
+412 0 obj
+<<
+	/Length 94
+>>
+stream
+BT
+	/Plain 12 Tf
+	229 442 Td
+	0.22222222 Tw
+	(Frames have an index 1, 2, ... up to some) Tj
+ET
+endstream
+endobj
+
+411 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	222 442 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+410 0 obj
+<<
+	/Length 66
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 442 Td
+	0.5 Tw
+	(Frames and Keyframes.) Tj
+ET
+endstream
+endobj
+
+409 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 454 Td
+	3.125 Tw
+	(keyframing process in Chroma Artist consists of two objects,) Tj
+ET
+endstream
+endobj
+
+408 0 obj
+<<
+	/Length 49
+>>
+stream
+BT
+	/Plain 12 Tf
+	497 466 Td
+	1.0 Tw
+	(The) Tj
+ET
+endstream
+endobj
+
+407 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	490 466 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+406 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	483 466 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+405 0 obj
+<<
+	/Length 98
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 466 Td
+	14.0 Tw
+	(alt="Keyframe" class="theme-image dark" width="700">) Tj
+ET
+endstream
+endobj
+
+404 0 obj
+<<
+	/Length 55
+>>
+stream
+BT
+	/Plain 12 Tf
+	444 478 Td
+	1.0 Tw
+	(dark.svg") Tj
+ET
+endstream
+endobj
+
+403 0 obj
+<<
+	/Length 55
+>>
+stream
+BT
+	/Emphasis 12 Tf
+	393 478 Td
+	1.0 Tw
+	(expand) Tj
+ET
+endstream
+endobj
+
+402 0 obj
+<<
+	/Length 82
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 478 Td
+	1.0 Tw
+	(src="/assets/chroma-graphics/keyframe) Tj
+ET
+endstream
+endobj
+
+401 0 obj
+<<
+	/Length 50
+>>
+stream
+BT
+	/Plain 12 Tf
+	481 490 Td
+	1.0 Tw
+	(<img) Tj
+ET
+endstream
+endobj
+
+400 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	471 490 Td
+	3.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+399 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 490 Td
+	64.5 Tw
+	(class="theme-image light" width="700">) Tj
+ET
+endstream
+endobj
+
+398 0 obj
+<<
+	/Length 108
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 502 Td
+	3.0 Tw
+	(src="/assets/chroma-graphics/keyframeexpand.svg" alt="Keyframe") Tj
+ET
+endstream
+endobj
+
+397 0 obj
+<<
+	/Length 50
+>>
+stream
+BT
+	/Plain 12 Tf
+	417 514 Td
+	1.0 Tw
+	(<img) Tj
+ET
+endstream
+endobj
+
+396 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	391 514 Td
+	19.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+395 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	365 514 Td
+	19.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+394 0 obj
+<<
+	/Length 58
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 514 Td
+	215.0 Tw
+	(child node.) Tj
+ET
+endstream
+endobj
+
+393 0 obj
+<<
+	/Length 108
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 526 Td
+	0.3 Tw
+	(rectangle node which evaluates the maximum of the value of each) Tj
+ET
+endstream
+endobj
+
+392 0 obj
+<<
+	/Length 115
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 538 Td
+	0.33333334 Tw
+	(adding the following dependencies, and adding a function to the) Tj
+ET
+endstream
+endobj
+
+391 0 obj
+<<
+	/Length 93
+>>
+stream
+BT
+	/Plain 12 Tf
+	194 550 Td
+	4.142857 Tw
+	(We can make the rectangle width dynamic by) Tj
+ET
+endstream
+endobj
+
+390 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	187 550 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+389 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	180 550 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+388 0 obj
+<<
+	/Length 49
+>>
+stream
+BT
+	/Plain 12 Tf
+	157 550 Td
+	1.0 Tw
+	()).) Tj
+ET
+endstream
+endobj
+
+387 0 obj
+<<
+	/Length 59
+>>
+stream
+BT
+	/Emphasis 12 Tf
+	72 550 Td
+	1.0 Tw
+	(kixJYgjSUAU) Tj
+ET
+endstream
+endobj
+
+386 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 562 Td
+	5.5 Tw
+	(graphs ([Topological Sort](https://youtu.be/eL-KzMXSXXI?si=mG9) Tj
+ET
+endstream
+endobj
+
+385 0 obj
+<<
+	/Length 115
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 574 Td
+	0.42857143 Tw
+	(William Fiset describes topological sorting of directed acyclic) Tj
+ET
+endstream
+endobj
+
+384 0 obj
+<<
+	/Length 75
+>>
+stream
+BT
+	/Plain 12 Tf
+	336 586 Td
+	7.3333335 Tw
+	(This excellent video by) Tj
+ET
+endstream
+endobj
+
+383 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	329 586 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+382 0 obj
+<<
+	/Length 77
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 586 Td
+	7.5 Tw
+	(is known as topological sorting.) Tj
+ET
+endstream
+endobj
+
+381 0 obj
+<<
+	/Length 58
+>>
+stream
+BT
+	/Plain 12 Tf
+	437 598 Td
+	0.0 Tw
+	(This problem) Tj
+ET
+endstream
+endobj
+
+380 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	430 598 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+379 0 obj
+<<
+	/Length 97
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 598 Td
+	0.375 Tw
+	(node only once each child node has been evaluated.) Tj
+ET
+endstream
+endobj
+
+378 0 obj
+<<
+	/Length 74
+>>
+stream
+BT
+	/Plain 12 Tf
+	311 610 Td
+	2.2 Tw
+	(But we need to evaluate each) Tj
+ET
+endstream
+endobj
+
+377 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	304 610 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+376 0 obj
+<<
+	/Length 76
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 610 Td
+	2.4 Tw
+	(child node of the current node.) Tj
+ET
+endstream
+endobj
+
+375 0 obj
+<<
+	/Length 108
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 622 Td
+	0.3 Tw
+	(positions this function evaluates the sum of the value for each) Tj
+ET
+endstream
+endobj
+
+374 0 obj
+<<
+	/Length 113
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 634 Td
+	0.9166667 Tw
+	(this we store a function at each node, in the case of relative) Tj
+ET
+endstream
+endobj
+
+373 0 obj
+<<
+	/Length 51
+>>
+stream
+BT
+	/Plain 12 Tf
+	484 646 Td
+	2.0 Tw
+	(To do) Tj
+ET
+endstream
+endobj
+
+372 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	477 646 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+371 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 646 Td
+	3.625 Tw
+	(combining the values of the dependencies in some way.) Tj
+ET
+endstream
+endobj
+
+370 0 obj
+<<
+	/Length 115
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 658 Td
+	0.23076923 Tw
+	(node of this graph, we want to compute the value of the node by) Tj
+ET
+endstream
+endobj
+
+369 0 obj
+<<
+	/Length 53
+>>
+stream
+BT
+	/Plain 12 Tf
+	471 670 Td
+	2.0 Tw
+	(At each) Tj
+ET
+endstream
+endobj
+
+368 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	464 670 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+367 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	457 670 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+366 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 670 Td
+	5.3333335 Tw
+	(alt="Keyframe" class="theme-image dark" width="700">) Tj
+ET
+endstream
+endobj
+
+365 0 obj
+<<
+	/Length 55
+>>
+stream
+BT
+	/Plain 12 Tf
+	442 682 Td
+	1.0 Tw
+	(dark.svg") Tj
+ET
+endstream
+endobj
+
+364 0 obj
+<<
+	/Length 54
+>>
+stream
+BT
+	/Emphasis 12 Tf
+	399 682 Td
+	1.0 Tw
+	(start) Tj
+ET
+endstream
+endobj
+
+363 0 obj
+<<
+	/Length 82
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 682 Td
+	1.0 Tw
+	(src="/assets/chroma-graphics/keyframe) Tj
+ET
+endstream
+endobj
+
+362 0 obj
+<<
+	/Length 50
+>>
+stream
+BT
+	/Plain 12 Tf
+	481 694 Td
+	1.0 Tw
+	(<img) Tj
+ET
+endstream
+endobj
+
+361 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	471 694 Td
+	3.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+360 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 694 Td
+	64.5 Tw
+	(class="theme-image light" width="700">) Tj
+ET
+endstream
+endobj
+
+359 0 obj
+<<
+	/Length 108
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 706 Td
+	11.0 Tw
+	(src="/assets/chroma-graphics/keyframestart.svg" alt="Keyframe") Tj
+ET
+endstream
+endobj
+
+358 0 obj
+<<
+	/Length 50
+>>
+stream
+BT
+	/Plain 12 Tf
+	484 718 Td
+	1.0 Tw
+	(<img) Tj
+ET
+endstream
+endobj
+
+357 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	475 718 Td
+	2.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+356 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	466 718 Td
+	2.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+355 0 obj
+<<
+	/Length 92
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 718 Td
+	17.166666 Tw
+	(graph, which is a directed acyclic graph.) Tj
+ET
+endstream
+endobj
+
+354 0 obj
+<<
+	/Length 104
+>>
+stream
+BT
+	/Plain 12 Tf
+	157 730 Td
+	0.42857143 Tw
+	(Continuing for all geometries we form the following) Tj
+ET
+endstream
+endobj
+
+353 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	150 730 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+352 0 obj
+<<
+	/Length 56
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 730 Td
+	0.0 Tw
+	(geometry 4.) Tj
+ET
+endstream
+endobj
+
+351 0 obj
+<<
+	/Type /Page
+	/Contents 344 0 R
+	/Resources 350 0 R
+>>
+endobj
+
+350 0 obj
+<<
+	/Font 349 0 R
+>>
+endobj
+
+349 0 obj
+<<
+	/Plain 345 0 R
+	/Strong 346 0 R
+	/Emphasis 347 0 R
+	/Code 348 0 R
+>>
+endobj
+
+348 0 obj
+<<
+	/Type /Font
+	/Subtype /Type1
+	/BaseFont /Courier
+>>
+endobj
+
+347 0 obj
+<<
+	/Type /Font
+	/Subtype /Type1
+	/BaseFont /Courier-Italic
+>>
+endobj
+
+346 0 obj
+<<
+	/Type /Font
+	/Subtype /Type1
+	/BaseFont /Courier-Bold
+>>
+endobj
+
+345 0 obj
+<<
+	/Type /Font
+	/Subtype /Type1
+	/BaseFont /Courier
+>>
+endobj
+
+344 0 obj
+[
+	228 0 R
+	229 0 R
+	230 0 R
+	231 0 R
+	232 0 R
+	233 0 R
+	234 0 R
+	235 0 R
+	236 0 R
+	237 0 R
+	238 0 R
+	239 0 R
+	240 0 R
+	241 0 R
+	242 0 R
+	243 0 R
+	244 0 R
+	245 0 R
+	246 0 R
+	247 0 R
+	248 0 R
+	249 0 R
 	250 0 R
 	251 0 R
 	252 0 R
@@ -303,1097 +2005,1675 @@ endobj
 	323 0 R
 	324 0 R
 	325 0 R
+	326 0 R
+	327 0 R
+	328 0 R
+	329 0 R
+	330 0 R
+	331 0 R
+	332 0 R
+	333 0 R
+	334 0 R
+	335 0 R
+	336 0 R
+	337 0 R
+	338 0 R
+	339 0 R
+	340 0 R
+	341 0 R
+	342 0 R
+	343 0 R
 ]
 endobj
 
-325 0 obj
+343 0 obj
 <<
-	/Length 79
+	/Length 108
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 78 Td
-	81.666664 Tw
-	(<video width="720" controls> ) Tj
+	2.909091 Tw
+	(the x position of geometry 1 and the relative x position of) Tj
 ET
 endstream
 endobj
 
-324 0 obj
+342 0 obj
 <<
-	/Length 110
+	/Length 111
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 90 Td
-	2.7777777 Tw
-	(Putting these together we can create the following graphic. ) Tj
+	1.6363636 Tw
+	(dependency with an arrow from the x position of geometry 4 to) Tj
 ET
 endstream
 endobj
 
-323 0 obj
+341 0 obj
 <<
-	/Length 109
+	/Length 62
+>>
+stream
+BT
+	/Plain 12 Tf
+	408 102 Td
+	0.5 Tw
+	(We indicate this) Tj
+ET
+endstream
+endobj
+
+340 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	401 102 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+339 0 obj
+<<
+	/Length 97
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 102 Td
-	2.909091 Tw
-	(it receives a template with a cycle in the keyframe graph. ) Tj
+	0.2857143 Tw
+	((it's parent) and its own relative x position.) Tj
 ET
 endstream
 endobj
 
-322 0 obj
+338 0 obj
 <<
-	/Length 110
+	/Length 107
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 114 Td
-	0.375 Tw
-	(makes evaluating them ambiguous, so Chroma Engine terminates if) Tj
-ET
-endstream
-endobj
-
-321 0 obj
-<<
-	/Length 54
->>
-stream
-BT
-	/Plain 12 Tf
-	464 126 Td
-	2.0 Tw
-	(Doing so) Tj
-ET
-endstream
-endobj
-
-320 0 obj
-<<
-	/Length 104
->>
-stream
-BT
-	/Plain 12 Tf
-	72 126 Td
-	1.7777778 Tw
-	(keyframes is they cannot create cycles in the graph. ) Tj
-ET
-endstream
-endobj
-
-319 0 obj
-<<
-	/Length 76
->>
-stream
-BT
-	/Plain 12 Tf
-	329 138 Td
-	7.6666665 Tw
-	(The only restrictions on) Tj
-ET
-endstream
-endobj
-
-318 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	72 138 Td
-	5.0 Tw
-	(the maximum of all child nodes. ) Tj
-ET
-endstream
-endobj
-
-317 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 150 Td
-	1.375 Tw
-	(and height respectively for each child geometry, and evaluates) Tj
-ET
-endstream
-endobj
-
-316 0 obj
-<<
-	/Length 113
->>
-stream
-BT
-	/Plain 12 Tf
-	72 162 Td
-	0.9166667 Tw
-	(an edge to the upper x position and upper y position for width) Tj
-ET
-endstream
-endobj
-
-315 0 obj
-<<
-	/Length 87
->>
-stream
-BT
-	/Plain 12 Tf
-	275 174 Td
-	0.85714287 Tw
-	(This is what we used above, we add) Tj
-ET
-endstream
-endobj
-
-314 0 obj
-<<
-	/Length 73
->>
-stream
-BT
-	/Plain 12 Tf
-	72 174 Td
 	1.0 Tw
-	(attributes width or height. ) Tj
+	(position of geometry 4 depends on the x position of geometry 1) Tj
 ET
 endstream
 endobj
 
-313 0 obj
-<<
-	/Length 104
->>
-stream
-BT
-	/Plain 12 Tf
-	72 186 Td
-	9.571428 Tw
-	(currently only supported for User Frame rectangles and) Tj
-ET
-endstream
-endobj
-
-312 0 obj
-<<
-	/Length 105
->>
-stream
-BT
-	/Plain 12 Tf
-	72 198 Td
-	2.5 Tw
-	(Additionally we can set a keyframe to be an expand keyframe,) Tj
-ET
-endstream
-endobj
-
-311 0 obj
-<<
-	/Length 90
->>
-stream
-BT
-	/Plain 12 Tf
-	72 220 Td
-	19.125 Tw
-	(takes the value of the single child node. ) Tj
-ET
-endstream
-endobj
-
-310 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 232 Td
-	1.0 Tw
-	(edge to another node in the graph, and the current node simply) Tj
-ET
-endstream
-endobj
-
-309 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 244 Td
-	2.2727273 Tw
-	(Bind Frame: Use a value computed in a keyframe. This adds an) Tj
-ET
-endstream
-endobj
-
-308 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 266 Td
-	6.6666665 Tw
-	(user, and is the default for non keyframed attributes. ) Tj
-ET
-endstream
-endobj
-
-307 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 278 Td
-	2.2727273 Tw
-	(adds an edge which points to the attribute values set by the) Tj
-ET
-endstream
-endobj
-
-306 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 290 Td
-	1.0 Tw
-	(template or page when the graphic is animated on is used. This) Tj
-ET
-endstream
-endobj
-
-305 0 obj
-<<
-	/Length 104
->>
-stream
-BT
-	/Plain 12 Tf
-	72 302 Td
-	3.2 Tw
-	(User Frame: Similar to set frame, except the value from the) Tj
-ET
-endstream
-endobj
-
-304 0 obj
-<<
-	/Length 85
->>
-stream
-BT
-	/Plain 12 Tf
-	72 324 Td
-	29.0 Tw
-	(node and doesn't add any dependencies. ) Tj
-ET
-endstream
-endobj
-
-303 0 obj
-<<
-	/Length 104
->>
-stream
-BT
-	/Plain 12 Tf
-	72 336 Td
-	3.2 Tw
-	(specific keyframe. In the graph this updates the value of a) Tj
-ET
-endstream
-endobj
-
-302 0 obj
-<<
-	/Length 110
->>
-stream
-BT
-	/Plain 12 Tf
-	72 348 Td
-	2.6666667 Tw
-	(Set Frame: Set the value of an attribute of a geometry in a) Tj
-ET
-endstream
-endobj
-
-301 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	72 370 Td
-	46.2 Tw
-	(Current types of keyframes are ) Tj
-ET
-endstream
-endobj
-
-300 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 382 Td
-	6.571429 Tw
-	(attributes are interpolated linearly between the frames. ) Tj
-ET
-endstream
-endobj
-
-299 0 obj
-<<
-	/Length 69
->>
-stream
-BT
-	/Plain 12 Tf
-	344 394 Td
-	7.5 Tw
-	(When animated, geometry) Tj
-ET
-endstream
-endobj
-
-298 0 obj
-<<
-	/Length 80
->>
-stream
-BT
-	/Plain 12 Tf
-	72 394 Td
-	4.8 Tw
-	(evaluation functions to the graph. ) Tj
-ET
-endstream
-endobj
-
-297 0 obj
-<<
-	/Length 91
->>
-stream
-BT
-	/Plain 12 Tf
-	170 406 Td
-	5.875 Tw
-	(A Keyframe is a way to add dependencies and) Tj
-ET
-endstream
-endobj
-
-296 0 obj
-<<
-	/Length 57
->>
-stream
-BT
-	/Plain 12 Tf
-	72 406 Td
-	6.5 Tw
-	(show above. ) Tj
-ET
-endstream
-endobj
-
-295 0 obj
-<<
-	/Length 108
->>
-stream
-BT
-	/Plain 12 Tf
-	72 418 Td
-	0.3 Tw
-	(each frame, we create the table of attributes for each geometry) Tj
-ET
-endstream
-endobj
-
-294 0 obj
-<<
-	/Length 49
->>
-stream
-BT
-	/Plain 12 Tf
-	501 430 Td
-	1.0 Tw
-	(For) Tj
-ET
-endstream
-endobj
-
-293 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 430 Td
-	0.90909094 Tw
-	(fixed number $ n $, and contain a collection of keyframes. ) Tj
-ET
-endstream
-endobj
-
-292 0 obj
-<<
-	/Length 94
->>
-stream
-BT
-	/Plain 12 Tf
-	229 442 Td
-	0.22222222 Tw
-	(Frames have an index 1, 2, ... up to some) Tj
-ET
-endstream
-endobj
-
-291 0 obj
-<<
-	/Length 74
->>
-stream
-BT
-	/Plain 12 Tf
-	72 442 Td
-	0.33333334 Tw
-	(Frames and Keyframes. ) Tj
-ET
-endstream
-endobj
-
-290 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 454 Td
-	3.125 Tw
-	(keyframing process in Chroma Artist consists of two objects,) Tj
-ET
-endstream
-endobj
-
-289 0 obj
-<<
-	/Length 49
->>
-stream
-BT
-	/Plain 12 Tf
-	499 466 Td
-	1.0 Tw
-	(The) Tj
-ET
-endstream
-endobj
-
-288 0 obj
-<<
-	/Length 100
->>
-stream
-BT
-	/Plain 12 Tf
-	72 466 Td
-	12.75 Tw
-	(alt="Keyframe" class="theme-image dark" width="700"> ) Tj
-ET
-endstream
-endobj
-
-287 0 obj
-<<
-	/Length 55
->>
-stream
-BT
-	/Plain 12 Tf
-	444 478 Td
-	1.0 Tw
-	(dark.svg") Tj
-ET
-endstream
-endobj
-
-286 0 obj
-<<
-	/Length 55
->>
-stream
-BT
-	/Emphasis 12 Tf
-	393 478 Td
-	1.0 Tw
-	(expand) Tj
-ET
-endstream
-endobj
-
-285 0 obj
-<<
-	/Length 82
->>
-stream
-BT
-	/Plain 12 Tf
-	72 478 Td
-	1.0 Tw
-	(src="/assets/chroma-graphics/keyframe) Tj
-ET
-endstream
-endobj
-
-284 0 obj
-<<
-	/Length 50
->>
-stream
-BT
-	/Plain 12 Tf
-	481 490 Td
-	1.0 Tw
-	(<img) Tj
-ET
-endstream
-endobj
-
-283 0 obj
-<<
-	/Length 85
->>
-stream
-BT
-	/Plain 12 Tf
-	72 490 Td
-	44.0 Tw
-	(class="theme-image light" width="700"> ) Tj
-ET
-endstream
-endobj
-
-282 0 obj
-<<
-	/Length 108
->>
-stream
-BT
-	/Plain 12 Tf
-	72 502 Td
-	3.0 Tw
-	(src="/assets/chroma-graphics/keyframeexpand.svg" alt="Keyframe") Tj
-ET
-endstream
-endobj
-
-281 0 obj
-<<
-	/Length 50
->>
-stream
-BT
-	/Plain 12 Tf
-	411 514 Td
-	1.0 Tw
-	(<img) Tj
-ET
-endstream
-endobj
-
-280 0 obj
-<<
-	/Length 59
->>
-stream
-BT
-	/Plain 12 Tf
-	72 514 Td
-	127.0 Tw
-	(child node. ) Tj
-ET
-endstream
-endobj
-
-279 0 obj
-<<
-	/Length 108
->>
-stream
-BT
-	/Plain 12 Tf
-	72 526 Td
-	0.3 Tw
-	(rectangle node which evaluates the maximum of the value of each) Tj
-ET
-endstream
-endobj
-
-278 0 obj
-<<
-	/Length 115
->>
-stream
-BT
-	/Plain 12 Tf
-	72 538 Td
-	0.33333334 Tw
-	(adding the following dependencies, and adding a function to the) Tj
-ET
-endstream
-endobj
-
-277 0 obj
-<<
-	/Length 93
->>
-stream
-BT
-	/Plain 12 Tf
-	190 550 Td
-	4.857143 Tw
-	(We can make the rectangle width dynamic by) Tj
-ET
-endstream
-endobj
-
-276 0 obj
-<<
-	/Length 50
->>
-stream
-BT
-	/Plain 12 Tf
-	159 550 Td
-	3.0 Tw
-	()). ) Tj
-ET
-endstream
-endobj
-
-275 0 obj
-<<
-	/Length 59
->>
-stream
-BT
-	/Emphasis 12 Tf
-	72 550 Td
-	1.0 Tw
-	(kixJYgjSUAU) Tj
-ET
-endstream
-endobj
-
-274 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 562 Td
-	5.5 Tw
-	(graphs ([Topological Sort](https://youtu.be/eL-KzMXSXXI?si=mG9) Tj
-ET
-endstream
-endobj
-
-273 0 obj
-<<
-	/Length 115
->>
-stream
-BT
-	/Plain 12 Tf
-	72 574 Td
-	0.42857143 Tw
-	(William Fiset describes topological sorting of directed acyclic) Tj
-ET
-endstream
-endobj
-
-272 0 obj
-<<
-	/Length 75
->>
-stream
-BT
-	/Plain 12 Tf
-	337 586 Td
-	7.3333335 Tw
-	(This excellent video by) Tj
-ET
-endstream
-endobj
-
-271 0 obj
-<<
-	/Length 78
->>
-stream
-BT
-	/Plain 12 Tf
-	72 586 Td
-	6.2 Tw
-	(is known as topological sorting. ) Tj
-ET
-endstream
-endobj
-
-270 0 obj
-<<
-	/Length 58
->>
-stream
-BT
-	/Plain 12 Tf
-	437 598 Td
-	0.0 Tw
-	(This problem) Tj
-ET
-endstream
-endobj
-
-269 0 obj
-<<
-	/Length 103
->>
-stream
-BT
-	/Plain 12 Tf
-	72 598 Td
-	0.33333334 Tw
-	(node only once each child node has been evaluated. ) Tj
-ET
-endstream
-endobj
-
-268 0 obj
-<<
-	/Length 74
->>
-stream
-BT
-	/Plain 12 Tf
-	312 610 Td
-	2.2 Tw
-	(But we need to evaluate each) Tj
-ET
-endstream
-endobj
-
-267 0 obj
-<<
-	/Length 83
->>
-stream
-BT
-	/Plain 12 Tf
-	72 610 Td
-	2.1666667 Tw
-	(child node of the current node. ) Tj
-ET
-endstream
-endobj
-
-266 0 obj
-<<
-	/Length 108
->>
-stream
-BT
-	/Plain 12 Tf
-	72 622 Td
-	0.3 Tw
-	(positions this function evaluates the sum of the value for each) Tj
-ET
-endstream
-endobj
-
-265 0 obj
-<<
-	/Length 113
->>
-stream
-BT
-	/Plain 12 Tf
-	72 634 Td
-	0.9166667 Tw
-	(this we store a function at each node, in the case of relative) Tj
-ET
-endstream
-endobj
-
-264 0 obj
+337 0 obj
 <<
 	/Length 51
 >>
 stream
 BT
 	/Plain 12 Tf
-	485 646 Td
+	484 126 Td
 	2.0 Tw
-	(To do) Tj
+	(The x) Tj
 ET
 endstream
 endobj
 
-263 0 obj
+336 0 obj
 <<
-	/Length 105
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 646 Td
-	3.2222223 Tw
-	(combining the values of the dependencies in some way. ) Tj
+	477 126 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
-262 0 obj
+335 0 obj
 <<
-	/Length 115
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 658 Td
-	0.23076923 Tw
-	(node of this graph, we want to compute the value of the node by) Tj
+	470 126 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
-261 0 obj
+334 0 obj
 <<
-	/Length 53
+	/Length 102
 >>
 stream
 BT
 	/Plain 12 Tf
-	471 670 Td
-	2.0 Tw
-	(At each) Tj
+	72 126 Td
+	9.666667 Tw
+	(alt="Keyframe" class="theme-image dark" width="700">) Tj
 ET
 endstream
 endobj
 
-260 0 obj
-<<
-	/Length 99
->>
-stream
-BT
-	/Plain 12 Tf
-	72 670 Td
-	5.75 Tw
-	(alt="Keyframe" class="theme-image dark" width="700"> ) Tj
-ET
-endstream
-endobj
-
-259 0 obj
+333 0 obj
 <<
 	/Length 55
 >>
 stream
 BT
 	/Plain 12 Tf
-	442 682 Td
+	439 138 Td
 	1.0 Tw
 	(dark.svg") Tj
 ET
 endstream
 endobj
 
-258 0 obj
+332 0 obj
 <<
-	/Length 54
+	/Length 52
 >>
 stream
 BT
 	/Emphasis 12 Tf
-	399 682 Td
+	412 138 Td
 	1.0 Tw
-	(start) Tj
+	(img) Tj
 ET
 endstream
 endobj
 
-257 0 obj
+331 0 obj
 <<
 	/Length 82
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 682 Td
+	72 138 Td
 	1.0 Tw
 	(src="/assets/chroma-graphics/keyframe) Tj
 ET
 endstream
 endobj
 
-256 0 obj
+330 0 obj
 <<
 	/Length 50
 >>
 stream
 BT
 	/Plain 12 Tf
-	481 694 Td
+	491 150 Td
 	1.0 Tw
 	(<img) Tj
 ET
 endstream
 endobj
 
-255 0 obj
+329 0 obj
 <<
-	/Length 85
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 694 Td
-	44.0 Tw
-	(class="theme-image light" width="700"> ) Tj
+	484 150 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
-254 0 obj
+328 0 obj
+<<
+	/Length 99
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 150 Td
+	12.0 Tw
+	(alt="Keyframe" class="theme-image light" width="700">) Tj
+ET
+endstream
+endobj
+
+327 0 obj
+<<
+	/Length 96
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 162 Td
+	96.0 Tw
+	(<img src="/assets/chroma-graphics/keyframeimg.svg") Tj
+ET
+endstream
+endobj
+
+326 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 174 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+325 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	508 174 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+324 0 obj
 <<
 	/Length 108
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 706 Td
-	11.0 Tw
-	(src="/assets/chroma-graphics/keyframestart.svg" alt="Keyframe") Tj
+	72 174 Td
+	0.375 Tw
+	(represents some attributes of the graphic we described above,) Tj
+ET
+endstream
+endobj
+
+323 0 obj
+<<
+	/Length 80
+>>
+stream
+BT
+	/Plain 12 Tf
+	247 186 Td
+	8.0 Tw
+	(Consider the following table which) Tj
+ET
+endstream
+endobj
+
+322 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	240 186 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+321 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	233 186 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+320 0 obj
+<<
+	/Length 66
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 186 Td
+	19.0 Tw
+	(construct keyframes.) Tj
+ET
+endstream
+endobj
+
+319 0 obj
+<<
+	/Length 70
+>>
+stream
+BT
+	/Plain 12 Tf
+	335 198 Td
+	4.0 Tw
+	(This will be extended to) Tj
+ET
+endstream
+endobj
+
+318 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	328 198 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+317 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 198 Td
+	7.3333335 Tw
+	(positions from relative position.) Tj
+ET
+endstream
+endobj
+
+316 0 obj
+<<
+	/Length 105
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 210 Td
+	2.5 Tw
+	(case of no keyframes which is used to calculate the absolute) Tj
+ET
+endstream
+endobj
+
+315 0 obj
+<<
+	/Length 72
+>>
+stream
+BT
+	/Plain 12 Tf
+	330 222 Td
+	2.0 Tw
+	(We begin with the simplest) Tj
+ET
+endstream
+endobj
+
+314 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	323 222 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+313 0 obj
+<<
+	/Length 79
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 222 Td
+	2.0 Tw
+	(based on a directed acyclic graph.) Tj
+ET
+endstream
+endobj
+
+312 0 obj
+<<
+	/Length 77
+>>
+stream
+BT
+	/Plain 12 Tf
+	351 234 Td
+	0.33333334 Tw
+	(The keyframing system is) Tj
+ET
+endstream
+endobj
+
+311 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	344 234 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+310 0 obj
+<<
+	/Length 90
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 234 Td
+	0.33333334 Tw
+	(rectangle be linked to the text width.) Tj
+ET
+endstream
+endobj
+
+309 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 246 Td
+	3.5454545 Tw
+	(allows us to animate the graphic and have the width of the) Tj
+ET
+endstream
+endobj
+
+308 0 obj
+<<
+	/Length 56
+>>
+stream
+BT
+	/Plain 12 Tf
+	451 258 Td
+	1.0 Tw
+	(Keyframing) Tj
+ET
+endstream
+endobj
+
+307 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	444 258 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+306 0 obj
+<<
+	/Length 99
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 258 Td
+	0.375 Tw
+	(rectangle needs to be updated when the text changes.) Tj
+ET
+endstream
+endobj
+
+305 0 obj
+<<
+	/Length 105
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 270 Td
+	7.4444447 Tw
+	(Currently the rectangle is static and the width of the) Tj
+ET
+endstream
+endobj
+
+304 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	514 282 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+303 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	507 282 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+302 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 282 Td
+	1.0 Tw
+	(![keyframe](/assets/chroma-graphics/keyframeartist.png)) Tj
+ET
+endstream
+endobj
+
+301 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	477 294 Td
+	38.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+300 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	432 294 Td
+	38.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+299 0 obj
+<<
+	/Length 53
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 294 Td
+	1.0 Tw
+	(graphic.) Tj
+ET
+endstream
+endobj
+
+298 0 obj
+<<
+	/Length 110
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 306 Td
+	3.5555556 Tw
+	(Chroma Artist, the following image shows an example of this) Tj
+ET
+endstream
+endobj
+
+297 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	508 318 Td
+	1.0 Tw
+	(In) Tj
+ET
+endstream
+endobj
+
+296 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	501 318 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+295 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 318 Td
+	1.8888888 Tw
+	(the graphic we only need to change the rectangle position.) Tj
+ET
+endstream
+endobj
+
+294 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 330 Td
+	2.7777777 Tw
+	(geometries and circle are parented to the rectangle, to move) Tj
+ET
+endstream
+endobj
+
+293 0 obj
+<<
+	/Length 60
+>>
+stream
+BT
+	/Plain 12 Tf
+	419 342 Td
+	2.0 Tw
+	(Since the text) Tj
+ET
+endstream
+endobj
+
+292 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	412 342 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+291 0 obj
+<<
+	/Length 97
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 342 Td
+	1.8571428 Tw
+	(rectangle, aswell as the position of the text.) Tj
+ET
+endstream
+endobj
+
+290 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 354 Td
+	2.7777777 Tw
+	(set the default position, width and height of the background) Tj
+ET
+endstream
+endobj
+
+289 0 obj
+<<
+	/Length 64
+>>
+stream
+BT
+	/Plain 12 Tf
+	391 366 Td
+	1.5 Tw
+	(The designer could) Tj
+ET
+endstream
+endobj
+
+288 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	384 366 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+287 0 obj
+<<
+	/Length 88
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 366 Td
+	1.4 Tw
+	(placeholder also parented to the rectangle.) Tj
+ET
+endstream
+endobj
+
+286 0 obj
+<<
+	/Length 105
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 378 Td
+	2.5 Tw
+	(geometries parented to the rectangle, and a circle as a logo) Tj
+ET
+endstream
+endobj
+
+285 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 390 Td
+	7.5 Tw
+	(which contains a rectangle for the background, two text) Tj
+ET
+endstream
+endobj
+
+284 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 402 Td
+	2.7777777 Tw
+	(example of this functionality is a simple lower frame super,) Tj
+ET
+endstream
+endobj
+
+283 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	508 414 Td
+	1.0 Tw
+	(An) Tj
+ET
+endstream
+endobj
+
+282 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	501 414 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+281 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	494 414 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+280 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 414 Td
+	0.42857143 Tw
+	(Chroma Engine rebuilds to calculate the absolute positions.) Tj
+ET
+endstream
+endobj
+
+279 0 obj
+<<
+	/Length 106
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 426 Td
+	2.0 Tw
+	(gives an easy interface to specify this tree structure, which) Tj
+ET
+endstream
+endobj
+
+278 0 obj
+<<
+	/Length 59
+>>
+stream
+BT
+	/Plain 12 Tf
+	428 438 Td
+	2.0 Tw
+	(Chroma Artist) Tj
+ET
+endstream
+endobj
+
+277 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	421 438 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+276 0 obj
+<<
+	/Length 99
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 438 Td
+	1.1428572 Tw
+	(relative to the position of the parent geometry.) Tj
+ET
+endstream
+endobj
+
+275 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 450 Td
+	4.3333335 Tw
+	(geometries a tree structure, and position of a geometry is) Tj
+ET
+endstream
+endobj
+
+274 0 obj
+<<
+	/Length 60
+>>
+stream
+BT
+	/Plain 12 Tf
+	419 462 Td
+	2.0 Tw
+	(This gives the) Tj
+ET
+endstream
+endobj
+
+273 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	412 462 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+272 0 obj
+<<
+	/Length 97
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 462 Td
+	2.1666667 Tw
+	(graphics, each geometry has a parent geometry.) Tj
+ET
+endstream
+endobj
+
+271 0 obj
+<<
+	/Length 79
+>>
+stream
+BT
+	/Plain 12 Tf
+	255 474 Td
+	10.0 Tw
+	(To enable easier manipulation of) Tj
+ET
+endstream
+endobj
+
+270 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	247 474 Td
+	1.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+269 0 obj
+<<
+	/Length 67
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 474 Td
+	26.0 Tw
+	(relative coordinates.) Tj
+ET
+endstream
+endobj
+
+268 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 486 Td
+	5.75 Tw
+	(discussion of Chroma Engine, we omitted the discussion of) Tj
+ET
+endstream
+endobj
+
+267 0 obj
+<<
+	/Length 52
+>>
+stream
+BT
+	/Plain 12 Tf
+	474 498 Td
+	6.0 Tw
+	(In the) Tj
+ET
+endstream
+endobj
+
+266 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	466 498 Td
+	1.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+265 0 obj
+<<
+	/Length 98
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 498 Td
+	8.833333 Tw
+	(template, and create Keyframes for the template.) Tj
+ET
+endstream
+endobj
+
+264 0 obj
+<<
+	/Length 106
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 510 Td
+	5.888889 Tw
+	(Artist is used to manipulate the geometry hierarchy of a) Tj
+ET
+endstream
+endobj
+
+263 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 522 Td
+	5.75 Tw
+	(difference between Chroma Viz and Chroma Artist is Chroma) Tj
+ET
+endstream
+endobj
+
+262 0 obj
+<<
+	/Length 53
+>>
+stream
+BT
+	/Plain 12 Tf
+	467 534 Td
+	5.0 Tw
+	(The key) Tj
+ET
+endstream
+endobj
+
+261 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	460 534 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+260 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 534 Td
+	4.4444447 Tw
+	(be imported to Chroma Hub and used by Chroma Viz.) Tj
+ET
+endstream
+endobj
+
+259 0 obj
+<<
+	/Length 112
+>>
+stream
+BT
+	/Plain 12 Tf
+	79 546 Td
+	1.1111112 Tw
+	(Chroma Artist provides a UI for designing templates which can) Tj
+ET
+endstream
+endobj
+
+258 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 546 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+257 0 obj
+<<
+	/Length 59
+>>
+stream
+BT
+	/Strong 20 Tf
+	72 568 Td
+	1.0 Tw
+	(Chroma Artist) Tj
+ET
+endstream
+endobj
+
+256 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	507 598 Td
+	8.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+255 0 obj
+<<
+	/Length 79
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 598 Td
+	78.666664 Tw
+	(requests to retrieve assets.) Tj
+ET
+endstream
+endobj
+
+254 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	236 610 Td
+	3.0 Tw
+	(Chroma Artist/Viz and Engine using GET) Tj
 ET
 endstream
 endobj
 
 253 0 obj
 <<
-	/Length 50
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	484 718 Td
-	1.0 Tw
-	(<img) Tj
+	229 610 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 252 0 obj
 <<
-	/Length 93
+	/Length 66
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 718 Td
-	16.285715 Tw
-	(graph, which is a directed acyclic graph. ) Tj
+	72 610 Td
+	4.0 Tw
+	(templates and assets.) Tj
 ET
 endstream
 endobj
 
 251 0 obj
 <<
-	/Length 104
+	/Length 101
 >>
 stream
 BT
 	/Plain 12 Tf
-	157 730 Td
-	0.42857143 Tw
-	(Continuing for all geometries we form the following) Tj
+	72 622 Td
+	10.0 Tw
+	(application which makes POST requests, to import/update) Tj
 ET
 endstream
 endobj
 
 250 0 obj
 <<
-	/Length 57
+	/Length 81
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 730 Td
-	0.0 Tw
-	(geometry 4. ) Tj
+	272 634 Td
+	0.4 Tw
+	(Chroma Artist is currently the only) Tj
 ET
 endstream
 endobj
 
 249 0 obj
 <<
-	/Type /Page
-	/Contents 242 0 R
-	/Resources 248 0 R
+	/Length 47
 >>
+stream
+BT
+	/Plain 12 Tf
+	265 634 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
 endobj
 
 248 0 obj
 <<
-	/Font 247 0 R
+	/Length 72
 >>
+stream
+BT
+	/Plain 12 Tf
+	72 634 Td
+	1.0 Tw
+	(updating/retrieving assets.) Tj
+ET
+endstream
 endobj
 
 247 0 obj
 <<
-	/Plain 243 0 R
-	/Strong 244 0 R
-	/Emphasis 245 0 R
-	/Code 246 0 R
+	/Length 88
 >>
+stream
+BT
+	/Plain 12 Tf
+	236 646 Td
+	4.8333335 Tw
+	(Chroma Hub implements a REST API for) Tj
+ET
+endstream
 endobj
 
 246 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	229 646 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+245 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	222 646 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+244 0 obj
+<<
+	/Length 64
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 646 Td
+	5.0 Tw
+	(database to a file.) Tj
+ET
+endstream
+endobj
+
+243 0 obj
+<<
+	/Length 112
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 658 Td
+	1.6363636 Tw
+	(package for simplicity to write and read a json format of the) Tj
+ET
+endstream
+endobj
+
+242 0 obj
+<<
+	/Length 52
+>>
+stream
+BT
+	/Plain 12 Tf
+	477 670 Td
+	1.0 Tw
+	(Golang) Tj
+ET
+endstream
+endobj
+
+241 0 obj
+<<
+	/Length 58
+>>
+stream
+BT
+	/Code 12 Tf
+	381 670 Td
+	1.0 Tw
+	(encoding/json) Tj
+ET
+endstream
+endobj
+
+240 0 obj
+<<
+	/Length 68
+>>
+stream
+BT
+	/Plain 12 Tf
+	219 670 Td
+	1.5 Tw
+	(Internally we use the ) Tj
+ET
+endstream
+endobj
+
+239 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	212 670 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+238 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	205 670 Td
+	1.0 Tw
+	(.) Tj
+ET
+endstream
+endobj
+
+237 0 obj
+<<
+	/Length 62
+>>
+stream
+BT
+	/Code 12 Tf
+	72 670 Td
+	1.0 Tw
+	(hub/chroma_hub.sql) Tj
+ET
+endstream
+endobj
+
+236 0 obj
+<<
+	/Length 115
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 682 Td
+	0.27272728 Tw
+	(database, which currently needs to be setup with the schema in ) Tj
+ET
+endstream
+endobj
+
+235 0 obj
+<<
+	/Length 69
+>>
+stream
+BT
+	/Plain 12 Tf
+	365 694 Td
+	0.25 Tw
+	(Chroma Hub wraps a SQL) Tj
+ET
+endstream
+endobj
+
+234 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	358 694 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+233 0 obj
+<<
+	/Length 92
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 694 Td
+	0.33333334 Tw
+	(as images, currently only in png format.) Tj
+ET
+endstream
+endobj
+
+232 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 706 Td
+	1.1 Tw
+	(Chroma Hub also stores any assets needed by the templates such) Tj
+ET
+endstream
+endobj
+
+231 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 718 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+230 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 718 Td
+	4.75 Tw
+	(templates used by Chroma Viz and Chroma Engine instances.) Tj
+ET
+endstream
+endobj
+
+229 0 obj
+<<
+	/Length 106
+>>
+stream
+BT
+	/Plain 12 Tf
+	79 730 Td
+	5.7777777 Tw
+	(The purpose of Chroma Hub is to synchronize the graphic) Tj
+ET
+endstream
+endobj
+
+228 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 730 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+227 0 obj
+<<
+	/Type /Page
+	/Contents 220 0 R
+	/Resources 226 0 R
+>>
+endobj
+
+226 0 obj
+<<
+	/Font 225 0 R
+>>
+endobj
+
+225 0 obj
+<<
+	/Plain 221 0 R
+	/Strong 222 0 R
+	/Emphasis 223 0 R
+	/Code 224 0 R
+>>
+endobj
+
+224 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -1401,7 +3681,7 @@ endobj
 >>
 endobj
 
-245 0 obj
+223 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -1409,7 +3689,7 @@ endobj
 >>
 endobj
 
-244 0 obj
+222 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -1417,7 +3697,7 @@ endobj
 >>
 endobj
 
-243 0 obj
+221 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -1425,8 +3705,69 @@ endobj
 >>
 endobj
 
-242 0 obj
+220 0 obj
 [
+	100 0 R
+	101 0 R
+	102 0 R
+	103 0 R
+	104 0 R
+	105 0 R
+	106 0 R
+	107 0 R
+	108 0 R
+	109 0 R
+	110 0 R
+	111 0 R
+	112 0 R
+	113 0 R
+	114 0 R
+	115 0 R
+	116 0 R
+	117 0 R
+	118 0 R
+	119 0 R
+	120 0 R
+	121 0 R
+	122 0 R
+	123 0 R
+	124 0 R
+	125 0 R
+	126 0 R
+	127 0 R
+	128 0 R
+	129 0 R
+	130 0 R
+	131 0 R
+	132 0 R
+	133 0 R
+	134 0 R
+	135 0 R
+	136 0 R
+	137 0 R
+	138 0 R
+	139 0 R
+	140 0 R
+	141 0 R
+	142 0 R
+	143 0 R
+	144 0 R
+	145 0 R
+	146 0 R
+	147 0 R
+	148 0 R
+	149 0 R
+	150 0 R
+	151 0 R
+	152 0 R
+	153 0 R
+	154 0 R
+	155 0 R
+	156 0 R
+	157 0 R
+	158 0 R
+	159 0 R
+	160 0 R
 	161 0 R
 	162 0 R
 	163 0 R
@@ -1486,410 +3827,528 @@ endobj
 	217 0 R
 	218 0 R
 	219 0 R
-	220 0 R
-	221 0 R
-	222 0 R
-	223 0 R
-	224 0 R
-	225 0 R
-	226 0 R
-	227 0 R
-	228 0 R
-	229 0 R
-	230 0 R
-	231 0 R
-	232 0 R
-	233 0 R
-	234 0 R
-	235 0 R
-	236 0 R
-	237 0 R
-	238 0 R
-	239 0 R
-	240 0 R
-	241 0 R
 ]
 endobj
 
-241 0 obj
-<<
-	/Length 108
->>
-stream
-BT
-	/Plain 12 Tf
-	72 78 Td
-	2.909091 Tw
-	(the x position of geometry 1 and the relative x position of) Tj
-ET
-endstream
-endobj
-
-240 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 90 Td
-	1.6363636 Tw
-	(dependency with an arrow from the x position of geometry 4 to) Tj
-ET
-endstream
-endobj
-
-239 0 obj
-<<
-	/Length 62
->>
-stream
-BT
-	/Plain 12 Tf
-	408 102 Td
-	0.5 Tw
-	(We indicate this) Tj
-ET
-endstream
-endobj
-
-238 0 obj
-<<
-	/Length 93
->>
-stream
-BT
-	/Plain 12 Tf
-	72 102 Td
-	0.25 Tw
-	((it's parent) and its own relative x position. ) Tj
-ET
-endstream
-endobj
-
-237 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 114 Td
-	1.0 Tw
-	(position of geometry 4 depends on the x position of geometry 1) Tj
-ET
-endstream
-endobj
-
-236 0 obj
-<<
-	/Length 51
->>
-stream
-BT
-	/Plain 12 Tf
-	484 126 Td
-	3.0 Tw
-	(The x) Tj
-ET
-endstream
-endobj
-
-235 0 obj
-<<
-	/Length 98
->>
-stream
-BT
-	/Plain 12 Tf
-	72 126 Td
-	9.0 Tw
-	(alt="Keyframe" class="theme-image dark" width="700"> ) Tj
-ET
-endstream
-endobj
-
-234 0 obj
+219 0 obj
 <<
 	/Length 55
 >>
 stream
 BT
-	/Plain 12 Tf
-	439 138 Td
+	/Strong 20 Tf
+	72 72 Td
 	1.0 Tw
-	(dark.svg") Tj
-ET
-endstream
-endobj
-
-233 0 obj
-<<
-	/Length 52
->>
-stream
-BT
-	/Emphasis 12 Tf
-	412 138 Td
-	1.0 Tw
-	(img) Tj
-ET
-endstream
-endobj
-
-232 0 obj
-<<
-	/Length 82
->>
-stream
-BT
-	/Plain 12 Tf
-	72 138 Td
-	1.0 Tw
-	(src="/assets/chroma-graphics/keyframe) Tj
-ET
-endstream
-endobj
-
-231 0 obj
-<<
-	/Length 50
->>
-stream
-BT
-	/Plain 12 Tf
-	492 150 Td
-	1.0 Tw
-	(<img) Tj
-ET
-endstream
-endobj
-
-230 0 obj
-<<
-	/Length 99
->>
-stream
-BT
-	/Plain 12 Tf
-	72 150 Td
-	9.0 Tw
-	(alt="Keyframe" class="theme-image light" width="700"> ) Tj
-ET
-endstream
-endobj
-
-229 0 obj
-<<
-	/Length 96
->>
-stream
-BT
-	/Plain 12 Tf
-	72 162 Td
-	96.0 Tw
-	(<img src="/assets/chroma-graphics/keyframeimg.svg") Tj
-ET
-endstream
-endobj
-
-228 0 obj
-<<
-	/Length 113
->>
-stream
-BT
-	/Plain 12 Tf
-	72 174 Td
-	1.2222222 Tw
-	(represents some attributes of the graphic we described above, ) Tj
-ET
-endstream
-endobj
-
-227 0 obj
-<<
-	/Length 81
->>
-stream
-BT
-	/Plain 12 Tf
-	244 186 Td
-	9.25 Tw
-	(Consider the following table which) Tj
-ET
-endstream
-endobj
-
-226 0 obj
-<<
-	/Length 67
->>
-stream
-BT
-	/Plain 12 Tf
-	72 186 Td
-	11.5 Tw
-	(construct keyframes. ) Tj
-ET
-endstream
-endobj
-
-225 0 obj
-<<
-	/Length 70
->>
-stream
-BT
-	/Plain 12 Tf
-	336 198 Td
-	4.0 Tw
-	(This will be extended to) Tj
-ET
-endstream
-endobj
-
-224 0 obj
-<<
-	/Length 80
->>
-stream
-BT
-	/Plain 12 Tf
-	72 198 Td
-	5.75 Tw
-	(positions from relative position. ) Tj
-ET
-endstream
-endobj
-
-223 0 obj
-<<
-	/Length 105
->>
-stream
-BT
-	/Plain 12 Tf
-	72 210 Td
-	2.5 Tw
-	(case of no keyframes which is used to calculate the absolute) Tj
-ET
-endstream
-endobj
-
-222 0 obj
-<<
-	/Length 72
->>
-stream
-BT
-	/Plain 12 Tf
-	330 222 Td
-	2.0 Tw
-	(We begin with the simplest) Tj
-ET
-endstream
-endobj
-
-221 0 obj
-<<
-	/Length 86
->>
-stream
-BT
-	/Plain 12 Tf
-	72 222 Td
-	1.6666666 Tw
-	(based on a directed acyclic graph. ) Tj
-ET
-endstream
-endobj
-
-220 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	351 234 Td
-	0.33333334 Tw
-	(The keyframing system is) Tj
-ET
-endstream
-endobj
-
-219 0 obj
-<<
-	/Length 90
->>
-stream
-BT
-	/Plain 12 Tf
-	72 234 Td
-	0.2857143 Tw
-	(rectangle be linked to the text width. ) Tj
+	(Chroma Hub) Tj
 ET
 endstream
 endobj
 
 218 0 obj
 <<
-	/Length 109
+	/Length 48
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 246 Td
-	3.5454545 Tw
-	(allows us to animate the graphic and have the width of the) Tj
+	501 102 Td
+	14.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 217 0 obj
 <<
-	/Length 56
+	/Length 67
 >>
 stream
 BT
 	/Plain 12 Tf
-	451 258 Td
-	1.0 Tw
-	(Keyframing) Tj
+	72 102 Td
+	287.0 Tw
+	(alt="Chroma Engine">) Tj
 ET
 endstream
 endobj
 
 216 0 obj
 <<
-	/Length 105
+	/Length 99
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 258 Td
-	0.33333334 Tw
-	(rectangle needs to be updated when the text changes. ) Tj
+	137 114 Td
+	16.0 Tw
+	(<img src="/assets/chroma-graphics/chroma-engine.png") Tj
 ET
 endstream
 endobj
 
 215 0 obj
 <<
-	/Length 105
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 270 Td
-	7.4444447 Tw
-	(Currently the rectangle is static and the width of the) Tj
+	130 114 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 214 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	123 114 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+213 0 obj
+<<
+	/Length 52
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 114 Td
+	1.0 Tw
+	(OpenGL.) Tj
+ET
+endstream
+endobj
+
+212 0 obj
+<<
+	/Length 102
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 126 Td
+	4.6 Tw
+	(each geometry in the page is rendered to the screen using) Tj
+ET
+endstream
+endobj
+
+211 0 obj
+<<
+	/Length 53
+>>
+stream
+BT
+	/Plain 12 Tf
+	472 138 Td
+	1.0 Tw
+	(Finally) Tj
+ET
+endstream
+endobj
+
+210 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	465 138 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+209 0 obj
+<<
+	/Length 99
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 138 Td
+	1.0 Tw
+	(we use a bezier curve to control the animation timing.) Tj
+ET
+endstream
+endobj
+
+208 0 obj
+<<
+	/Length 68
+>>
+stream
+BT
+	/Plain 12 Tf
+	362 150 Td
+	1.5 Tw
+	(For smooth animations,) Tj
+ET
+endstream
+endobj
+
+207 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	355 150 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+206 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 150 Td
+	1.2 Tw
+	(described in the Chroma Artist section.) Tj
+ET
+endstream
+endobj
+
+205 0 obj
+<<
+	/Length 74
+>>
+stream
+BT
+	/Plain 12 Tf
+	334 162 Td
+	8.333333 Tw
+	(The keyframe process is) Tj
+ET
+endstream
+endobj
+
+204 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	326 162 Td
+	1.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+203 0 obj
+<<
+	/Length 77
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 162 Td
+	17.0 Tw
+	(absolute position calculations.) Tj
+ET
+endstream
+endobj
+
+202 0 obj
+<<
+	/Length 63
+>>
+stream
+BT
+	/Plain 12 Tf
+	390 174 Td
+	5.5 Tw
+	(This includes the) Tj
+ET
+endstream
+endobj
+
+201 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	383 174 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+200 0 obj
+<<
+	/Length 85
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 174 Td
+	5.4 Tw
+	(computes the keyframes for the template.) Tj
+ET
+endstream
+endobj
+
+199 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 186 Td
+	6.625 Tw
+	(the graphics request and any image assets, Chroma Engine) Tj
+ET
+endstream
+endobj
+
+198 0 obj
+<<
+	/Length 61
+>>
+stream
+BT
+	/Plain 12 Tf
+	409 198 Td
+	6.0 Tw
+	(After receiving) Tj
+ET
+endstream
+endobj
+
+197 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	402 198 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+196 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	395 198 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+195 0 obj
+<<
+	/Length 88
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 198 Td
+	3.0 Tw
+	(requesting the image again from Chroma Hub.) Tj
+ET
+endstream
+endobj
+
+194 0 obj
+<<
+	/Length 106
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 210 Td
+	5.888889 Tw
+	(currently stored image id, we reuse this file instead of) Tj
+ET
+endstream
+endobj
+
+193 0 obj
+<<
+	/Length 102
+>>
+stream
+BT
+	/Plain 12 Tf
+	132 222 Td
+	3.7777777 Tw
+	(In later render calls, if the image id matches the) Tj
+ET
+endstream
+endobj
+
+192 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	125 222 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+191 0 obj
+<<
+	/Length 52
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 222 Td
+	1.0 Tw
+	(libpng.) Tj
+ET
+endstream
+endobj
+
+190 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 234 Td
+	2.909091 Tw
+	(as well as decoding the png to extract the pixel data using) Tj
+ET
+endstream
+endobj
+
+189 0 obj
+<<
+	/Length 90
+>>
+stream
+BT
+	/Plain 12 Tf
+	250 246 Td
+	0.2857143 Tw
+	(Then we store this data for later use,) Tj
+ET
+endstream
+endobj
+
+188 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	243 246 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+187 0 obj
+<<
+	/Length 69
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 246 Td
+	0.2 Tw
+	(image as a raw PNG file.) Tj
+ET
+endstream
+endobj
+
+186 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 258 Td
+	3.5454545 Tw
+	(send 4 bytes with the length of the image, followed by the) Tj
+ET
+endstream
+endobj
+
+185 0 obj
+<<
+	/Length 62
+>>
+stream
+BT
+	/Plain 12 Tf
+	408 270 Td
+	0.5 Tw
+	(Chroma Hub first) Tj
+ET
+endstream
+endobj
+
+184 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	401 270 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+183 0 obj
+<<
+	/Length 92
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 270 Td
+	0.25 Tw
+	(render an image we request it from Chroma Hub.) Tj
+ET
+endstream
+endobj
+
+182 0 obj
 <<
 	/Length 102
 >>
@@ -1897,906 +4356,428 @@ stream
 BT
 	/Plain 12 Tf
 	72 282 Td
-	53.0 Tw
-	(![keyframe](/assets/chroma-graphics/keyframeartist.png) ) Tj
-ET
-endstream
-endobj
-
-213 0 obj
-<<
-	/Length 56
->>
-stream
-BT
-	/Plain 12 Tf
-	72 294 Td
-	387.0 Tw
-	(graphic. ) Tj
-ET
-endstream
-endobj
-
-212 0 obj
-<<
-	/Length 110
->>
-stream
-BT
-	/Plain 12 Tf
-	72 306 Td
-	3.5555556 Tw
-	(Chroma Artist, the following image shows an example of this) Tj
-ET
-endstream
-endobj
-
-211 0 obj
-<<
-	/Length 48
->>
-stream
-BT
-	/Plain 12 Tf
-	508 318 Td
-	1.0 Tw
-	(In) Tj
-ET
-endstream
-endobj
-
-210 0 obj
-<<
-	/Length 104
->>
-stream
-BT
-	/Plain 12 Tf
-	72 318 Td
-	1.7 Tw
-	(the graphic we only need to change the rectangle position. ) Tj
-ET
-endstream
-endobj
-
-209 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 330 Td
-	2.7777777 Tw
-	(geometries and circle are parented to the rectangle, to move) Tj
-ET
-endstream
-endobj
-
-208 0 obj
-<<
-	/Length 60
->>
-stream
-BT
-	/Plain 12 Tf
-	419 342 Td
-	2.0 Tw
-	(Since the text) Tj
-ET
-endstream
-endobj
-
-207 0 obj
-<<
-	/Length 94
->>
-stream
-BT
-	/Plain 12 Tf
-	72 342 Td
-	1.625 Tw
-	(rectangle, aswell as the position of the text. ) Tj
-ET
-endstream
-endobj
-
-206 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 354 Td
-	2.7777777 Tw
-	(set the default position, width and height of the background) Tj
-ET
-endstream
-endobj
-
-205 0 obj
-<<
-	/Length 64
->>
-stream
-BT
-	/Plain 12 Tf
-	391 366 Td
-	1.5 Tw
-	(The designer could) Tj
-ET
-endstream
-endobj
-
-204 0 obj
-<<
-	/Length 95
->>
-stream
-BT
-	/Plain 12 Tf
-	72 366 Td
-	1.1666666 Tw
-	(placeholder also parented to the rectangle. ) Tj
-ET
-endstream
-endobj
-
-203 0 obj
-<<
-	/Length 105
->>
-stream
-BT
-	/Plain 12 Tf
-	72 378 Td
-	2.5 Tw
-	(geometries parented to the rectangle, and a circle as a logo) Tj
-ET
-endstream
-endobj
-
-202 0 obj
-<<
-	/Length 100
->>
-stream
-BT
-	/Plain 12 Tf
-	72 390 Td
-	7.5 Tw
-	(which contains a rectangle for the background, two text) Tj
-ET
-endstream
-endobj
-
-201 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 402 Td
-	2.7777777 Tw
-	(example of this functionality is a simple lower frame super,) Tj
-ET
-endstream
-endobj
-
-200 0 obj
-<<
-	/Length 48
->>
-stream
-BT
-	/Plain 12 Tf
-	508 414 Td
-	1.0 Tw
-	(An) Tj
-ET
-endstream
-endobj
-
-199 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 414 Td
-	1.25 Tw
-	(Chroma Engine rebuilds to calculate the absolute positions. ) Tj
-ET
-endstream
-endobj
-
-198 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 426 Td
-	2.0 Tw
-	(gives an easy interface to specify this tree structure, which) Tj
-ET
-endstream
-endobj
-
-197 0 obj
-<<
-	/Length 59
->>
-stream
-BT
-	/Plain 12 Tf
-	428 438 Td
-	2.0 Tw
-	(Chroma Artist) Tj
-ET
-endstream
-endobj
-
-196 0 obj
-<<
-	/Length 94
->>
-stream
-BT
-	/Plain 12 Tf
-	72 438 Td
-	1.0 Tw
-	(relative to the position of the parent geometry. ) Tj
-ET
-endstream
-endobj
-
-195 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 450 Td
-	4.3333335 Tw
-	(geometries a tree structure, and position of a geometry is) Tj
-ET
-endstream
-endobj
-
-194 0 obj
-<<
-	/Length 60
->>
-stream
-BT
-	/Plain 12 Tf
-	419 462 Td
-	2.0 Tw
-	(This gives the) Tj
-ET
-endstream
-endobj
-
-193 0 obj
-<<
-	/Length 98
->>
-stream
-BT
-	/Plain 12 Tf
-	72 462 Td
-	1.8571428 Tw
-	(graphics, each geometry has a parent geometry. ) Tj
-ET
-endstream
-endobj
-
-192 0 obj
-<<
-	/Length 79
->>
-stream
-BT
-	/Plain 12 Tf
-	255 474 Td
-	10.0 Tw
-	(To enable easier manipulation of) Tj
-ET
-endstream
-endobj
-
-191 0 obj
-<<
-	/Length 68
->>
-stream
-BT
-	/Plain 12 Tf
-	72 474 Td
-	13.5 Tw
-	(relative coordinates. ) Tj
-ET
-endstream
-endobj
-
-190 0 obj
-<<
-	/Length 103
->>
-stream
-BT
-	/Plain 12 Tf
-	72 486 Td
-	5.75 Tw
-	(discussion of Chroma Engine, we omitted the discussion of) Tj
-ET
-endstream
-endobj
-
-189 0 obj
-<<
-	/Length 52
->>
-stream
-BT
-	/Plain 12 Tf
-	474 498 Td
-	6.0 Tw
-	(In the) Tj
-ET
-endstream
-endobj
-
-188 0 obj
-<<
-	/Length 99
->>
-stream
-BT
-	/Plain 12 Tf
-	72 498 Td
-	7.714286 Tw
-	(template, and create Keyframes for the template. ) Tj
-ET
-endstream
-endobj
-
-187 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 510 Td
-	5.888889 Tw
-	(Artist is used to manipulate the geometry hierarchy of a) Tj
-ET
-endstream
-endobj
-
-186 0 obj
-<<
-	/Length 103
->>
-stream
-BT
-	/Plain 12 Tf
-	72 522 Td
-	5.75 Tw
-	(difference between Chroma Viz and Chroma Artist is Chroma) Tj
-ET
-endstream
-endobj
-
-185 0 obj
-<<
-	/Length 53
->>
-stream
-BT
-	/Plain 12 Tf
-	468 534 Td
-	5.0 Tw
-	(The key) Tj
-ET
-endstream
-endobj
-
-184 0 obj
-<<
-	/Length 95
->>
-stream
-BT
-	/Plain 12 Tf
-	72 534 Td
-	4.1 Tw
-	(be imported to Chroma Hub and used by Chroma Viz. ) Tj
-ET
-endstream
-endobj
-
-183 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 546 Td
-	2.0 Tw
-	(Chroma Artist provides a UI for designing templates which can) Tj
-ET
-endstream
-endobj
-
-182 0 obj
-<<
-	/Length 47
->>
-stream
-BT
-	/Plain 20 Tf
-	233 568 Td
-	1.0 Tw
-	( ) Tj
+	4.6 Tw
+	(assets are also contained in Chroma Hub, so before we can) Tj
 ET
 endstream
 endobj
 
 181 0 obj
 <<
-	/Length 59
+	/Length 51
 >>
 stream
 BT
-	/Strong 20 Tf
-	72 568 Td
+	/Plain 12 Tf
+	482 294 Td
 	1.0 Tw
-	(Chroma Artist) Tj
+	(Image) Tj
 ET
 endstream
 endobj
 
 180 0 obj
 <<
-	/Length 76
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 598 Td
-	61.25 Tw
-	(requests to retrieve assets. ) Tj
+	475 294 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 179 0 obj
 <<
-	/Length 84
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	237 610 Td
-	3.0 Tw
-	(Chroma Artist/Viz and Engine using GET) Tj
+	468 294 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 178 0 obj
 <<
-	/Length 67
+	/Length 97
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 610 Td
-	3.0 Tw
-	(templates and assets. ) Tj
+	72 294 Td
+	5.125 Tw
+	(restricting geometry tree depth to a maximum of 8.) Tj
 ET
 endstream
 endobj
 
 177 0 obj
 <<
-	/Length 101
+	/Length 100
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 622 Td
-	10.0 Tw
-	(application which makes POST requests, to import/update) Tj
+	72 306 Td
+	9.375 Tw
+	(restrictions mean we can only have 8 stencil buffers,) Tj
 ET
 endstream
 endobj
 
 176 0 obj
 <<
-	/Length 81
+	/Length 49
 >>
 stream
 BT
 	/Plain 12 Tf
-	272 634 Td
-	0.4 Tw
-	(Chroma Artist is currently the only) Tj
+	496 318 Td
+	1.0 Tw
+	(GTK) Tj
 ET
 endstream
 endobj
 
 175 0 obj
 <<
-	/Length 73
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 634 Td
-	0.5 Tw
-	(updating/retrieving assets. ) Tj
+	488 318 Td
+	1.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 174 0 obj
 <<
-	/Length 88
+	/Length 98
 >>
 stream
 BT
 	/Plain 12 Tf
-	232 646 Td
-	5.6666665 Tw
-	(Chroma Hub implements a REST API for) Tj
+	72 318 Td
+	11.714286 Tw
+	(geometry where we can pass through all buffers.) Tj
 ET
 endstream
 endobj
 
 173 0 obj
 <<
-	/Length 65
+	/Length 107
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 646 Td
-	4.5 Tw
-	(database to a file. ) Tj
+	72 330 Td
+	1.1 Tw
+	(buffers, keeping a buffer for each parent and then drawing the) Tj
 ET
 endstream
 endobj
 
 172 0 obj
 <<
-	/Length 112
+	/Length 87
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 658 Td
-	1.6363636 Tw
-	(package for simplicity to write and read a json format of the) Tj
+	191 342 Td
+	6.5 Tw
+	(To achieve this we utilise OpenGL stencil) Tj
 ET
 endstream
 endobj
 
 171 0 obj
 <<
-	/Length 52
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	477 670 Td
-	1.0 Tw
-	(Golang) Tj
+	184 342 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 170 0 obj
 <<
-	/Length 58
+	/Length 59
 >>
 stream
 BT
-	/Code 12 Tf
-	381 670 Td
-	1.0 Tw
-	(encoding/json) Tj
+	/Plain 12 Tf
+	72 342 Td
+	6.5 Tw
+	(at this point.) Tj
 ET
 endstream
 endobj
 
 169 0 obj
 <<
-	/Length 68
+	/Length 115
 >>
 stream
 BT
 	/Plain 12 Tf
-	219 670 Td
-	1.5 Tw
-	(Internally we use the ) Tj
+	72 354 Td
+	0.27272728 Tw
+	(the geometry we check if every parent geometry also has a pixel) Tj
 ET
 endstream
 endobj
 
 168 0 obj
 <<
-	/Length 48
+	/Length 115
 >>
 stream
 BT
 	/Plain 12 Tf
-	205 670 Td
-	0.0 Tw
-	(. ) Tj
+	72 366 Td
+	0.27272728 Tw
+	(geometry has a masking attribute, and if set, for each pixel of) Tj
 ET
 endstream
 endobj
 
 167 0 obj
 <<
-	/Length 62
+	/Length 50
 >>
 stream
 BT
-	/Code 12 Tf
-	72 670 Td
+	/Plain 12 Tf
+	494 378 Td
 	1.0 Tw
-	(hub/chroma_hub.sql) Tj
+	(Each) Tj
 ET
 endstream
 endobj
 
 166 0 obj
 <<
-	/Length 115
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 682 Td
-	0.27272728 Tw
-	(database, which currently needs to be setup with the schema in ) Tj
+	487 378 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 165 0 obj
 <<
-	/Length 69
+	/Length 87
 >>
 stream
 BT
 	/Plain 12 Tf
-	365 694 Td
-	0.25 Tw
-	(Chroma Hub wraps a SQL) Tj
+	200 378 Td
+	0.75 Tw
+	(Chroma Engine features geometry masking.) Tj
 ET
 endstream
 endobj
 
 164 0 obj
 <<
-	/Length 92
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 694 Td
-	0.2857143 Tw
-	(as images, currently only in png format. ) Tj
+	193 378 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 163 0 obj
 <<
-	/Length 107
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 706 Td
-	1.1 Tw
-	(Chroma Hub also stores any assets needed by the templates such) Tj
+	186 378 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
 162 0 obj
 <<
-	/Length 109
+	/Length 61
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 718 Td
-	4.3333335 Tw
-	(templates used by Chroma Viz and Chroma Engine instances. ) Tj
+	72 378 Td
+	1.0 Tw
+	(target template.) Tj
 ET
 endstream
 endobj
 
 161 0 obj
 <<
-	/Length 106
+	/Length 109
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 730 Td
-	6.6666665 Tw
-	(The purpose of Chroma Hub is to synchronize the graphic) Tj
+	72 390 Td
+	0.25 Tw
+	(we parse the string, we set the values for each geometry of the) Tj
 ET
 endstream
 endobj
 
 160 0 obj
 <<
-	/Type /Page
-	/Contents 153 0 R
-	/Resources 159 0 R
+	/Length 48
 >>
+stream
+BT
+	/Plain 12 Tf
+	508 402 Td
+	1.0 Tw
+	(As) Tj
+ET
+endstream
 endobj
 
 159 0 obj
 <<
-	/Font 158 0 R
+	/Length 47
 >>
+stream
+BT
+	/Plain 12 Tf
+	501 402 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
 endobj
 
 158 0 obj
 <<
-	/Plain 154 0 R
-	/Strong 155 0 R
-	/Emphasis 156 0 R
-	/Code 157 0 R
+	/Length 110
 >>
+stream
+BT
+	/Plain 12 Tf
+	72 402 Td
+	1.1111112 Tw
+	(integer, followed by a list of attributes for the geometry.) Tj
+ET
+endstream
 endobj
 
 157 0 obj
 <<
-	/Type /Font
-	/Subtype /Type1
-	/BaseFont /Courier
+	/Length 81
 >>
+stream
+BT
+	/Plain 12 Tf
+	259 414 Td
+	3.0 Tw
+	(Then each geometry, specified by an) Tj
+ET
+endstream
 endobj
 
 156 0 obj
 <<
-	/Type /Font
-	/Subtype /Type1
-	/BaseFont /Courier-Italic
+	/Length 47
 >>
+stream
+BT
+	/Plain 12 Tf
+	252 414 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
 endobj
 
 155 0 obj
 <<
-	/Type /Font
-	/Subtype /Type1
-	/BaseFont /Courier-Bold
+	/Length 75
 >>
+stream
+BT
+	/Plain 12 Tf
+	72 414 Td
+	3.3333333 Tw
+	(template id, and action.) Tj
+ET
+endstream
 endobj
 
 154 0 obj
 <<
-	/Type /Font
-	/Subtype /Type1
-	/BaseFont /Courier
+	/Length 111
 >>
+stream
+BT
+	/Plain 12 Tf
+	79 426 Td
+	1.8888888 Tw
+	(The string contains a header with the format version, layer,) Tj
+ET
+endstream
 endobj
 
 153 0 obj
-[
-	71 0 R
-	72 0 R
-	73 0 R
-	74 0 R
-	75 0 R
-	76 0 R
-	77 0 R
-	78 0 R
-	79 0 R
-	80 0 R
-	81 0 R
-	82 0 R
-	83 0 R
-	84 0 R
-	85 0 R
-	86 0 R
-	87 0 R
-	88 0 R
-	89 0 R
-	90 0 R
-	91 0 R
-	92 0 R
-	93 0 R
-	94 0 R
-	95 0 R
-	96 0 R
-	97 0 R
-	98 0 R
-	99 0 R
-	100 0 R
-	101 0 R
-	102 0 R
-	103 0 R
-	104 0 R
-	105 0 R
-	106 0 R
-	107 0 R
-	108 0 R
-	109 0 R
-	110 0 R
-	111 0 R
-	112 0 R
-	113 0 R
-	114 0 R
-	115 0 R
-	116 0 R
-	117 0 R
-	118 0 R
-	119 0 R
-	120 0 R
-	121 0 R
-	122 0 R
-	123 0 R
-	124 0 R
-	125 0 R
-	126 0 R
-	127 0 R
-	128 0 R
-	129 0 R
-	130 0 R
-	131 0 R
-	132 0 R
-	133 0 R
-	134 0 R
-	135 0 R
-	136 0 R
-	137 0 R
-	138 0 R
-	139 0 R
-	140 0 R
-	141 0 R
-	142 0 R
-	143 0 R
-	144 0 R
-	145 0 R
-	146 0 R
-	147 0 R
-	148 0 R
-	149 0 R
-	150 0 R
-	151 0 R
-	152 0 R
-]
-endobj
-
-152 0 obj
 <<
 	/Length 46
 >>
 stream
 BT
-	/Plain 20 Tf
-	196 84 Td
-	1.0 Tw
+	/Plain 12 Tf
+	72 426 Td
+	0.0 Tw
 	( ) Tj
+ET
+endstream
+endobj
+
+152 0 obj
+<<
+	/Length 78
+>>
+stream
+BT
+	/Plain 12 Tf
+	300 438 Td
+	0.25 Tw
+	(is sufficient for our purposes.) Tj
 ET
 endstream
 endobj
@@ -2807,1158 +4788,752 @@ endobj
 >>
 stream
 BT
-	/Strong 20 Tf
-	72 84 Td
-	1.0 Tw
-	(Chroma Hub) Tj
-ET
-endstream
-endobj
-
-150 0 obj
-<<
-	/Length 56
->>
-stream
-BT
-	/Plain 12 Tf
-	72 114 Td
-	387.0 Tw
-	(Engine"> ) Tj
-ET
-endstream
-endobj
-
-149 0 obj
-<<
-	/Length 105
->>
-stream
-BT
-	/Plain 12 Tf
-	72 126 Td
-	32.0 Tw
-	(src="/assets/chroma-graphics/chroma-engine.png" alt="Chroma) Tj
-ET
-endstream
-endobj
-
-148 0 obj
-<<
-	/Length 50
->>
-stream
-BT
-	/Plain 12 Tf
-	489 138 Td
-	1.0 Tw
-	(<img) Tj
-ET
-endstream
-endobj
-
-147 0 obj
-<<
-	/Length 100
->>
-stream
-BT
-	/Plain 12 Tf
-	72 138 Td
-	7.6666665 Tw
-	(the page is rendered to the screen using OpenGL. ) Tj
-ET
-endstream
-endobj
-
-146 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	351 150 Td
-	0.33333334 Tw
-	(Finally each geometry in) Tj
-ET
-endstream
-endobj
-
-145 0 obj
-<<
-	/Length 91
->>
-stream
-BT
-	/Plain 12 Tf
-	72 150 Td
-	0.33333334 Tw
-	(curve to control the animation timing. ) Tj
-ET
-endstream
-endobj
-
-144 0 obj
-<<
-	/Length 90
->>
-stream
-BT
-	/Plain 12 Tf
-	241 162 Td
-	1.8333334 Tw
-	(For smooth animations, we use a bezier) Tj
-ET
-endstream
-endobj
-
-143 0 obj
-<<
-	/Length 68
->>
-stream
-BT
-	/Plain 12 Tf
-	72 162 Td
-	2.0 Tw
-	(Chroma Artist section. ) Tj
-ET
-endstream
-endobj
-
-142 0 obj
-<<
-	/Length 93
->>
-stream
-BT
-	/Plain 12 Tf
-	236 174 Td
-	0.33333334 Tw
-	(The keyframe process is described in the) Tj
-ET
-endstream
-endobj
-
-141 0 obj
-<<
-	/Length 68
->>
-stream
-BT
-	/Plain 12 Tf
-	72 174 Td
-	0.5 Tw
-	(position calculations. ) Tj
-ET
-endstream
-endobj
-
-140 0 obj
-<<
-	/Length 78
->>
-stream
-BT
-	/Plain 12 Tf
-	321 186 Td
-	5.6666665 Tw
-	(This includes the absolute) Tj
-ET
-endstream
-endobj
-
-139 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	72 186 Td
-	4.4 Tw
-	(the keyframes for the template. ) Tj
-ET
-endstream
-endobj
-
-138 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 198 Td
-	2.25 Tw
-	(graphics request and any image assets, Chroma Engine computes) Tj
-ET
-endstream
-endobj
-
-137 0 obj
-<<
-	/Length 65
->>
-stream
-BT
-	/Plain 12 Tf
-	386 210 Td
-	0.5 Tw
-	(After receiving the) Tj
-ET
-endstream
-endobj
-
-136 0 obj
-<<
-	/Length 95
->>
-stream
-BT
-	/Plain 12 Tf
-	72 210 Td
-	0.2857143 Tw
-	(requesting the image again from Chroma Hub. ) Tj
-ET
-endstream
-endobj
-
-135 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 222 Td
-	5.888889 Tw
-	(currently stored image id, we reuse this file instead of) Tj
-ET
-endstream
-endobj
-
-134 0 obj
-<<
-	/Length 102
->>
-stream
-BT
-	/Plain 12 Tf
-	133 234 Td
-	3.7777777 Tw
-	(In later render calls, if the image id matches the) Tj
-ET
-endstream
-endobj
-
-133 0 obj
-<<
-	/Length 53
->>
-stream
-BT
-	/Plain 12 Tf
-	72 234 Td
-	5.0 Tw
-	(libpng. ) Tj
-ET
-endstream
-endobj
-
-132 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 246 Td
-	2.909091 Tw
-	(as well as decoding the png to extract the pixel data using) Tj
-ET
-endstream
-endobj
-
-131 0 obj
-<<
-	/Length 90
->>
-stream
-BT
-	/Plain 12 Tf
-	250 258 Td
-	0.2857143 Tw
-	(Then we store this data for later use,) Tj
-ET
-endstream
-endobj
-
-130 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	72 258 Td
-	0.16666667 Tw
-	(image as a raw PNG file. ) Tj
-ET
-endstream
-endobj
-
-129 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 270 Td
-	3.5454545 Tw
-	(send 4 bytes with the length of the image, followed by the) Tj
-ET
-endstream
-endobj
-
-128 0 obj
-<<
-	/Length 62
->>
-stream
-BT
-	/Plain 12 Tf
-	408 282 Td
-	0.5 Tw
-	(Chroma Hub first) Tj
-ET
-endstream
-endobj
-
-127 0 obj
-<<
-	/Length 99
->>
-stream
-BT
-	/Plain 12 Tf
-	72 282 Td
-	0.22222222 Tw
-	(render an image we request it from Chroma Hub. ) Tj
-ET
-endstream
-endobj
-
-126 0 obj
-<<
-	/Length 115
->>
-stream
-BT
-	/Plain 12 Tf
-	72 294 Td
-	0.27272728 Tw
-	(Image assets are also contained in Chroma Hub, so before we can) Tj
-ET
-endstream
-endobj
-
-125 0 obj
-<<
-	/Length 105
->>
-stream
-BT
-	/Plain 12 Tf
-	72 306 Td
-	2.5 Tw
-	(buffers, restricting geometry tree depth to a maximum of 8. ) Tj
-ET
-endstream
-endobj
-
-124 0 obj
-<<
-	/Length 95
->>
-stream
-BT
-	/Plain 12 Tf
-	167 318 Td
-	1.75 Tw
-	(GTK restrictions mean we can only have 8 stencil) Tj
-ET
-endstream
-endobj
-
-123 0 obj
-<<
-	/Length 58
->>
-stream
-BT
-	/Plain 12 Tf
-	72 318 Td
-	1.5 Tw
-	(all buffers. ) Tj
-ET
-endstream
-endobj
-
-122 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 330 Td
-	1.1 Tw
-	(parent and then drawing the geometry where we can pass through) Tj
-ET
-endstream
-endobj
-
-121 0 obj
-<<
-	/Length 103
->>
-stream
-BT
-	/Plain 12 Tf
-	72 342 Td
-	5.75 Tw
-	(utilise OpenGL stencil buffers, keeping a buffer for each) Tj
-ET
-endstream
-endobj
-
-120 0 obj
-<<
-	/Length 64
->>
-stream
-BT
-	/Plain 12 Tf
-	385 354 Td
-	3.0 Tw
-	(To achieve this we) Tj
-ET
-endstream
-endobj
-
-119 0 obj
-<<
-	/Length 87
->>
-stream
-BT
-	/Plain 12 Tf
-	72 354 Td
-	2.75 Tw
-	(geometry also has a pixel at this point. ) Tj
-ET
-endstream
-endobj
-
-118 0 obj
-<<
-	/Length 111
->>
-stream
-BT
-	/Plain 12 Tf
-	72 366 Td
-	2.2727273 Tw
-	(set, for each pixel of the geometry we check if every parent) Tj
-ET
-endstream
-endobj
-
-117 0 obj
-<<
-	/Length 97
->>
-stream
-BT
-	/Plain 12 Tf
-	200 378 Td
-	0.2857143 Tw
-	(Each geometry has a masking attribute, and if) Tj
-ET
-endstream
-endobj
-
-116 0 obj
-<<
-	/Length 63
->>
-stream
-BT
-	/Plain 12 Tf
-	72 378 Td
-	0.0 Tw
-	(geometry masking. ) Tj
-ET
-endstream
-endobj
-
-115 0 obj
-<<
-	/Length 69
->>
-stream
-BT
-	/Plain 12 Tf
-	342 390 Td
-	12.0 Tw
-	(Chroma Engine features) Tj
-ET
-endstream
-endobj
-
-114 0 obj
-<<
-	/Length 78
->>
-stream
-BT
-	/Plain 12 Tf
-	72 390 Td
-	7.2 Tw
-	(geometry of the target template. ) Tj
-ET
-endstream
-endobj
-
-113 0 obj
-<<
-	/Length 96
->>
-stream
-BT
-	/Plain 12 Tf
-	147 402 Td
-	2.0 Tw
-	(As we parse the string, we set the values for each) Tj
-ET
-endstream
-endobj
-
-112 0 obj
-<<
-	/Length 55
->>
-stream
-BT
-	/Plain 12 Tf
-	72 402 Td
-	4.0 Tw
-	(geometry. ) Tj
-ET
-endstream
-endobj
-
-111 0 obj
-<<
-	/Length 100
->>
-stream
-BT
-	/Plain 12 Tf
-	72 414 Td
-	6.0 Tw
-	(by an integer, followed by a list of attributes for the) Tj
-ET
-endstream
-endobj
-
-110 0 obj
-<<
-	/Length 81
->>
-stream
-BT
-	/Plain 12 Tf
-	308 426 Td
-	2.6666667 Tw
-	(Then each geometry, specified) Tj
-ET
-endstream
-endobj
-
-109 0 obj
-<<
-	/Length 77
->>
-stream
-BT
-	/Plain 12 Tf
-	72 426 Td
-	1.8 Tw
-	(layer, template id, and action. ) Tj
-ET
-endstream
-endobj
-
-108 0 obj
-<<
-	/Length 101
->>
-stream
-BT
-	/Plain 12 Tf
-	143 438 Td
-	0.375 Tw
-	(The string contains a header with the format version,) Tj
-ET
-endstream
-endobj
-
-107 0 obj
-<<
-	/Length 55
->>
-stream
-BT
-	/Plain 12 Tf
-	72 438 Td
-	0.0 Tw
-	(purposes. ) Tj
-ET
-endstream
-endobj
-
-106 0 obj
-<<
-	/Length 72
->>
-stream
-BT
-	/Plain 12 Tf
-	344 450 Td
-	9.666667 Tw
-	(is sufficient for our) Tj
-ET
-endstream
-endobj
-
-105 0 obj
-<<
-	/Length 55
->>
-stream
-BT
 	/Code 12 Tf
-	259 450 Td
+	229 438 Td
 	1.0 Tw
 	(name=attr#) Tj
 ET
 endstream
 endobj
 
-104 0 obj
+150 0 obj
 <<
-	/Length 68
+	/Length 67
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 450 Td
-	15.5 Tw
+	72 438 Td
+	0.5 Tw
 	(name-attribute format ) Tj
 ET
 endstream
 endobj
 
-103 0 obj
+149 0 obj
 <<
 	/Length 54
 >>
 stream
 BT
 	/Plain 12 Tf
-	465 462 Td
+	465 450 Td
 	1.0 Tw
 	(A simple) Tj
 ET
 endstream
 endobj
 
-102 0 obj
+148 0 obj
 <<
-	/Length 99
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 462 Td
-	0.9 Tw
-	(recieves a string of data from a Chroma Viz instance. ) Tj
-ET
-endstream
-endobj
-
-101 0 obj
-<<
-	/Length 93
->>
-stream
-BT
-	/Plain 12 Tf
-	236 474 Td
-	0.33333334 Tw
-	(To render a graphic, first Chroma Engine) Tj
-ET
-endstream
-endobj
-
-100 0 obj
-<<
-	/Length 75
->>
-stream
-BT
-	/Plain 12 Tf
-	72 474 Td
-	0.33333334 Tw
-	(graphics using OpenGL. ) Tj
-ET
-endstream
-endobj
-
-99 0 obj
-<<
-	/Length 68
->>
-stream
-BT
-	/Plain 12 Tf
-	353 486 Td
-	10.0 Tw
-	(Chroma Engine renders) Tj
-ET
-endstream
-endobj
-
-98 0 obj
-<<
-	/Length 85
->>
-stream
-BT
-	/Plain 12 Tf
-	72 486 Td
-	4.714286 Tw
-	(the fly from Chroma Hub as needed. ) Tj
-ET
-endstream
-endobj
-
-97 0 obj
-<<
-	/Length 115
->>
-stream
-BT
-	/Plain 12 Tf
-	72 498 Td
-	0.33333334 Tw
-	(templates currently in use, and requesting any new templates on) Tj
-ET
-endstream
-endobj
-
-96 0 obj
-<<
-	/Length 99
->>
-stream
-BT
-	/Plain 12 Tf
-	72 510 Td
-	6.7 Tw
-	(options would be allowing the user to load a subset of) Tj
-ET
-endstream
-endobj
-
-95 0 obj
-<<
-	/Length 79
->>
-stream
-BT
-	/Plain 12 Tf
-	279 522 Td
-	1.8 Tw
-	(A middle ground between these two) Tj
-ET
-endstream
-endobj
-
-94 0 obj
-<<
-	/Length 73
->>
-stream
-BT
-	/Plain 12 Tf
-	72 522 Td
-	2.0 Tw
-	(receive a graphics request. ) Tj
-ET
-endstream
-endobj
-
-93 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 534 Td
-	0.25 Tw
-	(benefit is we don't need to allocate memory at run time when we) Tj
-ET
-endstream
-endobj
-
-92 0 obj
-<<
-	/Length 103
->>
-stream
-BT
-	/Plain 12 Tf
-	72 546 Td
-	6.625 Tw
-	(needing to allocate resources for each template, but the) Tj
-ET
-endstream
-endobj
-
-91 0 obj
-<<
-	/Length 72
->>
-stream
-BT
-	/Plain 12 Tf
-	330 558 Td
-	1.6 Tw
-	(This has the added cost of) Tj
-ET
-endstream
-endobj
-
-90 0 obj
-<<
-	/Length 86
->>
-stream
-BT
-	/Plain 12 Tf
-	72 558 Td
-	1.6666666 Tw
-	(could be received from Chroma Viz. ) Tj
-ET
-endstream
-endobj
-
-89 0 obj
-<<
-	/Length 115
->>
-stream
-BT
-	/Plain 12 Tf
-	72 570 Td
-	0.33333334 Tw
-	(Engine can build its own database containing each template that) Tj
-ET
-endstream
-endobj
-
-88 0 obj
-<<
-	/Length 68
->>
-stream
-BT
-	/Plain 12 Tf
-	360 582 Td
-	1.5 Tw
-	(This is done so Chroma) Tj
-ET
-endstream
-endobj
-
-87 0 obj
-<<
-	/Length 90
->>
-stream
-BT
-	/Plain 12 Tf
-	72 582 Td
-	1.5714285 Tw
-	(and requests all templates in the Hub. ) Tj
-ET
-endstream
-endobj
-
-86 0 obj
-<<
-	/Length 94
->>
-stream
-BT
-	/Plain 12 Tf
-	167 594 Td
-	2.0 Tw
-	(On startup, Chroma Engine connects to Chroma Hub) Tj
-ET
-endstream
-endobj
-
-85 0 obj
-<<
-	/Length 58
->>
-stream
-BT
-	/Plain 12 Tf
-	72 594 Td
-	3.0 Tw
-	(GtkGLRender. ) Tj
-ET
-endstream
-endobj
-
-84 0 obj
-<<
-	/Length 96
->>
-stream
-BT
-	/Plain 12 Tf
-	72 606 Td
-	16.0 Tw
-	(standalone GTK application which only contains the) Tj
-ET
-endstream
-endobj
-
-83 0 obj
-<<
-	/Length 112
->>
-stream
-BT
-	/Plain 12 Tf
-	72 618 Td
-	1.6363636 Tw
-	(Viz to create a preview window, and a binary, which creates a) Tj
-ET
-endstream
-endobj
-
-82 0 obj
-<<
-	/Length 102
->>
-stream
-BT
-	/Plain 12 Tf
-	147 630 Td
-	2.2222223 Tw
-	(We compile both a library, which is used by Chroma) Tj
-ET
-endstream
-endobj
-
-81 0 obj
-<<
-	/Length 55
->>
-stream
-BT
-	/Plain 12 Tf
-	72 630 Td
-	4.0 Tw
-	(graphics. ) Tj
-ET
-endstream
-endobj
-
-80 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 642 Td
-	1.375 Tw
-	(core, Chroma Engine creates a GtkGLRender widget which renders) Tj
-ET
-endstream
-endobj
-
-79 0 obj
-<<
-	/Length 52
->>
-stream
-BT
-	/Plain 12 Tf
-	480 654 Td
+	458 450 Td
 	0.0 Tw
-	(At its) Tj
+	( ) Tj
 ET
 endstream
 endobj
 
-78 0 obj
+147 0 obj
 <<
 	/Length 104
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 654 Td
-	0.375 Tw
-	(Chroma Engine renders graphics requests from Chroma Viz. ) Tj
+	72 450 Td
+	1.1111112 Tw
+	(recieves a string of data from a Chroma Viz instance.) Tj
 ET
 endstream
 endobj
 
-77 0 obj
+146 0 obj
+<<
+	/Length 93
+>>
+stream
+BT
+	/Plain 12 Tf
+	236 462 Td
+	0.33333334 Tw
+	(To render a graphic, first Chroma Engine) Tj
+ET
+endstream
+endobj
+
+145 0 obj
 <<
 	/Length 47
 >>
 stream
 BT
-	/Plain 20 Tf
-	233 676 Td
-	1.0 Tw
+	/Plain 12 Tf
+	229 462 Td
+	0.0 Tw
 	( ) Tj
 ET
 endstream
 endobj
 
-76 0 obj
+144 0 obj
+<<
+	/Length 67
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 462 Td
+	0.5 Tw
+	(graphics using OpenGL.) Tj
+ET
+endstream
+endobj
+
+143 0 obj
+<<
+	/Length 67
+>>
+stream
+BT
+	/Plain 12 Tf
+	355 474 Td
+	8.5 Tw
+	(Chroma Engine renders) Tj
+ET
+endstream
+endobj
+
+142 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	348 474 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+141 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	341 474 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+140 0 obj
+<<
+	/Length 85
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 474 Td
+	4.6666665 Tw
+	(the fly from Chroma Hub as needed.) Tj
+ET
+endstream
+endobj
+
+139 0 obj
+<<
+	/Length 115
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 486 Td
+	0.33333334 Tw
+	(templates currently in use, and requesting any new templates on) Tj
+ET
+endstream
+endobj
+
+138 0 obj
+<<
+	/Length 99
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 498 Td
+	6.7 Tw
+	(options would be allowing the user to load a subset of) Tj
+ET
+endstream
+endobj
+
+137 0 obj
+<<
+	/Length 79
+>>
+stream
+BT
+	/Plain 12 Tf
+	278 510 Td
+	1.8 Tw
+	(A middle ground between these two) Tj
+ET
+endstream
+endobj
+
+136 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	271 510 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+135 0 obj
+<<
+	/Length 78
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 510 Td
+	2.3333333 Tw
+	(receive a graphics request.) Tj
+ET
+endstream
+endobj
+
+134 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 522 Td
+	0.25 Tw
+	(benefit is we don't need to allocate memory at run time when we) Tj
+ET
+endstream
+endobj
+
+133 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 534 Td
+	6.625 Tw
+	(needing to allocate resources for each template, but the) Tj
+ET
+endstream
+endobj
+
+132 0 obj
+<<
+	/Length 72
+>>
+stream
+BT
+	/Plain 12 Tf
+	330 546 Td
+	1.6 Tw
+	(This has the added cost of) Tj
+ET
+endstream
+endobj
+
+131 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	323 546 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+130 0 obj
+<<
+	/Length 79
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 546 Td
+	2.0 Tw
+	(could be received from Chroma Viz.) Tj
+ET
+endstream
+endobj
+
+129 0 obj
+<<
+	/Length 115
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 558 Td
+	0.33333334 Tw
+	(Engine can build its own database containing each template that) Tj
+ET
+endstream
+endobj
+
+128 0 obj
+<<
+	/Length 68
+>>
+stream
+BT
+	/Plain 12 Tf
+	360 570 Td
+	1.5 Tw
+	(This is done so Chroma) Tj
+ET
+endstream
+endobj
+
+127 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	353 570 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+126 0 obj
+<<
+	/Length 89
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 570 Td
+	1.8333334 Tw
+	(and requests all templates in the Hub.) Tj
+ET
+endstream
+endobj
+
+125 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	173 582 Td
+	1.1428572 Tw
+	(On startup, Chroma Engine connects to Chroma Hub) Tj
+ET
+endstream
+endobj
+
+124 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	166 582 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+123 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	159 582 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+122 0 obj
+<<
+	/Length 57
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 582 Td
+	1.0 Tw
+	(GtkGLRender.) Tj
+ET
+endstream
+endobj
+
+121 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 594 Td
+	3.125 Tw
+	(creates a standalone GTK application which only contains the) Tj
+ET
+endstream
+endobj
+
+120 0 obj
+<<
+	/Length 103
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 606 Td
+	3.9 Tw
+	(Chroma Viz to create a preview window, and a binary, which) Tj
+ET
+endstream
+endobj
+
+119 0 obj
+<<
+	/Length 91
+>>
+stream
+BT
+	/Plain 12 Tf
+	204 618 Td
+	1.625 Tw
+	(We compile both a library, which is used by) Tj
+ET
+endstream
+endobj
+
+118 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	197 618 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+117 0 obj
+<<
+	/Length 62
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 618 Td
+	5.0 Tw
+	(renders graphics.) Tj
+ET
+endstream
+endobj
+
+116 0 obj
+<<
+	/Length 105
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 630 Td
+	4.875 Tw
+	(its core, Chroma Engine creates a GtkGLRender widget which) Tj
+ET
+endstream
+endobj
+
+115 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	507 642 Td
+	1.0 Tw
+	(At) Tj
+ET
+endstream
+endobj
+
+114 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	500 642 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+113 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	79 642 Td
+	3.2857144 Tw
+	(Chroma Engine renders graphics requests from Chroma Viz.) Tj
+ET
+endstream
+endobj
+
+112 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 642 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+111 0 obj
 <<
 	/Length 59
 >>
 stream
 BT
 	/Strong 20 Tf
-	72 676 Td
+	72 664 Td
 	1.0 Tw
 	(Chroma Engine) Tj
 ET
 endstream
 endobj
 
-75 0 obj
+110 0 obj
 <<
-	/Length 108
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 706 Td
-	1.0 Tw
-	(src="/assets/chroma-graphics/chroma-viz.png" alt="Chroma Viz"> ) Tj
+	515 694 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
-74 0 obj
+109 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 694 Td
+	1.5 Tw
+	(src="/assets/chroma-graphics/chroma-viz.png" alt="Chroma Viz">) Tj
+ET
+endstream
+endobj
+
+108 0 obj
 <<
 	/Length 50
 >>
 stream
 BT
 	/Plain 12 Tf
-	490 718 Td
+	489 706 Td
 	1.0 Tw
 	(<img) Tj
 ET
 endstream
 endobj
 
-73 0 obj
+107 0 obj
 <<
-	/Length 101
+	/Length 47
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 718 Td
-	9.333333 Tw
-	(templates attributes before rendering the graphic. ) Tj
+	482 706 Td
+	0.0 Tw
+	( ) Tj
 ET
 endstream
 endobj
 
-72 0 obj
+106 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	475 706 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+105 0 obj
+<<
+	/Length 95
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 706 Td
+	9.6 Tw
+	(templates attributes before rendering the graphic.) Tj
+ET
+endstream
+endobj
+
+104 0 obj
 <<
 	/Length 101
 >>
 stream
 BT
 	/Plain 12 Tf
-	178 730 Td
+	178 718 Td
 	0.42857143 Tw
 	(Chroma Engine parses the message and updates the) Tj
 ET
 endstream
 endobj
 
-71 0 obj
+103 0 obj
 <<
-	/Length 60
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	171 718 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+102 0 obj
+<<
+	/Length 59
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 718 Td
+	0.0 Tw
+	(Chroma Engine.) Tj
+ET
+endstream
+endobj
+
+101 0 obj
+<<
+	/Length 110
+>>
+stream
+BT
+	/Plain 12 Tf
+	79 730 Td
+	2.1818182 Tw
+	(Chroma Viz encodes the attributes of a page and sends it to) Tj
+ET
+endstream
+endobj
+
+100 0 obj
+<<
+	/Length 46
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 730 Td
 	0.0 Tw
-	(Chroma Engine. ) Tj
+	( ) Tj
 ET
 endstream
 endobj
 
-70 0 obj
+99 0 obj
 <<
 	/Type /Page
-	/Contents 63 0 R
-	/Resources 69 0 R
+	/Contents 92 0 R
+	/Resources 98 0 R
 >>
 endobj
 
-69 0 obj
+98 0 obj
 <<
-	/Font 68 0 R
+	/Font 97 0 R
 >>
 endobj
 
-68 0 obj
+97 0 obj
 <<
-	/Plain 64 0 R
-	/Strong 65 0 R
-	/Emphasis 66 0 R
-	/Code 67 0 R
+	/Plain 93 0 R
+	/Strong 94 0 R
+	/Emphasis 95 0 R
+	/Code 96 0 R
 >>
 endobj
 
-67 0 obj
+96 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -3966,7 +5541,7 @@ endobj
 >>
 endobj
 
-66 0 obj
+95 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -3974,7 +5549,7 @@ endobj
 >>
 endobj
 
-65 0 obj
+94 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -3982,7 +5557,7 @@ endobj
 >>
 endobj
 
-64 0 obj
+93 0 obj
 <<
 	/Type /Font
 	/Subtype /Type1
@@ -3990,7 +5565,7 @@ endobj
 >>
 endobj
 
-63 0 obj
+92 0 obj
 [
 	1 0 R
 	2 0 R
@@ -4054,542 +5629,865 @@ endobj
 	60 0 R
 	61 0 R
 	62 0 R
+	63 0 R
+	64 0 R
+	65 0 R
+	66 0 R
+	67 0 R
+	68 0 R
+	69 0 R
+	70 0 R
+	71 0 R
+	72 0 R
+	73 0 R
+	74 0 R
+	75 0 R
+	76 0 R
+	77 0 R
+	78 0 R
+	79 0 R
+	80 0 R
+	81 0 R
+	82 0 R
+	83 0 R
+	84 0 R
+	85 0 R
+	86 0 R
+	87 0 R
+	88 0 R
+	89 0 R
+	90 0 R
+	91 0 R
 ]
 endobj
 
-62 0 obj
+91 0 obj
 <<
-	/Length 108
+	/Length 53
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 82 Td
-	2.909091 Tw
-	(Chroma Viz encodes the attributes of a page and sends it to) Tj
+	72 92 Td
+	1.0 Tw
+	(Keyframe.) Tj
 ET
 endstream
 endobj
 
-61 0 obj
-<<
-	/Length 57
->>
-stream
-BT
-	/Plain 12 Tf
-	72 104 Td
-	380.0 Tw
-	(Keyframe. ) Tj
-ET
-endstream
-endobj
-
-60 0 obj
+90 0 obj
 <<
 	/Length 100
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 116 Td
+	72 104 Td
 	6.0 Tw
 	(Take Off runs from the second last Keyframe to the last) Tj
 ET
 endstream
 endobj
 
-59 0 obj
+89 0 obj
 <<
-	/Length 107
+	/Length 106
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 138 Td
-	1.1 Tw
-	(Continue runs from the current Keyframe to the next Keyframe. ) Tj
-ET
-endstream
-endobj
-
-58 0 obj
-<<
-	/Length 99
->>
-stream
-BT
-	/Plain 12 Tf
-	72 160 Td
-	12.222222 Tw
-	(Take On animates from Keyframe 1 to Keyframe 2. ) Tj
-ET
-endstream
-endobj
-
-57 0 obj
-<<
-	/Length 97
->>
-stream
-BT
-	/Plain 12 Tf
-	72 182 Td
-	17.714285 Tw
-	(Chroma Engine instances with the Engine type. ) Tj
-ET
-endstream
-endobj
-
-56 0 obj
-<<
-	/Length 98
->>
-stream
-BT
-	/Plain 12 Tf
-	187 194 Td
-	1.1428572 Tw
-	($ \texttt{Take Off} $, send pages to connected) Tj
-ET
-endstream
-endobj
-
-55 0 obj
-<<
-	/Length 67
->>
-stream
-BT
-	/Plain 12 Tf
-	72 194 Td
-	0.6666667 Tw
-	(Continue} $ and ) Tj
-ET
-endstream
-endobj
-
-54 0 obj
-<<
-	/Length 103
->>
-stream
-BT
-	/Plain 12 Tf
-	72 206 Td
-	3.9 Tw
-	(actions at the top of the editor panel, $ \texttt{Take On,) Tj
-ET
-endstream
-endobj
-
-53 0 obj
-<<
-	/Length 49
->>
-stream
-BT
-	/Plain 12 Tf
-	500 218 Td
-	1.0 Tw
-	(The) Tj
-ET
-endstream
-endobj
-
-52 0 obj
-<<
-	/Length 102
->>
-stream
-BT
-	/Plain 12 Tf
-	72 218 Td
-	4.625 Tw
-	(pages switch as expected which changing between pages. ) Tj
-ET
-endstream
-endobj
-
-51 0 obj
-<<
-	/Length 109
->>
-stream
-BT
-	/Plain 12 Tf
-	72 230 Td
-	2.909091 Tw
-	(Chroma Viz sends pages to layer 0 of the preview window, so) Tj
-ET
-endstream
-endobj
-
-50 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 242 Td
-	1.1 Tw
-	(using cgo, Chroma Viz creates a Chroma Engine preview window. ) Tj
-ET
-endstream
-endobj
-
-49 0 obj
-<<
-	/Length 108
->>
-stream
-BT
-	/Plain 12 Tf
-	72 254 Td
-	0.3 Tw
-	(provides a C library which can create a GtkGLRender widget, and) Tj
-ET
-endstream
-endobj
-
-48 0 obj
-<<
-	/Length 59
->>
-stream
-BT
-	/Plain 12 Tf
-	430 266 Td
-	0.0 Tw
-	(Chroma Engine) Tj
-ET
-endstream
-endobj
-
-47 0 obj
-<<
-	/Length 102
->>
-stream
-BT
-	/Plain 12 Tf
-	72 266 Td
-	0.33333334 Tw
-	(is sent to all connections with the preview type. ) Tj
-ET
-endstream
-endobj
-
-46 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 278 Td
-	1.0 Tw
-	(saving changes made to the page with the save button, the page) Tj
-ET
-endstream
-endobj
-
-45 0 obj
-<<
-	/Length 115
->>
-stream
-BT
-	/Plain 12 Tf
-	72 290 Td
-	0.23076923 Tw
-	(user opens a page to edit by double clicking on the page, or by) Tj
-ET
-endstream
-endobj
-
-44 0 obj
-<<
-	/Length 54
->>
-stream
-BT
-	/Plain 12 Tf
-	464 302 Td
+	72 126 Td
 	2.0 Tw
-	(When the) Tj
+	(Continue runs from the current Keyframe to the next Keyframe.) Tj
 ET
 endstream
 endobj
 
-43 0 obj
-<<
-	/Length 98
->>
-stream
-BT
-	/Plain 12 Tf
-	72 302 Td
-	2.0 Tw
-	(connection is either a Engine or Preview connection. ) Tj
-ET
-endstream
-endobj
-
-42 0 obj
-<<
-	/Length 50
->>
-stream
-BT
-	/Plain 12 Tf
-	491 314 Td
-	1.0 Tw
-	(Each) Tj
-ET
-endstream
-endobj
-
-41 0 obj
-<<
-	/Length 102
->>
-stream
-BT
-	/Plain 12 Tf
-	72 314 Td
-	7.142857 Tw
-	(Engine instances, using tcp sockets to communicate. ) Tj
-ET
-endstream
-endobj
-
-40 0 obj
-<<
-	/Length 93
->>
-stream
-BT
-	/Plain 12 Tf
-	193 326 Td
-	0.25 Tw
-	(Chroma Viz can connect to any number of Chroma) Tj
-ET
-endstream
-endobj
-
-39 0 obj
-<<
-	/Length 62
->>
-stream
-BT
-	/Plain 12 Tf
-	72 326 Td
-	1.0 Tw
-	(alt="Templates"> ) Tj
-ET
-endstream
-endobj
-
-38 0 obj
-<<
-	/Length 90
->>
-stream
-BT
-	/Plain 12 Tf
-	170 338 Td
-	47.0 Tw
-	(<img src="/assets/chroma-graphics/show.png") Tj
-ET
-endstream
-endobj
-
-37 0 obj
-<<
-	/Length 57
->>
-stream
-BT
-	/Plain 12 Tf
-	72 338 Td
-	6.5 Tw
-	(future use. ) Tj
-ET
-endstream
-endobj
-
-36 0 obj
-<<
-	/Length 105
->>
-stream
-BT
-	/Plain 12 Tf
-	72 350 Td
-	2.5 Tw
-	(Pages form shows, which can be saved to/loaded from disk for) Tj
-ET
-endstream
-endobj
-
-35 0 obj
-<<
-	/Length 107
->>
-stream
-BT
-	/Plain 12 Tf
-	72 362 Td
-	1.1 Tw
-	(implements a REST API for accessing assets such as templates. ) Tj
-ET
-endstream
-endobj
-
-34 0 obj
-<<
-	/Length 56
->>
-stream
-BT
-	/Plain 12 Tf
-	451 374 Td
-	0.0 Tw
-	(Chroma Hub) Tj
-ET
-endstream
-endobj
-
-33 0 obj
-<<
-	/Length 98
->>
-stream
-BT
-	/Plain 12 Tf
-	72 374 Td
-	0.3 Tw
-	(then send a request to Chroma Hub for this template. ) Tj
-ET
-endstream
-endobj
-
-32 0 obj
-<<
-	/Length 61
->>
-stream
-BT
-	/Plain 12 Tf
-	414 386 Td
-	1.0 Tw
-	(Chroma Viz will) Tj
-ET
-endstream
-endobj
-
-31 0 obj
-<<
-	/Length 92
->>
-stream
-BT
-	/Plain 12 Tf
-	72 386 Td
-	1.0 Tw
-	(clicking on the template in the Templates tab. ) Tj
-ET
-endstream
-endobj
-
-30 0 obj
-<<
-	/Length 98
->>
-stream
-BT
-	/Plain 12 Tf
-	193 398 Td
-	0.2857143 Tw
-	(Pages can be created from templates, by double) Tj
-ET
-endstream
-endobj
-
-29 0 obj
-<<
-	/Length 62
->>
-stream
-BT
-	/Plain 12 Tf
-	72 398 Td
-	1.0 Tw
-	(alt="Templates"> ) Tj
-ET
-endstream
-endobj
-
-28 0 obj
+88 0 obj
 <<
 	/Length 95
 >>
 stream
 BT
 	/Plain 12 Tf
-	72 410 Td
-	110.0 Tw
+	72 148 Td
+	14.625 Tw
+	(Take On animates from Keyframe 1 to Keyframe 2.) Tj
+ET
+endstream
+endobj
+
+87 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	496 170 Td
+	19.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+86 0 obj
+<<
+	/Length 63
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 170 Td
+	155.5 Tw
+	(the Engine type.) Tj
+ET
+endstream
+endobj
+
+85 0 obj
+<<
+	/Length 111
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 182 Td
+	2.7777777 Tw
+	(Off} $, send pages to connected Chroma Engine instances with) Tj
+ET
+endstream
+endobj
+
+84 0 obj
+<<
+	/Length 60
+>>
+stream
+BT
+	/Plain 12 Tf
+	423 194 Td
+	0.0 Tw
+	($ \texttt{Take) Tj
+ET
+endstream
+endobj
+
+83 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	416 194 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+82 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 194 Td
+	0.42857143 Tw
+	(editor panel, $ \texttt{Take On, Continue} $ and) Tj
+ET
+endstream
+endobj
+
+81 0 obj
+<<
+	/Length 75
+>>
+stream
+BT
+	/Plain 12 Tf
+	304 206 Td
+	2.0 Tw
+	(The actions at the top of the) Tj
+ET
+endstream
+endobj
+
+80 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	297 206 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+79 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	290 206 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+78 0 obj
+<<
+	/Length 74
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 206 Td
+	4.0 Tw
+	(which changing between pages.) Tj
+ET
+endstream
+endobj
+
+77 0 obj
+<<
+	/Length 112
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 218 Td
+	1.6363636 Tw
+	(to layer 0 of the preview window, so pages switch as expected) Tj
+ET
+endstream
+endobj
+
+76 0 obj
+<<
+	/Length 68
+>>
+stream
+BT
+	/Plain 12 Tf
+	362 230 Td
+	1.0 Tw
+	(Chroma Viz sends pages) Tj
+ET
+endstream
+endobj
+
+75 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	355 230 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+74 0 obj
+<<
+	/Length 84
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 230 Td
+	1.2 Tw
+	(creates a Chroma Engine preview window.) Tj
+ET
+endstream
+endobj
+
+73 0 obj
+<<
+	/Length 109
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 242 Td
+	4.3333335 Tw
+	(can create a GtkGLRender widget, and using cgo, Chroma Viz) Tj
+ET
+endstream
+endobj
+
+72 0 obj
+<<
+	/Length 93
+>>
+stream
+BT
+	/Plain 12 Tf
+	236 254 Td
+	0.33333334 Tw
+	(Chroma Engine provides a C library which) Tj
+ET
+endstream
+endobj
+
+71 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	229 254 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+70 0 obj
+<<
+	/Length 74
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 254 Td
+	0.33333334 Tw
+	(with the preview type.) Tj
+ET
+endstream
+endobj
+
+69 0 obj
+<<
+	/Length 107
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 266 Td
+	1.0 Tw
+	(page with the save button, the page is sent to all connections) Tj
+ET
+endstream
+endobj
+
+68 0 obj
+<<
+	/Length 112
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 278 Td
+	1.6363636 Tw
+	(double clicking on the page, or by saving changes made to the) Tj
+ET
+endstream
+endobj
+
+67 0 obj
+<<
+	/Length 85
+>>
+stream
+BT
+	/Plain 12 Tf
+	244 290 Td
+	1.875 Tw
+	(When the user opens a page to edit by) Tj
+ET
+endstream
+endobj
+
+66 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	237 290 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+65 0 obj
+<<
+	/Length 67
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 290 Td
+	4.5 Tw
+	(or Preview connection.) Tj
+ET
+endstream
+endobj
+
+64 0 obj
+<<
+	/Length 80
+>>
+stream
+BT
+	/Plain 12 Tf
+	275 302 Td
+	1.2 Tw
+	(Each connection is either a Engine) Tj
+ET
+endstream
+endobj
+
+63 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	268 302 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+62 0 obj
+<<
+	/Length 78
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 302 Td
+	1.3333334 Tw
+	(tcp sockets to communicate.) Tj
+ET
+endstream
+endobj
+
+61 0 obj
+<<
+	/Length 108
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 314 Td
+	0.3 Tw
+	(Viz can connect to any number of Chroma Engine instances, using) Tj
+ET
+endstream
+endobj
+
+60 0 obj
+<<
+	/Length 52
+>>
+stream
+BT
+	/Plain 12 Tf
+	480 326 Td
+	1.0 Tw
+	(Chroma) Tj
+ET
+endstream
+endobj
+
+59 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	473 326 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+58 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	466 326 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+57 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 326 Td
+	3.0 Tw
+	(src="/assets/chroma-graphics/show.png" alt="Templates">) Tj
+ET
+endstream
+endobj
+
+56 0 obj
+<<
+	/Length 50
+>>
+stream
+BT
+	/Plain 12 Tf
+	454 338 Td
+	1.0 Tw
+	(<img) Tj
+ET
+endstream
+endobj
+
+55 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	437 338 Td
+	10.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+54 0 obj
+<<
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	420 338 Td
+	10.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+53 0 obj
+<<
+	/Length 71
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 338 Td
+	68.666664 Tw
+	(disk for future use.) Tj
+ET
+endstream
+endobj
+
+52 0 obj
+<<
+	/Length 99
+>>
+stream
+BT
+	/Plain 12 Tf
+	151 350 Td
+	1.125 Tw
+	(Pages form shows, which can be saved to/loaded from) Tj
+ET
+endstream
+endobj
+
+51 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	144 350 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+50 0 obj
+<<
+	/Length 55
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 350 Td
+	1.0 Tw
+	(templates.) Tj
+ET
+endstream
+endobj
+
+49 0 obj
+<<
+	/Length 106
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 362 Td
+	1.8 Tw
+	(Chroma Hub implements a REST API for accessing assets such as) Tj
+ET
+endstream
+endobj
+
+48 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 374 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+47 0 obj
+<<
+	/Length 113
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 374 Td
+	0.90909094 Tw
+	(Viz will then send a request to Chroma Hub for this template.) Tj
+ET
+endstream
+endobj
+
+46 0 obj
+<<
+	/Length 52
+>>
+stream
+BT
+	/Plain 12 Tf
+	478 386 Td
+	1.0 Tw
+	(Chroma) Tj
+ET
+endstream
+endobj
+
+45 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	471 386 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+44 0 obj
+<<
+	/Length 100
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 386 Td
+	2.875 Tw
+	(double clicking on the template in the Templates tab.) Tj
+ET
+endstream
+endobj
+
+43 0 obj
+<<
+	/Length 91
+>>
+stream
+BT
+	/Plain 12 Tf
+	212 398 Td
+	5.3333335 Tw
+	(Pages can be created from templates, by) Tj
+ET
+endstream
+endobj
+
+42 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	205 398 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+41 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	198 398 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+40 0 obj
+<<
+	/Length 61
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 398 Td
+	1.0 Tw
+	(alt="Templates">) Tj
+ET
+endstream
+endobj
+
+39 0 obj
+<<
+	/Length 95
+>>
+stream
+BT
+	/Plain 12 Tf
+	81 410 Td
+	100.0 Tw
 	(<img src="/assets/chroma-graphics/templates.png") Tj
 ET
 endstream
 endobj
 
-27 0 obj
+38 0 obj
 <<
-	/Length 115
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 410 Td
+	2.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+37 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 422 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+36 0 obj
+<<
+	/Length 108
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 422 Td
-	0.23076923 Tw
-	(of all templates in the hub and sends this list to Chroma Viz. ) Tj
+	0.25 Tw
+	(of all templates in the hub and sends this list to Chroma Viz.) Tj
 ET
 endstream
 endobj
 
-26 0 obj
+35 0 obj
 <<
 	/Length 82
 >>
 stream
 BT
 	/Plain 12 Tf
-	265 434 Td
-	0.2 Tw
+	264 434 Td
+	0.4 Tw
 	(Chroma Hub collects the template IDs) Tj
 ET
 endstream
 endobj
 
-25 0 obj
+34 0 obj
 <<
-	/Length 73
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	257 434 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+33 0 obj
+<<
+	/Length 78
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 434 Td
-	0.25 Tw
-	(templates from Chroma Hub. ) Tj
+	0.33333334 Tw
+	(templates from Chroma Hub.) Tj
 ET
 endstream
 endobj
 
-24 0 obj
+32 0 obj
 <<
 	/Length 81
 >>
@@ -4603,49 +6501,63 @@ ET
 endstream
 endobj
 
-23 0 obj
-<<
-	/Length 72
->>
-stream
-BT
-	/Plain 12 Tf
-	72 446 Td
-	1.0 Tw
-	(commands to Chroma Engine. ) Tj
-ET
-endstream
-endobj
-
-22 0 obj
-<<
-	/Length 106
->>
-stream
-BT
-	/Plain 12 Tf
-	72 458 Td
-	5.888889 Tw
-	(Chroma Viz manages templates at a high level, and issues) Tj
-ET
-endstream
-endobj
-
-21 0 obj
+31 0 obj
 <<
 	/Length 47
 >>
 stream
 BT
-	/Plain 20 Tf
-	196 480 Td
-	1.0 Tw
+	/Plain 12 Tf
+	261 446 Td
+	0.0 Tw
 	( ) Tj
 ET
 endstream
 endobj
 
-20 0 obj
+30 0 obj
+<<
+	/Length 77
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 446 Td
+	1.6666666 Tw
+	(commands to Chroma Engine.) Tj
+ET
+endstream
+endobj
+
+29 0 obj
+<<
+	/Length 101
+>>
+stream
+BT
+	/Plain 12 Tf
+	79 458 Td
+	5.0 Tw
+	(Chroma Viz manages templates at a high level, and issues) Tj
+ET
+endstream
+endobj
+
+28 0 obj
+<<
+	/Length 46
+>>
+stream
+BT
+	/Plain 12 Tf
+	72 458 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+27 0 obj
 <<
 	/Length 56
 >>
@@ -4659,35 +6571,49 @@ ET
 endstream
 endobj
 
-19 0 obj
+26 0 obj
 <<
-	/Length 56
+	/Length 48
+>>
+stream
+BT
+	/Plain 12 Tf
+	472 510 Td
+	43.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+25 0 obj
+<<
+	/Length 53
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 510 Td
-	387.0 Tw
-	(</video> ) Tj
+	1.0 Tw
+	(</video>) Tj
 ET
 endstream
 endobj
 
-18 0 obj
+24 0 obj
 <<
-	/Length 121
+	/Length 120
 >>
 stream
 BT
 	/Code 12 Tf
 	96 546 Td
 	1.0 Tw
-	(<source src="https://github.com/jchilds0/chroma-viz/raw/main/data/demo.mp4"> ) Tj
+	(<source src="https://github.com/jchilds0/chroma-viz/raw/main/data/demo.mp4">) Tj
 ET
 endstream
 endobj
 
-17 0 obj
+23 0 obj
 <<
 	/Length 78
 >>
@@ -4701,35 +6627,63 @@ stream
 endstream
 endobj
 
-16 0 obj
+22 0 obj
 <<
-	/Length 81
+	/Length 75
 >>
 stream
 BT
 	/Plain 12 Tf
-	203 592 Td
-	37.666668 Tw
-	(<video width="720" controls> ) Tj
+	212 592 Td
+	54.5 Tw
+	(<video width="720" controls>) Tj
 ET
 endstream
 endobj
 
-15 0 obj
+21 0 obj
 <<
-	/Length 58
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	202 592 Td
+	3.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+20 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	192 592 Td
+	3.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+19 0 obj
+<<
+	/Length 56
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 592 Td
-	46.0 Tw
-	(repository. ) Tj
+	1.0 Tw
+	(repository.) Tj
 ET
 endstream
 endobj
 
-14 0 obj
+18 0 obj
 <<
 	/Length 104
 >>
@@ -4743,35 +6697,49 @@ ET
 endstream
 endobj
 
-13 0 obj
+17 0 obj
 <<
 	/Length 97
 >>
 stream
 BT
 	/Plain 12 Tf
-	132 616 Td
+	131 616 Td
 	2.8 Tw
 	(Chroma Engine is built in C and is contained in the) Tj
 ET
 endstream
 endobj
 
-12 0 obj
+16 0 obj
 <<
-	/Length 53
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	124 616 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+15 0 obj
+<<
+	/Length 52
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 616 Td
-	4.0 Tw
-	(Github. ) Tj
+	1.0 Tw
+	(Github.) Tj
 ET
 endstream
 endobj
 
-11 0 obj
+14 0 obj
 <<
 	/Length 104
 >>
@@ -4785,7 +6753,7 @@ ET
 endstream
 endobj
 
-10 0 obj
+13 0 obj
 <<
 	/Length 75
 >>
@@ -4799,7 +6767,7 @@ ET
 endstream
 endobj
 
-9 0 obj
+12 0 obj
 <<
 	/Length 99
 >>
@@ -4813,35 +6781,63 @@ ET
 endstream
 endobj
 
-8 0 obj
+11 0 obj
 <<
-	/Length 110
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	515 664 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+10 0 obj
+<<
+	/Length 105
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 664 Td
-	3.5555556 Tw
-	(collection consists of Chroma Viz, Hub, Engine and Artist. ) Tj
+	3.875 Tw
+	(collection consists of Chroma Viz, Hub, Engine and Artist.) Tj
 ET
 endstream
 endobj
 
-7 0 obj
+9 0 obj
 <<
 	/Length 60
 >>
 stream
 BT
 	/Plain 12 Tf
-	414 676 Td
+	413 676 Td
 	9.0 Tw
 	(Currently this) Tj
 ET
 endstream
 endobj
 
-6 0 obj
+8 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	406 676 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
+7 0 obj
 <<
 	/Length 94
 >>
@@ -4849,13 +6845,13 @@ stream
 BT
 	/Plain 12 Tf
 	72 676 Td
-	4.285714 Tw
-	(taken from the VizRT suite of applications. ) Tj
+	4.8333335 Tw
+	(taken from the VizRT suite of applications.) Tj
 ET
 endstream
 endobj
 
-5 0 obj
+6 0 obj
 <<
 	/Length 60
 >>
@@ -4869,16 +6865,30 @@ ET
 endstream
 endobj
 
+5 0 obj
+<<
+	/Length 47
+>>
+stream
+BT
+	/Plain 12 Tf
+	412 688 Td
+	0.0 Tw
+	( ) Tj
+ET
+endstream
+endobj
+
 4 0 obj
 <<
-	/Length 98
+	/Length 91
 >>
 stream
 BT
 	/Plain 12 Tf
 	72 688 Td
-	2.1666667 Tw
-	(applications which can render custom graphics. ) Tj
+	2.6 Tw
+	(applications which can render custom graphics.) Tj
 ET
 endstream
 endobj
@@ -4890,8 +6900,8 @@ endobj
 stream
 BT
 	/Plain 12 Tf
-	72 700 Td
-	7.5 Tw
+	80 700 Td
+	6.6 Tw
 	(The aim of this project is to develop a collection of) Tj
 ET
 endstream
@@ -4899,12 +6909,12 @@ endobj
 
 2 0 obj
 <<
-	/Length 47
+	/Length 46
 >>
 stream
 BT
-	/Plain 20 Tf
-	221 722 Td
+	/Plain 12 Tf
+	72 700 Td
 	1.0 Tw
 	( ) Tj
 ET
@@ -4926,346 +6936,480 @@ endstream
 endobj
 
 xref
-0 351
+0 485
 0000000000 65535 f
-0000047915 00000 n
-0000047816 00000 n
-0000047666 00000 n
-0000047516 00000 n
-0000047404 00000 n
-0000047258 00000 n
-0000047146 00000 n
-0000046983 00000 n
-0000046832 00000 n
-0000046704 00000 n
-0000046546 00000 n
-0000046440 00000 n
-0000046290 00000 n
-0000046132 00000 n
-0000046021 00000 n
-0000045887 00000 n
-0000045756 00000 n
-0000045581 00000 n
-0000045472 00000 n
-0000045363 00000 n
-0000045263 00000 n
-0000045103 00000 n
-0000044978 00000 n
-0000044844 00000 n
-0000044718 00000 n
-0000044583 00000 n
-0000044414 00000 n
-0000044266 00000 n
-0000044151 00000 n
-0000044000 00000 n
-0000043855 00000 n
+0000062475 00000 n
+0000062377 00000 n
+0000062227 00000 n
+0000062084 00000 n
+0000061985 00000 n
+0000061873 00000 n
+0000061727 00000 n
+0000061628 00000 n
+0000061516 00000 n
+0000061357 00000 n
+0000061257 00000 n
+0000061105 00000 n
+0000060977 00000 n
+0000060819 00000 n
+0000060714 00000 n
+0000060614 00000 n
+0000060464 00000 n
+0000060306 00000 n
+0000060197 00000 n
+0000060097 00000 n
+0000059997 00000 n
+0000059869 00000 n
+0000059738 00000 n
+0000059564 00000 n
+0000059458 00000 n
+0000059357 00000 n
+0000059248 00000 n
+0000059149 00000 n
+0000058994 00000 n
+0000058864 00000 n
+0000058764 00000 n
+0000058630 00000 n
+0000058499 00000 n
+0000058399 00000 n
+0000058264 00000 n
+0000058102 00000 n
+0000058002 00000 n
+0000057903 00000 n
+0000057755 00000 n
+0000057641 00000 n
+0000057541 00000 n
+0000057441 00000 n
+0000057297 00000 n
+0000057143 00000 n
+0000057043 00000 n
+0000056938 00000 n
+0000056771 00000 n
+0000056671 00000 n
+0000056511 00000 n
+0000056403 00000 n
+0000056303 00000 n
+0000056151 00000 n
+0000056027 00000 n
+0000055926 00000 n
+0000055825 00000 n
+0000055722 00000 n
+0000055568 00000 n
+0000055468 00000 n
+0000055368 00000 n
+0000055263 00000 n
+0000055101 00000 n
+0000054970 00000 n
+0000054870 00000 n
+0000054737 00000 n
+0000054617 00000 n
+0000054517 00000 n
+0000054379 00000 n
+0000054213 00000 n
+0000054052 00000 n
+0000053925 00000 n
+0000053825 00000 n
+0000053679 00000 n
+0000053516 00000 n
+0000053379 00000 n
+0000053279 00000 n
+0000053158 00000 n
+0000052992 00000 n
+0000052865 00000 n
+0000052765 00000 n
+0000052665 00000 n
+0000052537 00000 n
+0000052383 00000 n
+0000052283 00000 n
+0000052170 00000 n
+0000052005 00000 n
+0000051889 00000 n
+0000051788 00000 n
+0000051640 00000 n
+0000051480 00000 n
+0000051326 00000 n
+0000051220 00000 n
+0000050480 00000 n
+0000050407 00000 n
+0000050329 00000 n
+0000050249 00000 n
+0000050176 00000 n
+0000050090 00000 n
+0000050053 00000 n
+0000049980 00000 n
+0000049880 00000 n
+0000049715 00000 n
+0000049602 00000 n
+0000049501 00000 n
+0000049345 00000 n
+0000049196 00000 n
+0000049095 00000 n
+0000048994 00000 n
+0000048890 00000 n
+0000048728 00000 n
+0000048627 00000 n
+0000048514 00000 n
+0000048414 00000 n
+0000048252 00000 n
+0000048151 00000 n
+0000048049 00000 n
+0000047889 00000 n
+0000047773 00000 n
+0000047672 00000 n
+0000047527 00000 n
+0000047369 00000 n
+0000047207 00000 n
+0000047096 00000 n
+0000046995 00000 n
+0000046894 00000 n
+0000046739 00000 n
+0000046596 00000 n
+0000046495 00000 n
+0000046373 00000 n
+0000046203 00000 n
+0000046070 00000 n
+0000045969 00000 n
+0000045843 00000 n
+0000045685 00000 n
+0000045521 00000 n
+0000045389 00000 n
+0000045288 00000 n
+0000045155 00000 n
+0000045002 00000 n
+0000044832 00000 n
+0000044693 00000 n
+0000044592 00000 n
+0000044491 00000 n
+0000044370 00000 n
+0000044249 00000 n
+0000044148 00000 n
+0000044001 00000 n
+0000043842 00000 n
 0000043741 00000 n
-0000043590 00000 n
-0000043481 00000 n
-0000043320 00000 n
-0000043161 00000 n
-0000043051 00000 n
-0000042908 00000 n
-0000042793 00000 n
-0000042647 00000 n
-0000042491 00000 n
-0000042388 00000 n
-0000042237 00000 n
-0000042130 00000 n
-0000041961 00000 n
-0000041800 00000 n
-0000041644 00000 n
-0000041532 00000 n
-0000041370 00000 n
-0000041209 00000 n
-0000041046 00000 n
-0000040890 00000 n
-0000040788 00000 n
-0000040631 00000 n
-0000040511 00000 n
-0000040360 00000 n
-0000040210 00000 n
-0000040058 00000 n
-0000039897 00000 n
-0000039743 00000 n
-0000039633 00000 n
-0000039471 00000 n
-0000038963 00000 n
-0000038890 00000 n
+0000043633 00000 n
+0000043512 00000 n
+0000043403 00000 n
+0000043271 00000 n
+0000043171 00000 n
+0000043005 00000 n
+0000042876 00000 n
+0000042775 00000 n
+0000042640 00000 n
+0000042475 00000 n
+0000042374 00000 n
+0000042272 00000 n
+0000042108 00000 n
+0000041993 00000 n
+0000041892 00000 n
+0000041791 00000 n
+0000041650 00000 n
+0000041549 00000 n
+0000041445 00000 n
+0000041275 00000 n
+0000041105 00000 n
+0000040992 00000 n
+0000040891 00000 n
+0000040750 00000 n
+0000040588 00000 n
+0000040436 00000 n
+0000040335 00000 n
+0000040232 00000 n
+0000040077 00000 n
+0000039926 00000 n
+0000039825 00000 n
+0000039724 00000 n
+0000039619 00000 n
+0000039462 00000 n
+0000039316 00000 n
+0000039215 00000 n
+0000039099 00000 n
+0000038935 00000 n
 0000038812 00000 n
-0000038732 00000 n
-0000038659 00000 n
-0000038573 00000 n
-0000038536 00000 n
-0000038463 00000 n
-0000038350 00000 n
-0000038195 00000 n
-0000038040 00000 n
-0000037937 00000 n
-0000037775 00000 n
-0000037663 00000 n
-0000037563 00000 n
-0000037405 00000 n
-0000037300 00000 n
-0000037137 00000 n
-0000037029 00000 n
-0000036873 00000 n
-0000036707 00000 n
-0000036558 00000 n
-0000036447 00000 n
-0000036300 00000 n
-0000036157 00000 n
-0000036036 00000 n
-0000035867 00000 n
-0000035728 00000 n
-0000035603 00000 n
-0000035446 00000 n
-0000035283 00000 n
-0000035157 00000 n
-0000035025 00000 n
-0000034873 00000 n
-0000034704 00000 n
-0000034566 00000 n
-0000034445 00000 n
-0000034316 00000 n
-0000034169 00000 n
-0000034016 00000 n
-0000033908 00000 n
-0000033786 00000 n
-0000033677 00000 n
-0000033551 00000 n
-0000033442 00000 n
-0000033286 00000 n
-0000033155 00000 n
-0000033020 00000 n
-0000032865 00000 n
-0000032756 00000 n
-0000032606 00000 n
-0000032474 00000 n
-0000032351 00000 n
-0000032234 00000 n
-0000032083 00000 n
-0000031917 00000 n
-0000031776 00000 n
-0000031658 00000 n
-0000031500 00000 n
-0000031338 00000 n
-0000031226 00000 n
-0000031077 00000 n
-0000030917 00000 n
+0000038711 00000 n
+0000038567 00000 n
+0000038403 00000 n
+0000038297 00000 n
+0000038196 00000 n
+0000038039 00000 n
+0000037878 00000 n
+0000037736 00000 n
+0000037635 00000 n
+0000037534 00000 n
+0000037419 00000 n
+0000037261 00000 n
+0000037122 00000 n
+0000037021 00000 n
+0000036904 00000 n
+0000036773 00000 n
+0000036672 00000 n
+0000036544 00000 n
+0000036406 00000 n
+0000036305 00000 n
+0000036183 00000 n
+0000036030 00000 n
+0000035929 00000 n
+0000035822 00000 n
+0000035665 00000 n
+0000035559 00000 n
+0000035458 00000 n
+0000035357 00000 n
+0000035204 00000 n
+0000035083 00000 n
+0000034981 00000 n
+0000034872 00000 n
+0000033770 00000 n
+0000033696 00000 n
+0000033617 00000 n
+0000033536 00000 n
+0000033462 00000 n
+0000033371 00000 n
+0000033332 00000 n
+0000033256 00000 n
+0000033156 00000 n
+0000032995 00000 n
+0000032837 00000 n
+0000032736 00000 n
+0000032574 00000 n
+0000032428 00000 n
+0000032327 00000 n
+0000032204 00000 n
+0000032034 00000 n
+0000031918 00000 n
+0000031817 00000 n
+0000031716 00000 n
+0000031594 00000 n
+0000031482 00000 n
+0000031376 00000 n
+0000031209 00000 n
+0000031091 00000 n
+0000030990 00000 n
+0000030889 00000 n
 0000030747 00000 n
-0000030594 00000 n
-0000030478 00000 n
-0000030314 00000 n
-0000030183 00000 n
-0000030039 00000 n
-0000029875 00000 n
-0000029768 00000 n
-0000029611 00000 n
-0000029450 00000 n
-0000029301 00000 n
-0000029182 00000 n
-0000029020 00000 n
-0000028889 00000 n
-0000028757 00000 n
-0000028635 00000 n
-0000028488 00000 n
-0000028366 00000 n
-0000028222 00000 n
-0000028077 00000 n
-0000027946 00000 n
-0000027791 00000 n
-0000027687 00000 n
-0000027527 00000 n
-0000027417 00000 n
-0000027308 00000 n
-0000027208 00000 n
-0000026477 00000 n
-0000026403 00000 n
-0000026324 00000 n
-0000026243 00000 n
-0000026169 00000 n
-0000026078 00000 n
-0000026039 00000 n
-0000025963 00000 n
-0000025802 00000 n
-0000025638 00000 n
-0000025476 00000 n
-0000025330 00000 n
-0000025207 00000 n
-0000025037 00000 n
-0000024921 00000 n
-0000024819 00000 n
-0000024697 00000 n
-0000024585 00000 n
-0000024479 00000 n
-0000024312 00000 n
-0000024193 00000 n
-0000024051 00000 n
-0000023924 00000 n
-0000023789 00000 n
-0000023633 00000 n
-0000023512 00000 n
-0000023374 00000 n
-0000023244 00000 n
-0000023131 00000 n
-0000023030 00000 n
-0000022869 00000 n
-0000022720 00000 n
-0000022613 00000 n
-0000022455 00000 n
-0000022294 00000 n
-0000022141 00000 n
-0000022035 00000 n
-0000021877 00000 n
-0000021755 00000 n
-0000021622 00000 n
-0000021470 00000 n
-0000021356 00000 n
-0000021192 00000 n
-0000021044 00000 n
-0000020931 00000 n
-0000020770 00000 n
-0000020609 00000 n
-0000020507 00000 n
-0000020341 00000 n
-0000020186 00000 n
-0000020026 00000 n
-0000019877 00000 n
-0000019759 00000 n
-0000019593 00000 n
-0000019445 00000 n
-0000019331 00000 n
-0000019165 00000 n
-0000019006 00000 n
-0000018904 00000 n
-0000018739 00000 n
-0000018629 00000 n
-0000018472 00000 n
-0000018312 00000 n
-0000018152 00000 n
-0000018042 00000 n
-0000017878 00000 n
-0000017734 00000 n
-0000017603 00000 n
-0000017463 00000 n
-0000017337 00000 n
-0000017177 00000 n
-0000017043 00000 n
-0000016919 00000 n
-0000016798 00000 n
-0000016663 00000 n
-0000016495 00000 n
-0000016345 00000 n
-0000016192 00000 n
-0000016088 00000 n
-0000015952 00000 n
-0000015846 00000 n
-0000015737 00000 n
-0000015585 00000 n
-0000015480 00000 n
-0000015318 00000 n
-0000015171 00000 n
-0000015055 00000 n
-0000014889 00000 n
-0000014726 00000 n
-0000013975 00000 n
-0000013901 00000 n
-0000013822 00000 n
-0000013741 00000 n
-0000013667 00000 n
-0000013576 00000 n
-0000013537 00000 n
-0000013461 00000 n
-0000013350 00000 n
-0000013191 00000 n
-0000013044 00000 n
-0000012940 00000 n
-0000012777 00000 n
-0000012638 00000 n
-0000012534 00000 n
-0000012398 00000 n
-0000012290 00000 n
-0000012181 00000 n
-0000012028 00000 n
-0000011921 00000 n
-0000011751 00000 n
-0000011591 00000 n
-0000011486 00000 n
-0000011318 00000 n
-0000011155 00000 n
-0000011018 00000 n
-0000010890 00000 n
-0000010732 00000 n
-0000010620 00000 n
-0000010488 00000 n
-0000010359 00000 n
-0000010189 00000 n
-0000010027 00000 n
-0000009914 00000 n
-0000009810 00000 n
-0000009663 00000 n
-0000009493 00000 n
-0000009330 00000 n
-0000009217 00000 n
-0000009113 00000 n
+0000030621 00000 n
+0000030520 00000 n
+0000030385 00000 n
+0000030229 00000 n
+0000030109 00000 n
+0000030008 00000 n
+0000029870 00000 n
+0000029737 00000 n
+0000029636 00000 n
+0000029523 00000 n
+0000029423 00000 n
+0000029256 00000 n
+0000029101 00000 n
+0000029000 00000 n
+0000028893 00000 n
+0000028735 00000 n
+0000028574 00000 n
+0000028422 00000 n
+0000028321 00000 n
+0000028215 00000 n
+0000028057 00000 n
+0000027936 00000 n
+0000027835 00000 n
+0000027702 00000 n
+0000027551 00000 n
+0000027450 00000 n
+0000027336 00000 n
+0000027172 00000 n
+0000027019 00000 n
+0000026918 00000 n
+0000026805 00000 n
+0000026644 00000 n
+0000026478 00000 n
+0000026377 00000 n
+0000026276 00000 n
+0000026174 00000 n
+0000026008 00000 n
+0000025853 00000 n
+0000025693 00000 n
+0000025551 00000 n
+0000025450 00000 n
+0000025332 00000 n
+0000025166 00000 n
+0000025015 00000 n
+0000024914 00000 n
+0000024800 00000 n
+0000024634 00000 n
+0000024470 00000 n
+0000024369 00000 n
+0000024267 00000 n
+0000024102 00000 n
+0000023995 00000 n
+0000023893 00000 n
+0000023791 00000 n
+0000023636 00000 n
+0000023535 00000 n
+0000023434 00000 n
+0000023274 00000 n
+0000023121 00000 n
+0000023020 00000 n
+0000022910 00000 n
+0000022746 00000 n
+0000022602 00000 n
+0000022501 00000 n
+0000022370 00000 n
+0000022237 00000 n
+0000022136 00000 n
+0000022010 00000 n
+0000021850 00000 n
+0000021712 00000 n
+0000021611 00000 n
+0000021487 00000 n
+0000021367 00000 n
+0000021266 00000 n
+0000021165 00000 n
+0000021031 00000 n
+0000020868 00000 n
+0000020767 00000 n
+0000020666 00000 n
+0000020516 00000 n
+0000020363 00000 n
+0000020262 00000 n
+0000020158 00000 n
+0000020022 00000 n
+0000019916 00000 n
+0000019807 00000 n
+0000019650 00000 n
+0000019549 00000 n
+0000019448 00000 n
+0000019343 00000 n
+0000019181 00000 n
+0000019030 00000 n
+0000018929 00000 n
+0000018813 00000 n
+0000018647 00000 n
+0000018484 00000 n
+0000017418 00000 n
+0000017344 00000 n
+0000017265 00000 n
+0000017184 00000 n
+0000017110 00000 n
+0000017019 00000 n
+0000016980 00000 n
+0000016904 00000 n
+0000016794 00000 n
+0000016693 00000 n
+0000016534 00000 n
+0000016388 00000 n
+0000016287 00000 n
+0000016186 00000 n
+0000016082 00000 n
+0000015919 00000 n
+0000015781 00000 n
+0000015680 00000 n
+0000015576 00000 n
+0000015440 00000 n
+0000015332 00000 n
+0000015223 00000 n
+0000015065 00000 n
+0000014964 00000 n
+0000014863 00000 n
+0000014756 00000 n
+0000014586 00000 n
+0000014431 00000 n
+0000014330 00000 n
+0000014225 00000 n
+0000014057 00000 n
+0000013894 00000 n
+0000013764 00000 n
+0000013663 00000 n
+0000013535 00000 n
+0000013384 00000 n
+0000013283 00000 n
+0000013171 00000 n
+0000013040 00000 n
+0000012939 00000 n
+0000012810 00000 n
+0000012640 00000 n
+0000012478 00000 n
+0000012365 00000 n
+0000012262 00000 n
+0000012161 00000 n
+0000012060 00000 n
+0000011913 00000 n
+0000011743 00000 n
+0000011580 00000 n
+0000011468 00000 n
+0000011366 00000 n
+0000011264 00000 n
+0000011160 00000 n
+0000010997 00000 n
+0000010859 00000 n
+0000010758 00000 n
+0000010654 00000 n
+0000010518 00000 n
+0000010409 00000 n
+0000010300 00000 n
+0000010148 00000 n
+0000010047 00000 n
+0000009946 00000 n
+0000009843 00000 n
+0000009681 00000 n
+0000009561 00000 n
+0000009460 00000 n
+0000009312 00000 n
+0000009154 00000 n
+0000009053 00000 n
 0000008950 00000 n
-0000008811 00000 n
-0000008707 00000 n
-0000008571 00000 n
-0000008462 00000 n
-0000008353 00000 n
-0000008198 00000 n
-0000008095 00000 n
-0000007933 00000 n
-0000007805 00000 n
-0000007657 00000 n
-0000007491 00000 n
-0000007388 00000 n
-0000007225 00000 n
-0000007114 00000 n
-0000006969 00000 n
-0000006835 00000 n
-0000006712 00000 n
-0000006550 00000 n
-0000006419 00000 n
-0000006254 00000 n
-0000006095 00000 n
-0000005956 00000 n
-0000005797 00000 n
-0000005635 00000 n
-0000005469 00000 n
-0000005308 00000 n
-0000005142 00000 n
-0000004980 00000 n
-0000004836 00000 n
-0000004676 00000 n
-0000004517 00000 n
-0000004390 00000 n
-0000004249 00000 n
-0000004081 00000 n
-0000003917 00000 n
-0000003786 00000 n
-0000003656 00000 n
-0000003497 00000 n
-0000003389 00000 n
-0000003224 00000 n
-0000003060 00000 n
-0000002895 00000 n
-0000002762 00000 n
-0000002056 00000 n
-0000001982 00000 n
-0000001903 00000 n
-0000001822 00000 n
-0000001748 00000 n
-0000001657 00000 n
-0000001618 00000 n
-0000001542 00000 n
-0000001410 00000 n
-0000001227 00000 n
-0000001118 00000 n
-0000000994 00000 n
-0000000851 00000 n
+0000008787 00000 n
+0000008676 00000 n
+0000008575 00000 n
+0000008430 00000 n
+0000008296 00000 n
+0000008195 00000 n
+0000008072 00000 n
+0000007916 00000 n
+0000007815 00000 n
+0000007684 00000 n
+0000007583 00000 n
+0000007418 00000 n
+0000007259 00000 n
+0000007121 00000 n
+0000006962 00000 n
+0000006800 00000 n
+0000006634 00000 n
+0000006478 00000 n
+0000006312 00000 n
+0000006150 00000 n
+0000006004 00000 n
+0000005904 00000 n
+0000005744 00000 n
+0000005585 00000 n
+0000005453 00000 n
+0000005352 00000 n
+0000005211 00000 n
+0000005043 00000 n
+0000004879 00000 n
+0000004749 00000 n
+0000004648 00000 n
+0000004518 00000 n
+0000004367 00000 n
+0000004266 00000 n
+0000004158 00000 n
+0000003993 00000 n
+0000003835 00000 n
+0000003734 00000 n
+0000003574 00000 n
+0000003474 00000 n
+0000003374 00000 n
+0000003246 00000 n
+0000002270 00000 n
+0000002196 00000 n
+0000002117 00000 n
+0000002036 00000 n
+0000001962 00000 n
+0000001871 00000 n
+0000001832 00000 n
+0000001756 00000 n
+0000001624 00000 n
+0000001442 00000 n
+0000001335 00000 n
+0000001234 00000 n
+0000001133 00000 n
+0000001009 00000 n
+0000000869 00000 n
 0000000784 00000 n
 0000000710 00000 n
 0000000631 00000 n
@@ -5279,9 +7423,9 @@ xref
 0000000103 00000 n
 0000000009 00000 n
 trailer <<
-	/Size 351
-	/Root 350 0 R
+	/Size 485
+	/Root 484 0 R
 >>
 startxref
-48025
+62585
 %%EOF
